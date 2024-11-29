@@ -1,0 +1,38 @@
+:root {
+  --accent-bg-color: red;
+  --border-color: red;
+  --border-opacity: 100%;
+  --headbar-backdrop-color: red;
+  --headbar-bg-color: red;
+  --secondary-sidebar-bg-color: red;
+  --dim-opacity: 0;
+}
+
+/* Nautilus */
+
+.nautilus-window {
+  border-radius: 0;
+  outline: 2px solid #8a00c4;
+  color: #8a00c4;
+}
+
+.nautilus-window .undershoot-top {
+  background-color: #2a2139;
+}
+
+.nautilus-window .sidebar-row {
+  border-radius: 0;
+  margin: 4px 20px 4px 4px;
+  border: 2px solid transparent;
+}
+
+.nautilus-window .sidebar-row:hover {
+  background: none;
+  border: 2px solid yellow;
+}
+
+.nautilus-window .sidebar-row:selected {
+  background: none;
+  color: #8a00c4;
+  border-color: #8a00c4;
+}
