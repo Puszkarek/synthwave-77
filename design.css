@@ -7,10 +7,16 @@
 
 .purple {
   --primary-color: #7b4b8b;
+  --primary-color-hover: #692d7e;
+  --primary-color-disabled: #9777a3;
   --text-color: #c4b0cd;
   --accent-color: #4b5b8b;
+  --highlight-color: #7b4b8b;
   --primary-background: #12141f; /* Lighter */
+  --primary-background-hover: #2d2f54;
   --secondary-background: #0a0b14; /* Darker */
+  --secondary-background-hover: #21243c;
+  --yellow: #e6b800;
 }
 
 .backup {
