@@ -12,6 +12,7 @@
     - [ ] Rename
   - [ ] Notification Theme
 - [ ] Zen Browser Theme
+- [ ] Check https://github.com/ExposedCat/stunning-gnome-de
 
 # Manual Steps
 - Copy the files inside gtk-4.0 to ~/.config/gtk-4.0/
@@ -60,10 +61,15 @@ To install the theme under ./discord folder
 # Inspiration
 - https://www.behance.net/gallery/118663901/Cyberpunk-2077User-Interface-(Part-1)
 - https://github.com/refact0r/system24?tab=readme-ov-fileS
-- 
+- https://github.com/spicetify
+- https://www.reddit.com/r/unixporn/comments/18oryzo/waylandswayfx_linuxwave_synthwave/
 
 
-# References
+# Developer Resources
 - https://developer.gnome.org/hig/
+- https://developer.gnome.org/hig/resources.html
 - https://looking-glass.io/
+- https://stackoverflow.com/questions/49348833/looking-for-a-manual-for-gnome3-shell-css-entries
+- https://docs.gtk.org/gtk4/running.html#interactive-debugging
+- 
 
