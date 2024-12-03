@@ -1,38 +1,72 @@
 :root {
-  --accent-bg-color: red;
-  --border-color: red;
+  --accent-color: #7b4b8b;
+  /* 
+  --accent-bg-color: yellow;
+  --border-color: yellow;
   --border-opacity: 100%;
-  --headbar-backdrop-color: red;
-  --headbar-bg-color: red;
-  --secondary-sidebar-bg-color: red;
+  --headbar-backdrop-color: yellow;
+  --headbar-bg-color: yellow;
+  --secondary-sidebar-bg-color: yellow;
   --dim-opacity: 0;
+  */
 }
 
 /* Nautilus */
 
 .nautilus-window {
   border-radius: 0;
-  outline: 2px solid #8a00c4;
-  color: #8a00c4;
+  outline: 2px solid #7b4b8b;
+  color: #7b4b8b;
 }
 
 .nautilus-window .undershoot-top {
-  background-color: #2a2139;
+  background-color: #12141f;
+}
+
+.nautilus-window .navigation-sidebar {
+  border: 1px solid #7b4b8b;
+  border-width: 0 2px 0 0;
+  padding: 0;
+  margin: 0;
+}
+
+.nautilus-window separator {
+  background-color: #7b4b8b;
+  width: 100%;
+  margin: 0;
 }
 
 .nautilus-window .sidebar-row {
   border-radius: 0;
-  margin: 4px 20px 4px 4px;
+  padding: 0;
+  margin: 0;
+  padding: 8px;
   border: 2px solid transparent;
+  color: #7b4b8b;
 }
 
 .nautilus-window .sidebar-row:hover {
-  background: none;
-  border: 2px solid yellow;
+  background: #4b5b8b;
+  color: #090b04;
 }
 
 .nautilus-window .sidebar-row:selected {
-  background: none;
-  color: #8a00c4;
-  border-color: #8a00c4;
+  background: #7b4b8b;
+  color: #090b04;
+}
+
+.nautilus-window cell {
+  color: #c4b0cd;
+}
+
+.nautilus-window picture {
+  color: #7b4b8b;
+}
+
+.nautilus-window .content-pane .vertical banner {
+  background-color: #7b4b8b;
+}
+
+windowhandle {
+  color: #7b4b8b;
 }

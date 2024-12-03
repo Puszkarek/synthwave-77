@@ -1,0 +1,23 @@
+.green {
+  --primary-color: #a7d3a0;
+  --text-color: #b5cdb0;
+  --accent-color: #4b5b8b;
+  --bg-color: #090b04;
+}
+
+.purple {
+  --primary-color: #7b4b8b;
+  --text-color: #c4b0cd;
+  --accent-color: #4b5b8b;
+  --primary-background: #12141f; /* Lighter */
+  --secondary-background: #0a0b14; /* Darker */
+}
+
+.backup {
+  --bg-0: #0a0b14;
+  --bg-0: #0d0a14;
+  --bg-0: #140a0a;
+  --bg-0: #12141f;
+  --bg-0: #14121f;
+  --accent-color: #ac00e6;
+}

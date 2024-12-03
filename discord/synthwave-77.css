@@ -6,9 +6,6 @@
  * @source https://github.com/refact0r/system24
 */
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
-@import url("https://fonts.cdnfonts.com/css/asciid");
-
 /* colors */
 /* remove bg */
 [class^=sidebar_]  /* channel list */,
@@ -151,7 +148,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=chat_] > [class*=container_] /* header bar */,
 [class^='form_'] > [class^='wrapper_'] /* no access chat bar */ {
   border-radius: var(--panel-roundness);
-  border: var(--border-width) solid var(--border-color);
+  border: var(--border-width) solid var(--accent-color);
   transition: border-color var(--border-transition);
   &:hover {
     border-color: var(--border-hover-color);
@@ -192,10 +189,6 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
   font-size: 12px;
 }
 
-/* move chat bar out */
-:root {
-  --custom-channel-textarea-text-area-height: 56px;
-}
 .form_a7d72e {
   padding: 0;
   width: 100%;
@@ -223,7 +216,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
   width: 100%;
   box-sizing: border-box;
   position: absolute;
-  border: var(--border-width) solid var(--border-color);
+  border: var(--border-width) solid var(--accent-color);
   border-top: none;
   transition: border-color var(--border-transition);
 }
@@ -258,7 +251,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
   height: calc(
     var(--custom-channel-textarea-text-area-height) + 2 * var(--border-width)
   );
-  border: var(--border-width) solid var(--border-color);
+  border: var(--border-width) solid var(--accent-color);
   margin-top: var(--pad);
 }
 
@@ -268,7 +261,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 
   & > [class^="buttonContainer_"] {
     height: 100%;
-    border-left: var(--border-width) solid var(--border-color);
+    border-left: var(--border-width) solid var(--accent-color);
     transition: border-color var(--border-transition);
     box-sizing: border-box;
   }
@@ -298,7 +291,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^="peopleColumn_"]::after,
 [class^="nowPlayingColumn_"]::after {
   display: block;
-  color: var(--txt-3);
+  color: var(--accent-color);
   font-weight: var(--label-font-weight);
   position: absolute;
   top: -10px;
@@ -308,6 +301,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
   z-index: 100;
   transition: color var(--border-transition);
 }
+
 [class^="sidebar_"] > [class^="container_"]::after {
   content: "server";
 }
@@ -464,7 +458,7 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^='sectionDivider_'] /* channel list dividers */,
 .separator_a0 /* settings divider */,
 [class^=guildSeparator_] /* server list divider */ {
-  border-bottom: var(--border-width) solid var(--border-color);
+  border-bottom: var(--border-width) solid var(--accent-color);
   height: 0;
 }
 #app-mount [class^='divider_'] /* chat dividers */ {
@@ -476,14 +470,14 @@ svg[class^=slider_] > rect[fill='white'] /* settings checkbuttons slider */ {
 [class^=columnHeading_],
 [class^=tableCell_] {
   border-width: var(--border-width);
-  border-color: var(--border-color);
+  border-color: var(--accent-color);
 }
 [class^="divider_"]:not(.isUnread_c2654d),
 [class^="sectionDivider_"],
 #vc-spotify-player,
 .separator_a0,
 [class^="guildSeparator_"] {
-  border-color: var(--border-color);
+  border-color: var(--accent-color);
 }
 [class^="unreadPill_"][class*="endCap_"] {
   top: calc(-6px - 0.5 * var(--border-width));
@@ -565,7 +559,7 @@ html.theme-light {
   --button-outline-brand-border-active: var(--brand-560);
   --button-outline-brand-border-hover: var(--brand-500);
   --button-outline-brand-text: var(--txt-1);
-  --button-outline-brand-text-active: var(--txt-1);
+  --button-outline-brand-text-active: var(--acc-1);
   --button-outline-brand-text-hover: var(--txt-1);
   --button-outline-danger-background: hsl(0 calc(1 * 0%) 100% / 0);
   --button-outline-danger-background-active: var(--red-460);
@@ -574,7 +568,7 @@ html.theme-light {
   --button-outline-danger-border-active: var(--red-430);
   --button-outline-danger-border-hover: var(--red-430);
   --button-outline-danger-text: var(--txt-1);
-  --button-outline-danger-text-active: var(--txt-1);
+  --button-outline-danger-text-active: var(--acc-1);
   --button-outline-danger-text-hover: var(--txt-1);
   --button-outline-positive-background: hsl(0 calc(1 * 0%) 100% / 0);
   --button-outline-positive-background-active: var(--green-530);
@@ -583,7 +577,7 @@ html.theme-light {
   --button-outline-positive-border-active: var(--green-530);
   --button-outline-positive-border-hover: var(--green-430);
   --button-outline-positive-text: var(--txt-1);
-  --button-outline-positive-text-active: var(--txt-1);
+  --button-outline-positive-text-active: var(--acc-1);
   --button-outline-positive-text-hover: var(--txt-1);
   --button-outline-primary-background: hsl(0 calc(1 * 0%) 100% / 0);
   --button-outline-primary-background-active: var(--primary-430);
@@ -592,7 +586,7 @@ html.theme-light {
   --button-outline-primary-border-active: var(--primary-430);
   --button-outline-primary-border-hover: var(--primary-500);
   --button-outline-primary-text: var(--txt-1);
-  --button-outline-primary-text-active: var(--txt-1);
+  --button-outline-primary-text-active: var(--acc-1);
   --button-outline-primary-text-hover: var(--txt-1);
   --button-positive-background: var(--green-430);
   --button-positive-background-active: var(--green-530);
@@ -686,7 +680,7 @@ html.theme-light {
   --input-background: var(--bg-1);
   --input-focused-border: hsl(0 calc(1 * 0%) 100% / 0.16);
   --input-placeholder-text: var(--input-placeholder-text-dark);
-  --interactive-active: var(--txt-1);
+  --interactive-active: var(--acc-1);
   --interactive-hover: var(--txt-1);
   --interactive-muted: var(--txt-3);
   --interactive-normal: var(--txt-2);
@@ -800,11 +794,11 @@ html.theme-light {
   --redesign-only-background-overlay: var(--primary-645);
   --redesign-only-background-raised: var(--primary-630);
   --redesign-only-background-sunken: var(--primary-660);
-  --scrollbar-auto-scrollbar-color-thumb: var(--primary-730);
-  --scrollbar-auto-scrollbar-color-track: var(--primary-630);
-  --scrollbar-auto-thumb: var(--bg-1);
+  --scrollbar-auto-scrollbar-color-thumb: var(--accent-color);
+  --scrollbar-auto-scrollbar-color-track: var(--accent-color);
+  --scrollbar-auto-thumb: var(--accent-color);
   --scrollbar-auto-track: transparent;
-  --scrollbar-thin-thumb: var(--bg-1);
+  --scrollbar-thin-thumb: var(-accent-color);
   --scrollbar-thin-track: transparent;
   --spoiler-hidden-background: var(--primary-700);
   --spoiler-revealed-background: var(--primary-660);
@@ -833,8 +827,8 @@ html.theme-light {
   --text-muted-on-default: var(--primary-330);
   --text-normal: var(--txt-1);
   --text-positive: var(--green);
-  --text-primary: var(--primary-230);
-  --text-secondary: var(--primary-330);
+  --text-primary: var(--accent-color);
+  --text-secondary: var(--accent-color);
   --text-warning: var(--yellow-300);
   --textbox-markdown-syntax: var(--primary-360);
   --theme-locked-blur-fallback: hsl(225 calc(1 * 6.3%) 12.5% / 0.96);
@@ -889,7 +883,7 @@ html.theme-light {
   background: none !important;
   overflow-x: hidden;
   border-radius: var(--panel-roundness);
-  border: var(--border-width) solid var(--border-color);
+  border: var(--border-width) solid var(--accent-color);
   transition: border-color var(--border-transition);
   &:hover {
     border-color: var(--border-hover-color);
@@ -1015,40 +1009,41 @@ html.theme-light {
 
 /* customize things here */
 :root {
-  --font: "DM Mono";
+  --font: "Refinery 75 Medium";
   letter-spacing: -0.05ch;
   font-weight: 300;
   --label-font-weight: 500;
+  --accent-color: #7b4b8b;
 
-  --corner-text: "system24";
+  --corner-text: "Synth 77";
 
   --pad: 16px;
   --txt-pad: 10px;
 
   --panel-roundness: 0px;
 
-  --bg-0: oklch(19% 0 0);
-  --bg-1: oklch(23% 0 0);
-  --bg-2: oklch(27% 0 0);
-  --bg-3: oklch(31% 0 0);
+  --bg-0: #12141f;
+  --bg-1: #0a0b14;
+  --bg-2: #12141f;
+  --bg-3: #12141f;
 
-  --hover: oklch(54% 0 0 / 0.1);
+  --hover: var(--accent-color);
   --active: oklch(54% 0 0 / 0.2);
   --selected: var(--active);
 
-  --txt-dark: var(--bg-0);
-  --txt-link: var(--cyan);
-  --txt-0: oklch(90% 0 0);
-  --txt-1: oklch(80% 0 0);
-  --txt-2: oklch(60% 0 0);
-  --txt-3: oklch(40% 0 0);
+  --txt-dark: #7b4b8b;
+  --txt-link: #7b4b8b;
+  --txt-0: #7b4b8b;
+  --txt-1: #c4b0cd;
+  --txt-2: #7b4b8b;
+  --txt-3: #7b4b8b;
 
-  --acc-0: var(--purple);
-  --acc-1: var(--purple-1);
-  --acc-2: var(--purple-2);
+  --acc-0: #4b5b8b;
+  --acc-1: #4b5b8b;
+  --acc-2: #4b5b8b;
 
   --border-width: 2px;
-  --border-color: var(--bg-3);
+
   --border-hover-color: var(--acc-0);
   --border-transition: 0.2s ease;
 
@@ -1060,9 +1055,10 @@ html.theme-light {
   --mention-txt: var(--acc-0);
   --mention-bg: color-mix(in oklch, var(--acc-0), transparent 90%);
   --mention-overlay: color-mix(in oklch, var(--acc-0), transparent 90%);
-  --mention-hover-overlay: color-mix(in oklch, var(--acc-0), transparent 95%);
+  --mention-hover-overlay: var(--accent-color);
+  --custom-channel-textarea-text-area-height: 56px;
   --reply-overlay: var(--active);
-  --reply-hover-overlay: var(--hover);
+  --reply-hover-overlay: var(--accent-color);
 
   --pink: oklch(73% 0.12 0);
   --pink-1: oklch(63% 0.12 0);
@@ -1080,89 +1076,38 @@ html.theme-light {
   --font-display: var(--font), "gg mono", monospace;
   --font-code: var(--font), "gg mono", monospace;
 
-  --font: "DM Mono"; /* UI font name. it must be installed on your system. */
-  letter-spacing: -0.05ch; /* decreases letter spacing for better readability. */
-  font-weight: 300; /* UI font weight. */
-  --label-font-weight: 500; /* font weight for panel labels. */
-  --corner-text: "system24"; /* custom text to display in the corner. only works on windows. */
-  --pad: 16px; /* padding between panels. */
-  --txt-pad: 10px; /* padding inside panels to prevent labels from clipping */
-  --panel-roundness: 0px; /* corner roundness of panels. ONLY WORKS IF unrounding.css IS REMOVED (see above). */
+  --scrollbarBG: transparent;
+  --thumbBG: var(--accent-color);
+}
 
-  /* background colors */
-  --bg-0: #090b04; /* main background color. */
-  --bg-1: rgb(
-    7,
-    7,
-    6
-  ); /* background color for secondary elements like code blocks, embeds, etc. */
-  --bg-2: #090b04; /* color of neutral buttons. */
-  --bg-3: #090b04; /* color of neutral buttons when hovered. */
+.sidebarRegionScroller_c25c6d {
+  background-color: var(--bg-0);
+  border: 1px solid var(--accent-color);
+  border-width: 0 2px 0 0;
+}
+.sidebar_c25c6d {
+  margin-right: 0;
+  padding-right: 0;
+}
 
-  /* state modifiers */
-  --hover: oklch(54% 0 0 / 0.1); /* color of hovered elements. */
-  --active: oklch(54% 0 0 / 0.2); /* color of elements when clicked. */
-  --selected: var(--active); /* color of selected elements. */
+.link_d8bfb3 {
+  border: 2px solid transparent;
+}
 
-  /* text colors */
-  --txt-dark: var(--bg-0); /* color of dark text on colored backgrounds. */
-  --txt-link: var(--cyan); /* color of links. */
-  --txt-0: oklch(90% 0 0); /* color of bright/white text. */
-  --txt-1: oklch(80% 0 0); /* main text color. */
-  --txt-2: oklch(60% 0 0); /* color of secondary text like channel list. */
-  --txt-3: oklch(40% 0 0); /* color of muted text. */
+.modeSelected_d8bfb3 .link_d8bfb3 {
+  background-color: transparent;
+  border-color: var(--acc-0);
+  --channel-icon: var(--acc-0);
+  --interactive-active: var(--acc-0);
+  --interactive-normal: var(--acc-0);
+}
 
-  /* accent colors */
-  --acc-0: var(--purple); /* main accent color. */
-  --acc-1: var(--purple-1); /* color of accent buttons when hovered. */
-  --acc-2: var(--purple-2); /* color of accent buttons when clicked. */
+.selected_c64476:hover {
+  background-color: var(--accent-color);
+  --text-secondary: var(--bg-0);
+}
 
-  /* borders */
-  --border-width: 2px; /* panel border thickness. */
-  --border-color: #a7d3a0; /* panel border color. */
-  --border-hover-color: var(--acc-0); /* panel border color when hovered. */
-  --border-transition: 0.2s ease; /* panel border transition. */
-
-  /* status dot colors */
-  --online-dot: var(--green); /* color of online dot. */
-  --dnd-dot: var(--pink); /* color of do not disturb dot. */
-  --idle-dot: var(--yellow); /* color of idle dot. */
-  --streaming-dot: var(--purple); /* color of streaming dot. */
-
-  /* mention/ping and message colors */
-  --mention-txt: var(--acc-0); /* color of mention text. */
-  --mention-bg: color-mix(
-    in oklch,
-    var(--acc-0),
-    transparent 90%
-  ); /* background highlight of mention text. */
-  --mention-overlay: color-mix(
-    in oklch,
-    var(--acc-0),
-    transparent 90%
-  ); /* overlay color of messages that mention you. */
-  --mention-hover-overlay: color-mix(
-    in oklch,
-    var(--acc-0),
-    transparent 95%
-  ); /* overlay color of messages that mention you when hovered. */
-  --reply-overlay: var(
-    --active
-  ); /* overlay color of message you are replying to. */
-  --reply-hover-overlay: var(
-    --hover
-  ); /* overlay color of message you are replying to when hovered. */
-
-  /* color shades */
-  --pink: oklch(73% 0.12 0);
-  --pink-1: oklch(63% 0.12 0);
-  --pink-2: oklch(53% 0.12 0);
-  --purple: oklch(73% 0.12 300);
-  --purple-1: oklch(63% 0.12 300);
-  --purple-2: oklch(53% 0.12 300);
-  --cyan: oklch(73% 0.12 200);
-  --yellow: oklch(78% 0.12 80);
-  --green: oklch(73% 0.12 160);
-  --green-1: oklch(63% 0.12 160);
-  --green-2: oklch(53% 0.12 160);
+.clickable_d808b0.container_d808b0:hover {
+  background-color: var(--accent-color);
+  --channels-default: var(--bg-0);
 }

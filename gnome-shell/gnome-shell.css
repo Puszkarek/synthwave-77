@@ -1,0 +1,28 @@
+#panel {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#panel > * {
+  box-sizing: border-box;
+  border: 2px solid #7b4b8b;
+  border-radius: 0;
+  margin: 2px 6px;
+  padding: 0;
+  background-color: #12141f;
+}
+
+#panel .panel-button,
+#panel .clock,
+#panel .workspace-dot #panel,
+#panel .clock-display-box {
+  border-radius: 0;
+}
+
+#panel .panel-button:hover,
+#panel .clock:hover {
+  background-color: #0a0b14;
+  filter: none;
+}
