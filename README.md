@@ -25,6 +25,9 @@
 
 # Dependencies
 
+### Icons
+- Install [Suru Plus](https://github.com/gusbemacbe/suru-plus-aspromauros?tab=readme-ov-file#root-directory-recommended)
+
 ### VSCode
 1. Install this [VSCode Theme]() - (It's the secondary theme that comes from this package)
 2. Remove the icons from the editor to give a more minimalistic look (Optional of course)
@@ -71,5 +74,5 @@ To install the theme under ./discord folder
 - https://looking-glass.io/
 - https://stackoverflow.com/questions/49348833/looking-for-a-manual-for-gnome3-shell-css-entries
 - https://docs.gtk.org/gtk4/running.html#interactive-debugging
-- 
+- https://github.com/themix-project/themix-gui
 

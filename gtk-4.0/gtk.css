@@ -11,32 +11,31 @@
   */
 }
 
-/* Nautilus */
-
-.nautilus-window {
+GtkApplicationWindow,
+window {
   border-radius: 0;
   outline: 2px solid #7b4b8b;
   color: #7b4b8b;
 }
 
-.nautilus-window .undershoot-top {
+window .undershoot-top {
   background-color: #12141f;
 }
 
-.nautilus-window .navigation-sidebar {
+window .navigation-sidebar {
   border: 1px solid #7b4b8b;
   border-width: 0 2px 0 0;
   padding: 0;
   margin: 0;
 }
 
-.nautilus-window separator {
+window separator {
   background-color: #7b4b8b;
   width: 100%;
   margin: 0;
 }
 
-.nautilus-window .sidebar-row {
+window .sidebar-row {
   border-radius: 0;
   padding: 0;
   margin: 0;
@@ -45,25 +44,25 @@
   color: #7b4b8b;
 }
 
-.nautilus-window .sidebar-row:hover {
+window .sidebar-row:hover {
   background: #4b5b8b;
   color: #090b04;
 }
 
-.nautilus-window .sidebar-row:selected {
+window .sidebar-row:selected {
   background: #7b4b8b;
   color: #090b04;
 }
 
-.nautilus-window cell {
+window cell {
   color: #c4b0cd;
 }
 
-.nautilus-window picture {
+window picture {
   color: #7b4b8b;
 }
 
-.nautilus-window .content-pane .vertical banner {
+window .content-pane .vertical banner {
   background-color: #7b4b8b;
 }
 
