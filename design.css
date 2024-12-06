@@ -16,7 +16,10 @@
   --primary-background-hover: #2d2f54;
   --secondary-background: #0a0b14; /* Darker */
   --secondary-background-hover: #21243c;
-  --yellow: #e6b800;
+  --yellow: #ffdd00;
+  --red: #ff1f1f;
+  --cyan: #00ffff;
+  --purple: #e100ff;
 }
 
 .backup {
