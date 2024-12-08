@@ -108,7 +108,6 @@ textview text:selected:focus,
 .view text:selected,
 iconview text:selected,
 textview text:selected {
-  border-radius: 0;
 }
 
 textview border {
@@ -135,7 +134,7 @@ flowbox flowboxchild:selected {
 .content-view .tile {
   margin: 2px;
   background-color: black;
-  border-radius: 0;
+
   padding: 0;
 }
 .content-view .tile:backdrop {
@@ -316,7 +315,7 @@ entry {
   padding-left: 8px;
   padding-right: 8px;
   border: 1px solid;
-  border-radius: 0;
+
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #cccccc;
   border-color: rgba(23, 23, 23, 0.5);
@@ -340,7 +339,6 @@ entry.flat {
   padding: 2px;
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0;
 }
 spinbutton:focus:not(.vertical),
 entry:focus {
@@ -465,7 +463,7 @@ entry progress {
   margin: 2px -6px;
   background-color: transparent;
   background-image: none;
-  border-radius: 0;
+
   border-width: 0 0 2px;
   border-color: #6acad8;
   border-style: solid;
@@ -684,7 +682,6 @@ treeview entry:focus:dir(ltr) {
 
 treeview entry.flat,
 treeview entry {
-  border-radius: 0;
   background-image: none;
   background-color: #272727;
 }
@@ -764,7 +761,7 @@ button {
   min-width: 16px;
   padding: 4px 9px;
   border: 1px solid;
-  border-radius: 0;
+
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #cccccc;
   outline-color: rgba(204, 204, 204, 0.3);
@@ -954,7 +951,7 @@ button.osd {
   min-width: 26px;
   min-height: 32px;
   color: #eeeeec;
-  border-radius: 0;
+
   color: #eeeeec;
   border-color: rgba(0, 0, 0, 0.7);
   background-color: transparent;
@@ -1563,7 +1560,6 @@ button.font > box > box > label {
 }
 
 button.circular {
-  border-radius: 0;
   -gtk-outline-radius: 9999px;
   padding: 4px;
   /* circles instead of ellipses */
@@ -1722,7 +1718,7 @@ filechooser .path-bar.linked > button,
 .linked > button,
 toolbar.inline-toolbar toolbutton > button.flat {
   border-right-style: none;
-  border-radius: 0;
+
   -gtk-outline-radius: 0;
 }
 
@@ -1765,7 +1761,7 @@ filechooser .path-bar.linked > button:only-child,
 .linked > button:only-child,
 toolbar.inline-toolbar toolbutton:only-child > button.flat {
   border-style: solid;
-  border-radius: 0;
+
   -gtk-outline-radius: 4px;
 }
 
@@ -1774,7 +1770,7 @@ toolbar.inline-toolbar toolbutton:only-child > button.flat {
 .linked.vertical > entry,
 .linked.vertical > button {
   border-style: solid solid none solid;
-  border-radius: 0;
+
   -gtk-outline-radius: 0;
 }
 
@@ -1804,7 +1800,7 @@ toolbar.inline-toolbar toolbutton:only-child > button.flat {
 .linked.vertical > entry:only-child,
 .linked.vertical > button:only-child {
   border-style: solid;
-  border-radius: 0;
+
   -gtk-outline-radius: 4px;
 }
 
@@ -1849,7 +1845,7 @@ modelbutton.flat,
   min-height: 26px;
   padding-left: 5px;
   padding-right: 5px;
-  border-radius: 0;
+
   outline-offset: -2px;
 }
 modelbutton.flat:hover,
@@ -1875,7 +1871,6 @@ button.color {
 }
 button.color colorswatch:only-child,
 button.color colorswatch:only-child overlay {
-  border-radius: 0;
 }
 
 /* list buttons */
@@ -2022,7 +2017,7 @@ spinbutton:not(.vertical) entry {
   background: none;
   background-color: transparent;
   border: none;
-  border-radius: 0;
+
   box-shadow: none;
 }
 spinbutton:not(.vertical) entry:backdrop:disabled {
@@ -2037,7 +2032,7 @@ spinbutton:not(.vertical) button {
   background-image: none;
   border-style: none none none solid;
   border-color: rgba(23, 23, 23, 0);
-  border-radius: 0;
+
   box-shadow: none;
 }
 spinbutton:not(.vertical) button:dir(rtl) {
@@ -2071,10 +2066,8 @@ spinbutton:not(.vertical) button:backdrop:disabled:dir(rtl) {
   border-style: none solid none none;
 }
 spinbutton:not(.vertical) button:dir(ltr):last-child {
-  border-radius: 0;
 }
 spinbutton:not(.vertical) button:dir(rtl):first-child {
-  border-radius: 0;
 }
 .osd spinbutton:not(.vertical) button {
   border-color: transparent;
@@ -2086,7 +2079,7 @@ spinbutton:not(.vertical) button:dir(rtl):first-child {
   color: #eeeeec;
   border-style: none none none solid;
   border-color: rgba(0, 0, 0, 0.4);
-  border-radius: 0;
+
   box-shadow: none;
   -gtk-icon-shadow: 0 1px black;
 }
@@ -2131,10 +2124,8 @@ spinbutton:not(.vertical) button:dir(rtl):first-child {
   box-shadow: none;
 }
 .osd spinbutton:not(.vertical) button:dir(ltr):last-child {
-  border-radius: 0;
 }
 .osd spinbutton:not(.vertical) button:dir(rtl):first-child {
-  border-radius: 0;
 }
 spinbutton.vertical:disabled {
   color: #919190;
@@ -2150,7 +2141,6 @@ spinbutton.vertical entry {
   min-height: 32px;
   min-width: 32px;
   padding: 0;
-  border-radius: 0;
 }
 spinbutton.vertical button {
   min-height: 32px;
@@ -2158,11 +2148,9 @@ spinbutton.vertical button {
   padding: 0;
 }
 spinbutton.vertical button.up {
-  border-radius: 0;
   border-style: solid solid none solid;
 }
 spinbutton.vertical button.down {
-  border-radius: 0;
   border-style: none solid solid solid;
 }
 .osd spinbutton.vertical button:first-child {
@@ -2221,7 +2209,6 @@ spinbutton.vertical button.down {
 treeview spinbutton:not(.vertical) {
   min-height: 0;
   border-style: none;
-  border-radius: 0;
 }
 treeview spinbutton:not(.vertical) entry {
   min-height: 0;
@@ -2262,14 +2249,13 @@ toolbar {
 toolbar.osd {
   padding: 13px;
   border: none;
-  border-radius: 0;
+
   background-color: rgba(53, 53, 53, 0.7);
 }
 toolbar.osd.left,
 toolbar.osd.right,
 toolbar.osd.top,
 toolbar.osd.bottom {
-  border-radius: 0;
 }
 toolbar.horizontal separator {
   margin: 0 7px 1px 6px;
@@ -2285,7 +2271,6 @@ toolbar:not(.inline-toolbar):not(.osd) > *:not(.toggle):not(.popup) > * {
 .inline-toolbar {
   padding: 3px;
   border-width: 0 1px 1px;
-  border-radius: 0;
 }
 
 searchbar > revealer > box,
@@ -2325,7 +2310,7 @@ headerbar {
   border-width: 0 0 1px;
   border-style: solid;
   border-color: rgba(2, 2, 2, 0.5);
-  border-radius: 0;
+
   background: #171717 linear-gradient(to top, #171717, #171717);
   box-shadow: none;
   /* Darken switchbuttons for headerbars. issue #1588 */
@@ -2684,7 +2669,6 @@ headerbar.selection-mode .selection-menu .arrow {
 .tiled-left headerbar,
 .maximized headerbar,
 .fullscreen headerbar {
-  border-radius: 0;
 }
 .default-decoration.titlebar:not(headerbar),
 headerbar.default-decoration {
@@ -2711,7 +2695,7 @@ headerbar separator.titlebutton {
   margin-left: -1px;
   margin-right: -1px;
   margin-top: -1px;
-  border-radius: 0;
+
   box-shadow: none;
 }
 
@@ -2925,7 +2909,6 @@ treeview.view {
 }
 treeview.view:selected:focus,
 treeview.view:selected {
-  border-radius: 0;
 }
 treeview.view:selected:backdrop,
 treeview.view:selected {
@@ -3020,7 +3003,7 @@ treeview.view header.button.dnd {
   background-image: none;
   background-color: #94ebeb;
   border-style: none;
-  border-radius: 0;
+
   box-shadow: none;
   text-shadow: none;
   transition: none;
@@ -3036,7 +3019,7 @@ treeview.view header button:active {
   background-image: none;
   border-style: none solid solid none;
   border-color: #484848;
-  border-radius: 0;
+
   text-shadow: none;
 }
 treeview.view header button:disabled {
@@ -3080,7 +3063,6 @@ menubar > menuitem menu:dir(rtl),
 menubar > menuitem menu:dir(ltr),
 .menubar > menuitem menu:dir(rtl),
 .menubar > menuitem menu:dir(ltr) {
-  border-radius: 0;
   padding: 0;
 }
 menubar > menuitem:hover,
@@ -3095,7 +3077,6 @@ menubar > menuitem:disabled,
 }
 menubar .csd.popup decoration,
 .menubar .csd.popup decoration {
-  border-radius: 0;
 }
 
 .background.popup {
@@ -3114,7 +3095,6 @@ menu,
 .csd .menu,
 .csd .context-menu {
   border: none;
-  border-radius: 0;
 }
 menu:backdrop,
 .menu:backdrop,
@@ -3193,7 +3173,6 @@ menu > arrow,
   min-width: 16px;
   padding: 4px;
   background-color: #2f2f2f;
-  border-radius: 0;
 }
 menu > arrow.top,
 .menu > arrow.top,
@@ -3261,7 +3240,6 @@ popover.background {
 .csd popover.background,
 popover.background {
   border: 1px solid rgba(23, 23, 23, 0.5);
-  border-radius: 0;
 }
 .csd popover.background {
   background-clip: padding-box;
@@ -3412,7 +3390,6 @@ notebook > header.right > tabs > arrow.up {
 notebook > header > tabs > arrow {
   min-height: 16px;
   min-width: 16px;
-  border-radius: 0;
 }
 notebook > header > tabs > arrow:hover:not(:active):not(:backdrop) {
   background-clip: padding-box;
@@ -3594,7 +3571,7 @@ scrollbar slider {
   min-height: 8px;
   margin: -1px;
   border: 4px solid transparent;
-  border-radius: 0;
+
   background-clip: padding-box;
   background-color: #a4a4a3;
   transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -3639,7 +3616,7 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) button {
   min-height: 5px;
   background-color: #cccccc;
   background-clip: padding-box;
-  border-radius: 0;
+
   border: 1px solid black;
   -gtk-icon-source: none;
 }
@@ -3674,7 +3651,7 @@ scrollbar button {
   min-width: 12px;
   min-height: 12px;
   border-style: none;
-  border-radius: 0;
+
   transition-property: min-height, min-width, color;
   border-color: transparent;
   background-color: transparent;
@@ -3754,7 +3731,7 @@ treeview ~ scrollbar.vertical {
 switch {
   outline-offset: -4px;
   border: 1px solid rgba(23, 23, 23, 0.5);
-  border-radius: 0;
+
   color: #cccccc;
   background-color: #282828;
   text-shadow: 0 1px rgba(0, 0, 0, 0.1);
@@ -3793,7 +3770,7 @@ switch slider {
   min-width: 24px;
   min-height: 24px;
   border: 1px solid;
-  border-radius: 0;
+
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -gtk-outline-radius: 20px;
   color: #cccccc;
@@ -3859,7 +3836,7 @@ iconview.content-view.check:not(list),
   min-height: 32px;
   color: transparent;
   background-color: #fbb86c;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3876,7 +3853,7 @@ iconview.content-view.check:hover:not(list),
   min-height: 32px;
   color: transparent;
   background-color: #fbb86c;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3893,7 +3870,7 @@ iconview.content-view.check:active:not(list),
   min-height: 32px;
   color: transparent;
   background-color: #fbb86c;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3910,7 +3887,7 @@ iconview.content-view.check:backdrop:not(list),
   min-height: 32px;
   color: transparent;
   background-color: #b4b4b4;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3927,7 +3904,7 @@ iconview.content-view.check:checked:not(list),
   min-height: 32px;
   color: #eeeeec;
   background-color: #fbb86c;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3944,7 +3921,7 @@ iconview.content-view.check:checked:hover:not(list),
   min-height: 32px;
   color: #eeeeec;
   background-color: #fbb86c;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3961,7 +3938,7 @@ iconview.content-view.check:checked:active:not(list),
   min-height: 32px;
   color: #eeeeec;
   background-color: #fbb86c;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3978,7 +3955,7 @@ iconview.content-view.check:backdrop:checked:not(list),
   min-height: 32px;
   color: rgba(238, 238, 236, 0.8);
   background-color: #b4b4b4;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -4214,7 +4191,6 @@ menu menuitem radio:indeterminate:disabled {
 }
 
 check {
-  border-radius: 0;
 }
 
 check:checked {
@@ -4234,7 +4210,6 @@ check:indeterminate {
 treeview.view radio:selected:focus,
 treeview.view radio:selected,
 radio {
-  border-radius: 0;
 }
 treeview.view radio:checked:selected,
 radio:checked {
@@ -4294,7 +4269,7 @@ progressbar trough,
 scale fill,
 scale trough {
   border: 1px solid rgba(23, 23, 23, 0.5);
-  border-radius: 0;
+
   background-color: rgba(204, 204, 204, 0.3);
 }
 progressbar trough:disabled,
@@ -4343,7 +4318,7 @@ scale .osd trough:disabled {
 progressbar progress,
 scale highlight {
   border: 1px solid #237986;
-  border-radius: 0;
+
   background-color: #6acad8;
 }
 progressbar progress:disabled,
@@ -4409,7 +4384,6 @@ scale.fine-tune slider {
 scale.fine-tune fill,
 scale.fine-tune highlight,
 scale.fine-tune trough {
-  border-radius: 0;
   -gtk-outline-radius: 7px;
 }
 scale trough {
@@ -4443,7 +4417,7 @@ scale slider {
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.02), 0 1px rgba(0, 0, 0, 0.1),
     0 1px 2px rgba(0, 0, 0, 0.07);
   border: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius: 0;
+
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-property: background, border, box-shadow;
 }
@@ -4603,7 +4577,7 @@ scale.vertical.fine-tune indicator {
 scale.horizontal.marks-before:not(.marks-after) slider {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-above-dark.png"),
@@ -4623,7 +4597,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
 scale.horizontal.marks-before:not(.marks-after) slider:hover {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-above-hover-dark.png"),
@@ -4643,7 +4617,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
 scale.horizontal.marks-before:not(.marks-after) slider:active {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-above-active-dark.png"),
@@ -4663,7 +4637,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
 scale.horizontal.marks-before:not(.marks-after) slider:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-above-insensitive-dark.png"),
@@ -4683,7 +4657,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
 scale.horizontal.marks-before:not(.marks-after) slider:backdrop {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-above-backdrop-dark.png"),
@@ -4703,7 +4677,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
 scale.horizontal.marks-before:not(.marks-after) slider:backdrop:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-above-backdrop-insensitive-dark.png"),
@@ -4723,7 +4697,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
 scale.horizontal.marks-after:not(.marks-before) slider {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-below-dark.png"),
@@ -4743,7 +4717,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
 scale.horizontal.marks-after:not(.marks-before) slider:hover {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-below-hover-dark.png"),
@@ -4763,7 +4737,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
 scale.horizontal.marks-after:not(.marks-before) slider:active {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-below-active-dark.png"),
@@ -4783,7 +4757,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
 scale.horizontal.marks-after:not(.marks-before) slider:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-below-insensitive-dark.png"),
@@ -4803,7 +4777,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
 scale.horizontal.marks-after:not(.marks-before) slider:backdrop {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-below-backdrop-dark.png"),
@@ -4823,7 +4797,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
 scale.horizontal.marks-after:not(.marks-before) slider:backdrop:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-below-backdrop-insensitive-dark.png"),
@@ -4843,7 +4817,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
 scale.vertical.marks-before:not(.marks-after) slider {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-above-dark.png"),
@@ -4863,7 +4837,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune slider {
 scale.vertical.marks-before:not(.marks-after) slider:hover {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-above-hover-dark.png"),
@@ -4883,7 +4857,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune slider {
 scale.vertical.marks-before:not(.marks-after) slider:active {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-above-active-dark.png"),
@@ -4903,7 +4877,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune slider {
 scale.vertical.marks-before:not(.marks-after) slider:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-above-insensitive-dark.png"),
@@ -4923,7 +4897,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune slider {
 scale.vertical.marks-before:not(.marks-after) slider:backdrop {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-above-backdrop-dark.png"),
@@ -4943,7 +4917,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune slider {
 scale.vertical.marks-before:not(.marks-after) slider:backdrop:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-above-backdrop-insensitive-dark.png"),
@@ -4963,7 +4937,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune slider {
 scale.vertical.marks-after:not(.marks-before) slider {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-below-dark.png"),
@@ -4983,7 +4957,7 @@ scale.vertical.marks-after:not(.marks-before).fine-tune slider {
 scale.vertical.marks-after:not(.marks-before) slider:hover {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-below-hover-dark.png"),
@@ -5003,7 +4977,7 @@ scale.vertical.marks-after:not(.marks-before).fine-tune slider {
 scale.vertical.marks-after:not(.marks-before) slider:active {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-below-active-dark.png"),
@@ -5023,7 +4997,7 @@ scale.vertical.marks-after:not(.marks-before).fine-tune slider {
 scale.vertical.marks-after:not(.marks-before) slider:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-below-insensitive-dark.png"),
@@ -5043,7 +5017,7 @@ scale.vertical.marks-after:not(.marks-before).fine-tune slider {
 scale.vertical.marks-after:not(.marks-before) slider:backdrop {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-below-backdrop-dark.png"),
@@ -5063,7 +5037,7 @@ scale.vertical.marks-after:not(.marks-before).fine-tune slider {
 scale.vertical.marks-after:not(.marks-before) slider:backdrop:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-below-backdrop-insensitive-dark.png"),
@@ -5208,7 +5182,6 @@ progressbar:backdrop {
   transition: 200ms ease-out;
 }
 progressbar progress {
-  border-radius: 0;
 }
 progressbar progress.left {
   border-top-left-radius: 2px;
@@ -5233,13 +5206,12 @@ progressbar.osd {
 }
 progressbar.osd trough {
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   box-shadow: none;
 }
 progressbar.osd progress {
   border-style: none;
-  border-radius: 0;
 }
 progressbar text {
   padding: 3px;
@@ -5278,7 +5250,7 @@ levelbar:backdrop {
 levelbar trough {
   border: 1px solid;
   padding: 2px;
-  border-radius: 0;
+
   color: #cccccc;
   border-color: rgba(23, 23, 23, 0.5);
   background-color: #272727;
@@ -5293,7 +5265,6 @@ levelbar trough:backdrop {
 
 levelbar block {
   border: 1px solid;
-  border-radius: 0;
 }
 levelbar block.low {
   border-color: #fff19e;
@@ -5352,7 +5323,7 @@ frame > border,
   box-shadow: none;
   margin: 0;
   padding: 0;
-  border-radius: 0;
+
   border: 1px solid rgba(23, 23, 23, 0.5);
 }
 frame > border.flat,
@@ -5598,7 +5569,7 @@ row.activatable:selected:backdrop {
 .app-notification,
 .app-notification.frame {
   padding: 10px;
-  border-radius: 0;
+
   background-color: rgba(53, 53, 53, 0.7);
   background-image: linear-gradient(
     to bottom,
@@ -5649,7 +5620,6 @@ calendar {
   border: 1px solid rgba(23, 23, 23, 0.5);
 }
 calendar:selected {
-  border-radius: 0;
 }
 calendar.header {
   border-bottom-color: rgba(0, 0, 0, 0.1);
@@ -5704,7 +5674,7 @@ messagedialog.csd .dialog-action-area button {
   padding: 10px 14px;
   border-right-style: none;
   border-bottom-style: none;
-  border-radius: 0;
+
   -gtk-outline-radius: 0;
 }
 messagedialog.csd .dialog-action-area button:first-child {
@@ -5845,7 +5815,7 @@ button.sidebar-button {
   margin-top: 3px;
   margin-bottom: 3px;
   padding: 0;
-  border-radius: 0;
+
   -gtk-outline-radius: 100%;
 }
 button.sidebar-button:not(:hover):not(:active) > image,
@@ -6122,7 +6092,7 @@ infobar.error *:link {
 tooltip {
   padding: 4px;
   /* not working */
-  border-radius: 0;
+
   box-shadow: none;
   text-shadow: 0 1px black;
 }
@@ -6240,10 +6210,8 @@ colorswatch overlay:backdrop:hover {
 }
 
 colorswatch#add-color-button {
-  border-radius: 0;
 }
 colorswatch#add-color-button:only-child {
-  border-radius: 0;
 }
 colorswatch#add-color-button overlay {
   color: #cccccc;
@@ -6289,14 +6257,11 @@ row:selected colorswatch {
 }
 
 colorswatch#editor-color-sample {
-  border-radius: 0;
 }
 colorswatch#editor-color-sample overlay {
-  border-radius: 0;
 }
 
 colorchooser .popover.osd {
-  border-radius: 0;
 }
 
 /********
@@ -6314,19 +6279,16 @@ colorchooser .popover.osd {
 
 .osd .scale-popup button.flat {
   border-style: none;
-  border-radius: 0;
 }
 
 .scale-popup button:hover {
   background-color: rgba(204, 204, 204, 0.1);
-  border-radius: 0;
 }
 
 /**********************
  * Window Decorations *
  *********************/
 decoration {
-  border-radius: 0;
   border-width: 0px;
   box-shadow: none;
   margin: 10px;
@@ -6338,7 +6300,6 @@ decoration:backdrop {
 }
 .maximized decoration,
 .fullscreen decoration {
-  border-radius: 0;
   box-shadow: none;
 }
 .tiled decoration,
@@ -6346,7 +6307,6 @@ decoration:backdrop {
 .tiled-right decoration,
 .tiled-bottom decoration,
 .tiled-left decoration {
-  border-radius: 0;
   box-shadow: none;
 }
 .tiled decoration:backdrop,
@@ -6366,15 +6326,12 @@ decoration:backdrop {
   box-shadow: none;
 }
 .csd.popup decoration {
-  border-radius: 0;
   box-shadow: none;
 }
 tooltip.csd decoration {
-  border-radius: 0;
   box-shadow: none;
 }
 messagedialog.csd decoration {
-  border-radius: 0;
   box-shadow: none;
 }
 .solid-csd decoration {
@@ -6382,7 +6339,7 @@ messagedialog.csd decoration {
   padding: 4px;
   background-color: rgba(23, 23, 23, 0.5);
   border: solid 1px rgba(23, 23, 23, 0.5);
-  border-radius: 0;
+
   box-shadow: none;
 }
 .solid-csd decoration:backdrop {
@@ -6394,7 +6351,6 @@ button.titlebutton {
   -gtk-icon-shadow: none;
 }
 button.titlebutton:not(.appmenu) {
-  border-radius: 0;
   padding: 6px;
   margin: 0 2px;
   min-width: 0;
@@ -6640,7 +6596,7 @@ cursor-handle.insertion-cursor:active:dir(rtl) {
   background-color: #272727;
   border: 1px solid;
   border-color: rgba(23, 23, 23, 0.5);
-  border-radius: 0;
+
   box-shadow: none;
   font-size: smaller;
 }
@@ -6699,7 +6655,7 @@ button.emoji-section {
   border-color: transparent;
   border-width: 3px;
   border-style: none none solid;
-  border-radius: 0;
+
   margin: 2px 4px 2px 4px;
   padding: 3px 0 0;
   min-width: 32px;
@@ -6742,7 +6698,6 @@ popover.emoji-picker .emoji {
 }
 popover.emoji-picker .emoji :hover {
   background: #94ebeb;
-  border-radius: 0;
 }
 
 popover.emoji-completion arrow {
@@ -6770,7 +6725,6 @@ headerbar .subtitle,
  ***********/
 
 button.osd {
-  border-radius: 0;
 }
 
 button.osd.suggested-action {
@@ -6923,11 +6877,9 @@ button.osd.destructive-action:disabled:checked {
  * Toolbars *
  ************/
 toolbar.osd {
-  border-radius: 0;
 }
 
 .inline-toolbar {
-  border-radius: 0;
 }
 
 /***************
@@ -7076,7 +7028,7 @@ list.tweak-categories separator {
 }
 .nautilus-window .path-buttons-box {
   border: 1px solid;
-  border-radius: 0;
+
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #f7f7f7;
   outline-color: rgba(247, 247, 247, 0.3);
@@ -7116,7 +7068,7 @@ list.tweak-categories separator {
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.02),
     0 1px 2px rgba(0, 0, 0, 0.07);
   margin: 6px 0px 6px 0px;
-  border-radius: 0;
+
   border-width: 1px;
   border-style: solid;
   transition: 200ms ease-out;
@@ -7137,7 +7089,6 @@ list.tweak-categories separator {
   background: none;
 }
 .nautilus-window .nautilus-path-bar > scrolledwindow undershoot.left {
-  border-radius: 0;
   background: linear-gradient(
     to right,
     rgba(49, 49, 49, 0.9) 4px,
@@ -7160,7 +7111,7 @@ list.tweak-categories separator {
 .nautilus-window .nautilus-path-bar .path-buttons-box button {
   margin: 0px;
   box-shadow: none;
-  border-radius: 0;
+
   border-width: 0px;
   -gtk-icon-shadow: none;
 }
@@ -7190,7 +7141,7 @@ list.tweak-categories separator {
   background: rgba(24, 24, 24, 0.9);
   color: #f7f7f7;
   border: none;
-  border-radius: 0;
+
   /* stop upload folder button */
 }
 .nautilus-window paned box.floating-bar button.circular.flat.image-button,
@@ -7244,7 +7195,6 @@ list.tweak-categories separator {
 scrolledwindow widget.view:selected {
   background-color: rgba(255, 255, 255, 0.1);
   background-image: image(#94ebeb);
-  border-radius: 0;
 }
 .nautilus-window .nautilus-list-view .view,
 .nautilus-window .nautilus-list-view iconview {
@@ -7339,7 +7289,6 @@ headerbar .nautilus-window .nautilus-canvas-item.subtitle:selected,
 }
 
 .list-box-app-row {
-  border-radius: 0;
   border-color: rgba(23, 23, 23, 0.5);
   border-style: none solid solid solid;
   border-width: 0 1px 1px 1px;
@@ -7391,7 +7340,6 @@ box > list row.list-box-app-row {
   border: 1px solid rgba(23, 23, 23, 0.5);
   border-top-style: none;
   padding: 4px 8px;
-  border-radius: 0;
 }
 .gedit-search-slider:backdrop {
   background-color: #353535;
@@ -7461,7 +7409,6 @@ headerbar button image ~ window decoration ~ menu separator {
   box.vertical
   treeview.view.places-treeview {
   background-image: image(#313131);
-  border-radius: 0;
 }
 .nemo-window
   .sidebar
@@ -7593,7 +7540,6 @@ headerbar button image ~ window decoration ~ menu separator {
 * GNOME ToDo *
 **************/
 .org-gnome-Todo taskrow.activatable.new-task-row button.popup.toggle {
-  border-radius: 0;
   border: none;
   border-left: 1px solid rgba(23, 23, 23, 0.5);
   padding-left: 10px;
@@ -7623,7 +7569,6 @@ headerbar button image ~ window decoration ~ menu separator {
 #MozillaGtkWidget.background menu,
 #MozillaGtkWidget.background .menu,
 #MozillaGtkWidget.background .context-menu {
-  border-radius: 0;
 }
 
 #MozillaGtkWidget.background *:selected {
@@ -11846,7 +11791,6 @@ paned.titlebar > separator:backdrop {
 }
 
 button.titlebutton {
-  border-radius: 0;
   min-height: 24px;
   min-width: 24px;
   padding: 2px;
@@ -11943,137 +11887,17 @@ button.titlebutton:not(.close):not(.appmenu):active:active {
   );
 }
 button.titlebutton.close {
-  color: #f7f7f7;
-  background-image: -gtk-gradient(
-    radial,
-    center center,
-    0,
-    center center,
-    0.3571428571,
-    to(#f28c2a),
-    to(transparent)
-  );
+  color: #e100ff;
+  border: 1px solid #e100ff;
 }
-button.titlebutton.close:hover {
-  background-image: -gtk-gradient(
-    radial,
-    center center,
-    0,
-    center center,
-    0.3571428571,
-    to(rgba(255, 255, 255, 0.2)),
-    to(transparent)
-  );
-}
-button.titlebutton.close:hover:backdrop {
-  background-image: -gtk-gradient(
-    radial,
-    center center,
-    0,
-    center center,
-    0.3571428571,
-    to(rgba(255, 255, 255, 0.1)),
-    to(transparent)
-  );
-}
-button.titlebutton.close:active {
-  background-image: -gtk-gradient(
-    radial,
-    center center,
-    0,
-    center center,
-    0.3571428571,
-    to(rgba(255, 255, 255, 0.1)),
-    to(transparent)
-  );
-}
-button.titlebutton.close:hover {
-  background-image: -gtk-gradient(
-    radial,
-    center center,
-    0,
-    center center,
-    0.3571428571,
-    to(#f28c2a),
-    to(transparent)
-  );
-}
-button.titlebutton.close:hover:hover {
-  background-image: -gtk-gradient(
-    radial,
-    center center,
-    0,
-    center center,
-    0.3571428571,
-    to(rgba(255, 255, 255, 0.2)),
-    to(transparent)
-  );
-}
-button.titlebutton.close:hover:hover:backdrop {
-  background-image: -gtk-gradient(
-    radial,
-    center center,
-    0,
-    center center,
-    0.3571428571,
-    to(rgba(255, 255, 255, 0.1)),
-    to(transparent)
-  );
-}
-button.titlebutton.close:hover:active {
-  background-image: -gtk-gradient(
-    radial,
-    center center,
-    0,
-    center center,
-    0.3571428571,
-    to(rgba(255, 255, 255, 0.1)),
-    to(transparent)
-  );
-}
-button.titlebutton.close:active {
-  background-image: -gtk-gradient(
-    radial,
-    center center,
-    0,
-    center center,
-    0.3571428571,
-    to(#f28c2a),
-    to(transparent)
-  );
-}
-button.titlebutton.close:active:hover {
-  background-image: -gtk-gradient(
-    radial,
-    center center,
-    0,
-    center center,
-    0.3571428571,
-    to(rgba(255, 255, 255, 0.2)),
-    to(transparent)
-  );
-}
-button.titlebutton.close:active:hover:backdrop {
-  background-image: -gtk-gradient(
-    radial,
-    center center,
-    0,
-    center center,
-    0.3571428571,
-    to(rgba(255, 255, 255, 0.1)),
-    to(transparent)
-  );
-}
+button.titlebutton.close:hover,
+button.titlebutton.close:active,
+button.titlebutton.close:hover:backdrop,
+button.titlebutton.close:active:hover,
+button.titlebutton.close:active:hover:backdrop,
 button.titlebutton.close:active:active {
-  background-image: -gtk-gradient(
-    radial,
-    center center,
-    0,
-    center center,
-    0.3571428571,
-    to(rgba(255, 255, 255, 0.1)),
-    to(transparent)
-  );
+  border: 1px solid #ff1f1f;
+  color: #ff1f1f;
 }
 
 headerbar button.titlebutton.appmenu.popup.toggle,
@@ -12218,7 +12042,7 @@ treeview.view:selected {
 switch {
   outline-offset: -4px;
   border: 0px solid transparent;
-  border-radius: 0;
+
   color: #cccccc;
   background-color: rgba(204, 204, 204, 0.4);
   box-shadow: none;
@@ -12267,7 +12091,7 @@ switch slider {
   min-width: 20px;
   min-height: 20px;
   border: 0px solid transparent;
-  border-radius: 0;
+
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   box-shadow: none;
   -gtk-outline-radius: 9999px;
@@ -12362,7 +12186,7 @@ scale slider {
   border: 1px solid #94ebeb;
   background-image: none;
   background-color: #94ebeb;
-  border-radius: 0;
+
   box-shadow: none;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-property: background, border, box-shadow;
@@ -12371,7 +12195,7 @@ scale slider:backdrop {
   border: 1px solid #94ebeb;
   background-image: none;
   background-color: #6ca0a0;
-  border-radius: 0;
+
   box-shadow: none;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-property: background, border, box-shadow;
@@ -12435,7 +12259,6 @@ row:selected scale slider:disabled {
  * File credits: Ian Santopietro <isantop@gmail.com>
  */
 .avatar {
-  border-radius: 0;
   box-shadow: none;
 }
 
@@ -12525,7 +12348,7 @@ button.back-button.text-button:dir(rtl) {
 .card {
   transition: all 300ms cubic-bezier(0.25, 0.8, 0.25, 1);
   border: none;
-  border-radius: 0;
+
   background-color: #272727;
   box-shadow: none;
 }
@@ -12545,7 +12368,7 @@ button.back-button.text-button:dir(rtl) {
 .storage-bar .trough {
   padding: 8px 6px;
   border: none;
-  border-radius: 0;
+
   background-image: none;
   box-shadow: none;
 }
@@ -12557,18 +12380,15 @@ button.back-button.text-button:dir(rtl) {
   border-right-width: 0;
   border-bottom-width: 1px;
   border-left-width: 0;
-  border-radius: 0;
+
   border-bottom-color: rgba(0, 0, 0, 0.5);
   background-color: #010101;
 }
 .storage-bar .fill-block:first-child {
-  border-radius: 0;
 }
 .storage-bar .fill-block:last-child {
-  border-radius: 0;
 }
 .storage-bar .fill-block:only-child {
-  border-radius: 0;
 }
 .storage-bar .fill-block image {
   -gtk-icon-style: symbolic;
@@ -12630,7 +12450,6 @@ button.back-button.text-button:dir(rtl) {
 
 .storage-bar .legend {
   padding: 8px;
-  border-radius: 0;
 }
 .storage-bar .legend image {
   color: black;
@@ -12638,7 +12457,7 @@ button.back-button.text-button:dir(rtl) {
 
 .storage-bar .disk-bar {
   padding: 0;
-  border-radius: 0;
+
   background-color: #ada29e;
 }
 
@@ -12779,11 +12598,9 @@ headerbar .welcome .subtitle,
  */
 window.rounded,
 window.rounded actionbar {
-  border-radius: 0;
 }
 window.rounded decoration,
 window.rounded actionbar decoration {
-  border-radius: 0;
 }
 
 window.flat headerbar {
@@ -13226,7 +13043,6 @@ leaflet > outline {
 }
 
 avatar {
-  border-radius: 0;
   -gtk-outline-radius: 9999px;
   font-weight: bold;
 }
@@ -13507,7 +13323,6 @@ popover.combo list {
 }
 
 window.csd.unified:not(.solid-csd) headerbar {
-  border-radius: 0;
 }
 
 .windowhandle,
@@ -13600,7 +13415,6 @@ viewswitcher button {
 }
 
 viewswitcher button {
-  border-radius: 0;
   border-top: 0;
   border-bottom: 0;
   box-shadow: none;
@@ -13823,7 +13637,6 @@ window.csd.unified:not(.solid-csd):not(.fullscreen):not(.tiled):not(
     .tiled-top
   ):not(.tiled-bottom):not(.tiled-left):not(.tiled-right):not(.maximized)
   > decoration-overlay {
-  border-radius: 0;
 }
 
 window.csd.unified:not(.solid-csd):not(.fullscreen) leaflet headerbar {
@@ -13960,7 +13773,6 @@ tabbar .end-action:backdrop {
 tabbar .start-action button,
 tabbar .end-action button {
   border: none;
-  border-radius: 0;
 }
 
 tabbar .start-action:dir(ltr),
@@ -14010,7 +13822,7 @@ tabbar tab .tab-indicator,
   margin: 0;
   min-width: 24px;
   min-height: 24px;
-  border-radius: 0;
+
   border: none;
   box-shadow: none;
   -gtk-icon-shadow: none;
@@ -14028,6 +13840,10 @@ tabbar tab .tab-indicator.clickable:active,
 .tab-drag-icon tab .tab-close-button:active,
 .tab-drag-icon tab .tab-indicator.clickable:active {
   background: alpha(black, 0.2);
+}
+
+* {
+  border-radius: 0;
 }
 
 /* GTK NAMED COLORS

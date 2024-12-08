@@ -50,7 +50,6 @@ iconview:selected:focus,
 iconview:selected,
 textview > text:selected:focus,
 textview > text:selected {
-  border-radius: 0;
 }
 
 textview:drop(active) {
@@ -203,7 +202,6 @@ window.assistant .sidebar > label {
 
 window.assistant .sidebar > label.highlight {
   background-color: #e8e6e3;
-  border-radius: 0;
 }
 
 window.aboutdialog image.large-icons {
@@ -306,7 +304,7 @@ entry {
   padding-left: 8px;
   padding-right: 8px;
   border: 1px solid;
-  border-radius: 0;
+
   border-spacing: 6px;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #000;
@@ -355,7 +353,6 @@ entry.flat {
   padding: 2px;
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0;
 }
 spinbutton.vertical > text:focus-within > placeholder,
 spinbutton:focus-within:not(.vertical) > placeholder,
@@ -487,7 +484,7 @@ spinbutton:not(.vertical) progress > trough > progress,
 entry progress > trough > progress {
   background-color: transparent;
   background-image: none;
-  border-radius: 0;
+
   border-width: 0 0 2px;
   border-color: #63b1bc;
   border-style: solid;
@@ -733,7 +730,6 @@ treeview entry:focus-within:dir(ltr) {
 
 treeview entry.flat,
 treeview entry {
-  border-radius: 0;
   background-image: none;
   background-color: #fff;
 }
@@ -778,7 +774,7 @@ button {
   min-width: 16px;
   padding: 4px 9px;
   border: 1px solid;
-  border-radius: 0;
+
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #2b2928;
@@ -1015,7 +1011,7 @@ button.osd {
   min-width: 26px;
   min-height: 32px;
   color: #ededed;
-  border-radius: 0;
+
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ededed;
   outline-color: #ffad00;
@@ -1033,7 +1029,7 @@ button.osd.image-button {
 
 button.osd.image-button:only-child {
   margin: 4px;
-  border-radius: 0;
+
   box-shadow: none;
 }
 
@@ -1418,7 +1414,6 @@ button.circular {
   min-width: 32px;
   min-height: 32px;
   padding: 0;
-  border-radius: 0;
 }
 menubutton.circular button label,
 button.circular label {
@@ -1625,7 +1620,6 @@ modelbutton.flat {
   min-height: 26px;
   padding-left: 5px;
   padding-right: 5px;
-  border-radius: 0;
 }
 modelbutton.flat:hover {
   background-color: #e8e6e3;
@@ -1699,7 +1693,6 @@ button.color > colorswatch:only-child {
 }
 button.color > colorswatch:only-child,
 button.color > colorswatch:only-child > overlay {
-  border-radius: 0;
 }
 .osd button.color > colorswatch:only-child {
   box-shadow: none;
@@ -1887,7 +1880,7 @@ spinbutton:not(.vertical) > text {
   background: none;
   background-color: transparent;
   border: none;
-  border-radius: 0;
+
   box-shadow: none;
   padding: 6px;
 }
@@ -1905,7 +1898,7 @@ spinbutton:not(.vertical) > button.image-button.down:not(.flat) {
   background-image: none;
   border-style: none none none solid;
   border-color: rgba(205, 199, 194, 0.3);
-  border-radius: 0;
+
   box-shadow: none;
 }
 spinbutton:not(.vertical) > button.image-button.up:not(.flat):dir(rtl),
@@ -1931,13 +1924,11 @@ spinbutton:not(.vertical)
   > button.image-button.up:not(.flat):dir(ltr):last-child,
 spinbutton:not(.vertical)
   > button.image-button.down:not(.flat):dir(ltr):last-child {
-  border-radius: 0;
 }
 spinbutton:not(.vertical)
   > button.image-button.up:not(.flat):dir(rtl):first-child,
 spinbutton:not(.vertical)
   > button.image-button.down:not(.flat):dir(rtl):first-child {
-  border-radius: 0;
 }
 .osd spinbutton:not(.vertical) > button.image-button.up:not(.flat),
 .osd spinbutton:not(.vertical) > button.image-button.down:not(.flat) {
@@ -1948,7 +1939,7 @@ spinbutton:not(.vertical)
   color: #ededed;
   border-style: none none none solid;
   border-color: rgba(0, 0, 0, 0.4);
-  border-radius: 0;
+
   box-shadow: none;
   -gtk-icon-shadow: 0 1px black;
 }
@@ -1985,7 +1976,6 @@ spinbutton:not(.vertical)
 .osd
   spinbutton:not(.vertical)
   > button.image-button.down:not(.flat):dir(ltr):last-child {
-  border-radius: 0;
 }
 .osd
   spinbutton:not(.vertical)
@@ -1993,7 +1983,6 @@ spinbutton:not(.vertical)
 .osd
   spinbutton:not(.vertical)
   > button.image-button.down:not(.flat):dir(rtl):first-child {
-  border-radius: 0;
 }
 spinbutton.vertical:disabled {
   color: #929595;
@@ -2006,7 +1995,6 @@ spinbutton.vertical > text {
   min-height: 32px;
   min-width: 32px;
   padding: 0;
-  border-radius: 0;
 }
 spinbutton.vertical > text > block-cursor {
   color: #fff;
@@ -2064,7 +2052,6 @@ spinbutton.vertical > button.down {
 treeview spinbutton:not(.vertical) {
   min-height: 0;
   border-style: none;
-  border-radius: 0;
 }
 treeview spinbutton:not(.vertical) > text {
   min-height: 0;
@@ -2145,7 +2132,7 @@ toolbar {
 toolbar.osd {
   padding: 13px;
   border: none;
-  border-radius: 0;
+
   background-color: rgba(51, 48, 47, 0.7);
 }
 .toolbar.osd.left,
@@ -2156,7 +2143,6 @@ toolbar.osd.left,
 toolbar.osd.right,
 toolbar.osd.top,
 toolbar.osd.bottom {
-  border-radius: 0;
 }
 
 .toolbar.horizontal > separator,
@@ -2209,24 +2195,20 @@ infobar.error > revealer > box {
 
 infobar .close,
 searchbar .close {
-  border-color: transparent;
+  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid #e100ff;
+  color: #e100ff;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
   min-width: 16px;
   min-height: 16px;
   padding: 4px;
-  border-radius: 0;
 }
 infobar .close:hover,
 searchbar .close:hover {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #2b2928;
-  border-color: #d8d4d0;
-  border-top-color: #e4e1de;
-  border-bottom-color: #cdc7c2;
-  background-image: image(#fbfbfb);
-  box-shadow: none;
+  border-color: #ff1f1f;
+  color: #ff1f1f;
 }
 
 /*****************
@@ -2244,7 +2226,6 @@ windowcontrols:not(.empty).end:dir(ltr) {
   margin-left: 7px;
 }
 windowcontrols button {
-  border-radius: 0;
   padding: 6px;
   margin: 0 2px;
   min-width: 0;
@@ -2274,7 +2255,7 @@ headerbar {
   border-width: 0 0 1px;
   border-style: solid;
   border-color: #bfb8b1;
-  border-radius: 0;
+
   background: #dddddd;
   /* Darken switchbuttons for headerbars. issue #1588 */
 }
@@ -2329,7 +2310,6 @@ headerbar button.toggle:checked:backdrop {
 .tiled-bottom headerbar,
 .maximized headerbar,
 .fullscreen headerbar {
-  border-radius: 0;
 }
 .default-decoration.titlebar:not(headerbar),
 headerbar.default-decoration {
@@ -2361,7 +2341,7 @@ headerbar.default-decoration windowcontrols menubutton button {
   margin-left: -1px;
   margin-right: -1px;
   margin-top: -1px;
-  border-radius: 0;
+
   box-shadow: none;
 }
 
@@ -2478,7 +2458,6 @@ columnview.view:selected:focus,
 columnview.view:selected,
 treeview.view:selected:focus,
 treeview.view:selected {
-  border-radius: 0;
   outline-color: rgba(255, 255, 255, 0.8);
 }
 columnview.view:disabled,
@@ -2632,7 +2611,7 @@ treeview.view header.button.dnd {
   background-image: none;
   background-color: #63b1bc;
   border-style: none;
-  border-radius: 0;
+
   box-shadow: none;
   text-shadow: none;
   transition: none;
@@ -2652,7 +2631,7 @@ treeview.view > header > button:active {
   background-image: none;
   border-style: none none solid solid;
   border-color: #d7d2ce;
-  border-radius: 0;
+
   text-shadow: none;
 }
 columnview.view > header > button:disabled,
@@ -2684,7 +2663,6 @@ popover.background:backdrop {
 }
 popover.background > contents {
   padding: 8px;
-  border-radius: 0;
 }
 popover.background > contents > list,
 popover.background > contents > .view,
@@ -2817,7 +2795,6 @@ popover.menu modelbutton {
   min-height: 30px;
   min-width: 40px;
   padding: 0 12px;
-  border-radius: 0;
 }
 popover.menu modelbutton:selected {
   color: #000;
@@ -2855,7 +2832,6 @@ menubar > item popover.menu popover.menu {
 }
 menubar > item popover.menu.background popover.menu.background > contents {
   margin: 0;
-  border-radius: 0;
 }
 
 /*************
@@ -2977,7 +2953,6 @@ notebook > header.right > tabs > arrow.up {
 notebook > header > tabs > arrow {
   min-height: 16px;
   min-width: 16px;
-  border-radius: 0;
 }
 notebook > header > tabs > arrow:hover:not(:active):not(:backdrop) {
   background-clip: padding-box;
@@ -3131,7 +3106,7 @@ scrollbar > range > trough > slider {
   min-height: 8px;
   margin: -1px;
   border: 4px solid transparent;
-  border-radius: 0;
+
   background-clip: padding-box;
   background-color: #7c7b7a;
   transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -3208,7 +3183,7 @@ switch {
   font-weight: bold;
   font-size: smaller;
   border: 1px solid #cdc7c2;
-  border-radius: 0;
+
   color: #2b2928;
   background-color: #e1dedb;
   transition: outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
@@ -3253,7 +3228,7 @@ switch > slider {
   min-height: 24px;
   border: 1px solid;
   border-color: #cdc7c2;
-  border-radius: 0;
+
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 switch > image {
@@ -3298,7 +3273,7 @@ iconview.content-view.check:not(list),
   min-height: 32px;
   color: transparent;
   background-color: #ffad00;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3315,7 +3290,7 @@ iconview.content-view.check:hover:not(list),
   min-height: 32px;
   color: transparent;
   background-color: #ffad00;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3332,7 +3307,7 @@ iconview.content-view.check:active:not(list),
   min-height: 32px;
   color: transparent;
   background-color: #ffad00;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3349,7 +3324,7 @@ iconview.content-view.check:backdrop:not(list),
   min-height: 32px;
   color: transparent;
   background-color: gray;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3366,7 +3341,7 @@ iconview.content-view.check:checked:not(list),
   min-height: 32px;
   color: #ededed;
   background-color: #ffad00;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3383,7 +3358,7 @@ iconview.content-view.check:checked:hover:not(list),
   min-height: 32px;
   color: #ededed;
   background-color: #ffad00;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3400,7 +3375,7 @@ iconview.content-view.check:checked:active:not(list),
   min-height: 32px;
   color: #ededed;
   background-color: #ffad00;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3417,7 +3392,7 @@ iconview.content-view.check:backdrop:checked:not(list),
   min-height: 32px;
   color: rgba(237, 237, 237, 0.8);
   background-color: gray;
-  border-radius: 0;
+
   background-image: none;
   transition: 200ms;
   box-shadow: none;
@@ -3428,7 +3403,7 @@ iconview.content-view.check:backdrop:checked:not(list),
 
 checkbutton {
   border-spacing: 4px;
-  border-radius: 0;
+
   transition: outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
     outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-property: outline, outline-width, outline-offset, outline-color;
@@ -3569,7 +3544,6 @@ row:selected radio {
 }
 
 check {
-  border-radius: 0;
   -gtk-icon-size: 14px;
 }
 
@@ -3590,7 +3564,6 @@ check:indeterminate {
 treeview.view radio:selected:focus,
 treeview.view radio:selected,
 radio {
-  border-radius: 0;
   -gtk-icon-size: 14px;
 }
 treeview.view radio:checked:selected,
@@ -3624,7 +3597,7 @@ progressbar > trough,
 scale > trough > fill,
 scale > trough {
   border: 1px solid #e1dedb;
-  border-radius: 0;
+
   background-color: #e1dedb;
 }
 headerbar row:selected scale > trough,
@@ -3667,7 +3640,7 @@ row:selected scale > trough > highlight,
 progressbar > trough > progress,
 scale > trough > highlight {
   border: 1px solid #63b1bc;
-  border-radius: 0;
+
   background-color: #63b1bc;
 }
 row:selected scale > trough > fill:disabled,
@@ -3743,7 +3716,6 @@ scale.fine-tune > trough > slider {
 scale.fine-tune > trough > fill,
 scale.fine-tune > trough > highlight,
 scale.fine-tune > trough {
-  border-radius: 0;
 }
 scale > trough > fill:disabled {
   border-color: transparent;
@@ -3765,7 +3737,7 @@ scale > trough > slider {
   box-shadow: none;
   border-width: 1px;
   border-style: solid;
-  border-radius: 0;
+
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-property: background, border, box-shadow;
 }
@@ -3895,7 +3867,7 @@ scale.vertical.fine-tune > marks indicator {
 scale.horizontal.marks-before:not(.marks-after) > trough > slider {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-above.png"),
@@ -3915,7 +3887,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune > trough > slider {
 scale.horizontal.marks-before:not(.marks-after) > trough > slider:hover {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-above-hover.png"),
@@ -3935,7 +3907,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune > trough > slider {
 scale.horizontal.marks-before:not(.marks-after) > trough > slider:active {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-above-active.png"),
@@ -3955,7 +3927,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune > trough > slider {
 scale.horizontal.marks-before:not(.marks-after) > trough > slider:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-above-insensitive.png"),
@@ -3975,7 +3947,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune > trough > slider {
 scale.horizontal.marks-after:not(.marks-before) > trough > slider {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-below.png"),
@@ -3995,7 +3967,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune > trough > slider {
 scale.horizontal.marks-after:not(.marks-before) > trough > slider:hover {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-below-hover.png"),
@@ -4015,7 +3987,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune > trough > slider {
 scale.horizontal.marks-after:not(.marks-before) > trough > slider:active {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-below-active.png"),
@@ -4035,7 +4007,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune > trough > slider {
 scale.horizontal.marks-after:not(.marks-before) > trough > slider:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-horz-scale-has-marks-below-insensitive.png"),
@@ -4055,7 +4027,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune > trough > slider {
 scale.vertical.marks-before:not(.marks-after) > trough > slider {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-above.png"),
@@ -4075,7 +4047,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune > trough > slider {
 scale.vertical.marks-before:not(.marks-after) > trough > slider:hover {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-above-hover.png"),
@@ -4095,7 +4067,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune > trough > slider {
 scale.vertical.marks-before:not(.marks-after) > trough > slider:active {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-above-active.png"),
@@ -4115,7 +4087,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune > trough > slider {
 scale.vertical.marks-before:not(.marks-after) > trough > slider:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-above-insensitive.png"),
@@ -4135,7 +4107,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune > trough > slider {
 scale.vertical.marks-after:not(.marks-before) > trough > slider {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-below.png"),
@@ -4155,7 +4127,7 @@ scale.vertical.marks-after:not(.marks-before).fine-tune > trough > slider {
 scale.vertical.marks-after:not(.marks-before) > trough > slider:hover {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-below-hover.png"),
@@ -4175,7 +4147,7 @@ scale.vertical.marks-after:not(.marks-before).fine-tune > trough > slider {
 scale.vertical.marks-after:not(.marks-before) > trough > slider:active {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-below-active.png"),
@@ -4195,7 +4167,7 @@ scale.vertical.marks-after:not(.marks-before).fine-tune > trough > slider {
 scale.vertical.marks-after:not(.marks-before) > trough > slider:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   background-image: -gtk-scaled(
     url("assets/slider-vert-scale-has-marks-below-insensitive.png"),
@@ -4344,7 +4316,6 @@ progressbar.vertical > trough > progress {
 progressbar > trough > progress {
   /* share most of scales' */
   /* override insensitive that is specific to progress */
-  border-radius: 0;
 }
 progressbar > trough > progress:disabled {
   background-color: #929595;
@@ -4373,13 +4344,12 @@ progressbar.osd {
 }
 progressbar.osd > trough {
   border-style: none;
-  border-radius: 0;
+
   background-color: transparent;
   box-shadow: none;
 }
 progressbar.osd > trough > progress {
   border-style: none;
-  border-radius: 0;
 }
 progressbar > trough.empty > progress {
   all: unset;
@@ -4390,35 +4360,27 @@ progressbar > trough.empty > progress {
  *************/
 levelbar.horizontal trough > block {
   min-height: 9px;
-  border-radius: 0;
 }
 levelbar.horizontal trough > block:dir(rtl) {
-  border-radius: 0;
 }
 levelbar.horizontal trough > block:dir(ltr) {
-  border-radius: 0;
 }
 levelbar.horizontal trough > block.empty,
 levelbar.horizontal trough > block.full {
-  border-radius: 0;
 }
 
 levelbar.horizontal.discrete trough > block {
   min-height: 2px;
   margin: 1px;
   min-width: 24px;
-  border-radius: 0;
 }
 levelbar.horizontal.discrete trough > block:first-child {
-  border-radius: 0;
 }
 levelbar.horizontal.discrete trough > block:last-child {
-  border-radius: 0;
 }
 
 levelbar.vertical trough > block {
   min-width: 9px;
-  border-radius: 0;
 }
 
 levelbar.vertical.discrete > trough > block {
@@ -4480,7 +4442,6 @@ frame,
 }
 
 frame {
-  border-radius: 0;
 }
 frame > label {
   margin: 4px;
@@ -4719,7 +4680,7 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
 .app-notification {
   padding: 10px;
   border-spacing: 10px;
-  border-radius: 0;
+
   background-color: rgba(51, 48, 47, 0.7);
   background-image: linear-gradient(
     to bottom,
@@ -4767,7 +4728,6 @@ expander-widget:focus:focus-visible > box > title {
 expander-widget > box > title {
   transition: outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
     outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  border-radius: 0;
 }
 expander-widget > box > title:hover > expander {
   color: #7a7572;
@@ -4798,7 +4758,6 @@ calendar > header > button {
   border: none;
   box-shadow: none;
   background: none;
-  border-radius: 0;
 }
 calendar > header > button:backdrop {
   background: none;
@@ -4819,7 +4778,6 @@ calendar > grid > label.day-number {
   padding: 4px;
 }
 calendar > grid > label.day-number:selected {
-  border-radius: 0;
 }
 calendar > grid > label.day-number.other-month {
   color: alpha(currentColor, 0.3);
@@ -4853,7 +4811,7 @@ window.dialog.message.csd.background {
 
 window.dialog.message.csd .dialog-action-area button {
   padding: 10px 14px;
-  border-radius: 0;
+
   border-left-style: solid;
   border-right-style: none;
   border-bottom-style: none;
@@ -4941,7 +4899,7 @@ stacksidebar row.needs-attention > label {
 }
 stacksidebar row:selected {
   background-color: #e8e6e3;
-  border-radius: 0;
+
   color: #2b2928;
 }
 stacksidebar row:selected:hover:dir(ltr),
@@ -4969,7 +4927,7 @@ separator.sidebar {
 .navigation-sidebar > row {
   min-height: 36px;
   padding: 0 8px;
-  border-radius: 0;
+
   margin: 0 4px 2px;
   transition-property: outline, outline-width, outline-offset, outline-color;
   transition-duration: 300ms;
@@ -5032,7 +4990,6 @@ button.sidebar-button {
   margin-top: 3px;
   margin-bottom: 3px;
   padding: 0;
-  border-radius: 0;
 }
 placessidebar .navigation-sidebar > row:selected:active {
   box-shadow: none;
@@ -5134,7 +5091,6 @@ video {
 video image.osd {
   min-width: 64px;
   min-height: 64px;
-  border-radius: 0;
 }
 
 /************
@@ -5142,7 +5098,7 @@ video image.osd {
  ************/
 tooltip {
   padding: 6px 10px;
-  border-radius: 0;
+
   box-shadow: none;
 }
 tooltip.background {
@@ -5245,10 +5201,8 @@ colorswatch.activatable:hover > overlay {
     inset 0 -1px rgba(0, 0, 0, 0.2);
 }
 colorswatch#add-color-button {
-  border-radius: 0;
 }
 colorswatch#add-color-button:only-child {
-  border-radius: 0;
 }
 colorswatch#add-color-button > overlay {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -5278,10 +5232,8 @@ row:selected colorswatch {
   box-shadow: none;
 }
 colorswatch#editor-color-sample {
-  border-radius: 0;
 }
 colorswatch#editor-color-sample > overlay {
-  border-radius: 0;
 }
 
 plane {
@@ -5302,7 +5254,6 @@ plane:focus:focus-visible {
 }
 
 colorchooser .popover.osd {
-  border-radius: 0;
 }
 
 /********
@@ -5317,7 +5268,7 @@ colorchooser .popover.osd {
 .content-view .tile {
   margin: 2px;
   background-color: transparent;
-  border-radius: 0;
+
   padding: 0;
 }
 .content-view .tile:active,
@@ -5330,12 +5281,10 @@ colorchooser .popover.osd {
 
 .osd .scale-popup button.flat {
   border-style: none;
-  border-radius: 0;
 }
 
 .scale-popup button:hover {
   background-color: rgba(43, 41, 40, 0.1);
-  border-radius: 0;
 }
 
 /**********************
@@ -5347,7 +5296,6 @@ window {
 window.csd {
   box-shadow: none;
   margin: 0px;
-  border-radius: 0;
 }
 window.csd:backdrop {
   box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px rgba(0, 0, 0, 0.2),
@@ -5355,19 +5303,17 @@ window.csd:backdrop {
   transition: 200ms ease-out;
 }
 window.csd.popup {
-  border-radius: 0;
   box-shadow: none;
 }
 window.csd.dialog.message {
-  border-radius: 0;
   box-shadow: none;
 }
 window.solid-csd {
   margin: 0;
   padding: 4px;
   border: solid 1px #cdc7c2;
-  border-radius: 0;
-  box-shadow: inset 0 0 0 4px #cdc7c2, inset 0 0 0 3px #574f4a,
+
+  box-shadow: inset 0 0 0 4px #cdc7c2, inset 0 0 0 3px #12141f,
     inset 0 1px rgba(255, 255, 255, 0.8);
 }
 window.solid-csd:backdrop {
@@ -5376,7 +5322,6 @@ window.solid-csd:backdrop {
 }
 window.maximized,
 window.fullscreen {
-  border-radius: 0;
   box-shadow: none;
 }
 window.tiled,
@@ -5384,7 +5329,6 @@ window.tiled-top,
 window.tiled-left,
 window.tiled-right,
 window.tiled-bottom {
-  border-radius: 0;
   box-shadow: none;
 }
 window:backdrop {
@@ -5398,7 +5342,6 @@ window.ssd {
 }
 
 tooltip.csd {
-  border-radius: 0;
   box-shadow: none;
 }
 
@@ -5578,7 +5521,7 @@ shortcut > .keycap {
   background-color: #fff;
   border: 1px solid;
   border-color: #e1dfdc;
-  border-radius: 0;
+
   box-shadow: none;
   font-size: smaller;
 }
@@ -5643,7 +5586,7 @@ button.emoji-section {
   border-color: transparent;
   border-width: 3px;
   border-style: none none solid;
-  border-radius: 0;
+
   padding: 3px 0 0;
   min-width: 32px;
   min-height: 28px;
@@ -5662,7 +5605,6 @@ button.emoji-section:checked {
 popover.emoji-picker emoji {
   font-size: x-large;
   padding: 6px;
-  border-radius: 0;
 }
 popover.emoji-picker emoji:focus,
 popover.emoji-picker emoji:hover {
@@ -5723,9 +5665,9 @@ headerbar {
   border-width: 1px 0px 0px;
   border-style: solid;
   border-color: #736861;
-  border-radius: 0;
+
   color: rgba(255, 255, 255, 0.8);
-  background: #574f4a;
+  background: #12141f;
 }
 .titlebar:not(headerbar) label .title,
 headerbar label .title {
@@ -7317,7 +7259,7 @@ headerbar switch:backdrop {
 }
 .titlebar:not(headerbar) switch:disabled,
 headerbar switch:disabled {
-  background-color: #574f4a;
+  background-color: #12141f;
   border-color: #cdc7c2;
 }
 .titlebar:not(headerbar) switch:backdrop,
@@ -7340,7 +7282,7 @@ headerbar switch slider:checked {
 }
 .titlebar:not(headerbar) switch slider:disabled,
 headerbar switch slider:disabled {
-  background-color: #574f4a;
+  background-color: #12141f;
   border-color: #cdc7c2;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #929595;
@@ -8907,17 +8849,17 @@ paned.titlebar > separator:backdrop {
 }
 
 window.devel headerbar.titlebar {
-  background: #574f4a
+  background: #12141f
       cross-fade(10% -gtk-icontheme("system-run-symbolic"), image(transparent))
       90% 0/256px 256px no-repeat,
     linear-gradient(to right, transparent 65%, rgba(251, 184, 108, 0.2)),
     linear-gradient(to top, #332e2c, #3b3633 3px, #4c4541);
 }
 window.devel headerbar.titlebar:backdrop {
-  background: #574f4a
+  background: #12141f
       cross-fade(10% -gtk-icontheme("system-run-symbolic"), image(transparent))
       90% 0/256px 256px no-repeat,
-    image(#574f4a);
+    image(#12141f);
   /* background-color would flash */
 }
 
@@ -8937,7 +8879,7 @@ windowcontrols:not(.empty).end:dir(ltr) {
 }
 windowcontrols button {
   background-image: none;
-  border-radius: 0;
+
   padding: 2px;
   margin: 0 2px;
   min-width: 0;
@@ -8967,7 +8909,6 @@ windowcontrols button.close {
   transition-duration: 100ms;
 }
 windowcontrols button.close:hover {
-  background-color: rgba(255, 255, 255, 0.2);
   transition-duration: 100ms;
 }
 windowcontrols button.close:active,
@@ -9023,7 +8964,7 @@ headerbar * {
  **********/
 switch {
   border: 0px solid transparent;
-  border-radius: 0;
+
   color: #2b2928;
   background-color: rgba(43, 41, 40, 0.4);
   box-shadow: none;
@@ -9073,7 +9014,7 @@ switch slider {
   min-width: 20px;
   min-height: 20px;
   border: 0px solid transparent;
-  border-radius: 0;
+
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   box-shadow: none;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -9147,7 +9088,7 @@ scale > trough > slider {
   border: 1px solid #63b1bc;
   background-image: none;
   background-color: #63b1bc;
-  border-radius: 0;
+
   box-shadow: none;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-property: background, border, box-shadow;
@@ -9156,7 +9097,7 @@ scale > trough > slider:backdrop {
   border: 1px solid #63b1bc;
   background-image: none;
   background-color: #9ecdd3;
-  border-radius: 0;
+
   box-shadow: none;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-property: background, border, box-shadow;
@@ -9338,15 +9279,6 @@ infobar button:hover {
   box-shadow: none;
 }
 
-infobar .close,
-searchbar .close {
-  color: #000;
-}
-infobar .close:hover,
-searchbar .close:hover {
-  color: #2b2928;
-}
-
 /*************************
  * Treeview Progressbars *
  *************************/
@@ -9400,7 +9332,7 @@ scale > trough > fill,
 progressbar > trough,
 row:selected scale > trough {
   border: 1px solid #e1dedb;
-  border-radius: 0;
+
   background-color: rgba(43, 41, 40, 0.1);
 }
 headerbar scale > trough,
@@ -9436,6 +9368,10 @@ row:selected .osd scale > trough {
 .osd progressbar > trough:disabled,
 .osd row:selected scale > trough:disabled {
   background-color: rgba(70, 67, 66, 0.5);
+}
+
+* {
+  border-radius: 0;
 }
 
 /* GTK NAMED COLORS
