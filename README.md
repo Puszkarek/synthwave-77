@@ -16,12 +16,18 @@
 
 # Manual Steps
 - Copy the files inside gtk-4.0 to ~/.config/gtk-4.0/
+- Set the background and text color in the terminal
 - Setup the fonts
   - Install the fonts
   - Set it to use in the:
     - VSCode
+    ```
+      "editor.fontFamily": "Share Tech Mono",
+      "terminal.integrated.fontFamily": "Share Tech Mono",
+      "editor.codeLensFontFamily": "Share Tech Mono",
+    ```
     - Gnome Tweaks
-    - TODO(check)
+    - Terminal
 
 # Dependencies
 
@@ -47,7 +53,8 @@ To install the theme under ./discord folder
 
 
 ### Fonts
-- [Refinery](https://ifonts.xyz/refinery-font.html)
+- [Main - Refinery](https://ifonts.xyz/refinery-font.html)
+- [Mono - Share Tech Mono](https://fonts.google.com/specimen/Share+Tech+Mono)
 
 #### Alternative fonts (Might not be so good for long reading)
 - [Blender Pro](https://en.bestfonts.pro/font/blender-pro)

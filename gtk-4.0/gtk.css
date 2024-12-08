@@ -1,71 +1,234 @@
-:root {
-  --accent-color: #7b4b8b;
-  /* 
-  --accent-bg-color: yellow;
-  --border-color: yellow;
-  --border-opacity: 100%;
-  --headbar-backdrop-color: yellow;
-  --headbar-bg-color: yellow;
-  --secondary-sidebar-bg-color: yellow;
-  --dim-opacity: 0;
-  */
+* {
+  -gtkscrollbar-has-backward-stepper: true;
+  -gtkscrollbar-has-forward-stepper: true;
+  -gtkscrollbar-has-secondary-backward-stepper: false;
+  -gtkscrollbar-has-secondary-forward-stepper: false;
 }
 
-GtkApplicationWindow,
-window {
-  border-radius: 0;
-  outline: 2px solid #7b4b8b;
-  color: #7b4b8b;
+scrollbar {
+  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-window .undershoot-top {
+scrollbar:backdrop {
+  transition: 200ms ease-out;
+}
+
+scrollbar slider {
+  transition: 200ms ease-out;
+}
+
+scrollbar {
+  border: none;
   background-color: #12141f;
 }
 
-window .navigation-sidebar {
-  border: 1px solid #7b4b8b;
-  border-width: 0 2px 0 0;
-  padding: 0;
-  margin: 0;
+scrollbar trough {
+  border: none;
 }
 
+scrollbar slider {
+  min-width: 16px;
+  width: 16px;
+  max-width: 16px;
+  min-height: 12px;
+  margin: 0;
+  border: 1px solid #e100ff;
+  opacity: 1;
+  background-clip: padding-box;
+  color: #e100ff;
+  background-color: #12141f;
+}
+
+scrollbar slider:hover {
+  border-color: #00ffff;
+}
+
+scrollbar slider:hover:active {
+  border-color: #00ffff;
+}
+
+scrollbar slider:disabled {
+  background-color: #12141f;
+  border-color: #e100ff;
+  color: #e100ff;
+}
+
+scrollbar.vertical slider {
+  min-width: 12px;
+  min-height: 16px;
+}
+
+scrollbar.fine-tune slider {
+  border-color: #e100ff;
+}
+
+scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
+  margin: 0;
+  min-width: 16px;
+  width: 16px;
+  max-width: 16px;
+}
+
+scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
+  margin: 0;
+  min-height: 16px;
+}
+
+scrollbar.horizontal slider {
+  min-width: 16px;
+}
+
+scrollbar.horizontal button {
+  padding: 0px;
+  min-height: 14px;
+  min-width: 14px;
+}
+
+scrollbar.horizontal button.down {
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+scrollbar.horizontal button.up {
+  -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+}
+
+scrollbar.vertical slider {
+  min-height: 16px;
+}
+
+scrollbar.vertical button {
+  min-height: 14px;
+  min-width: 14px;
+  padding: 0px;
+}
+
+scrollbar.vertical button.down {
+  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
+scrollbar.vertical button.up {
+  -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+
+treeview ~ scrollbar.vertical {
+  border-top: 1px solid #e100ff;
+  margin-top: -1px;
+}
+
+* {
+  border-radius: 0;
+}
+*:selected {
+  color: #00ffff;
+}
+*:hover {
+  color: #00ffff;
+}
+
+GtkApplicationWindow,
+dialog,
+window {
+  box-shadow: 0 0 5px #e100ff, 0 0 10px #e100ff, 0 0 15px #e100ff;
+}
+
+.background,
+GtkApplicationWindow,
+dialog,
+headerbar,
+window {
+  color: #e100ff;
+  background-color: #12141f;
+  border: 1px solid #e100ff;
+}
+
+headerbar {
+  padding: 8px;
+}
+
+.activatable:hover {
+  color: #00ffff;
+}
+.activatable:selected {
+  color: #00ffff;
+}
+
+GtkApplicationWindow,
+dialog,
+window {
+  border: 1px solid #e100ff;
+  outline: 0;
+}
+
+window {
+  color: #e100ff;
+}
 window separator {
-  background-color: #7b4b8b;
+  background-color: #e100ff;
   width: 100%;
   margin: 0;
 }
-
 window .sidebar-row {
-  border-radius: 0;
-  padding: 0;
   margin: 0;
   padding: 8px;
-  border: 2px solid transparent;
-  color: #7b4b8b;
 }
-
-window .sidebar-row:hover {
-  background: #4b5b8b;
-  color: #090b04;
-}
-
-window .sidebar-row:selected {
-  background: #7b4b8b;
-  color: #090b04;
-}
-
 window cell {
   color: #c4b0cd;
 }
 
-window picture {
-  color: #7b4b8b;
+button {
+  padding: 8px;
+  border: 1px solid #e100ff;
+  color: #e100ff;
 }
-
-window .content-pane .vertical banner {
-  background-color: #7b4b8b;
+button:hover {
+  border-color: #00ffff;
+  color: #00ffff;
+}
+button:selected {
+  border-color: #00ffff;
+  color: #00ffff;
 }
 
 windowhandle {
-  color: #7b4b8b;
+  color: #e100ff;
 }
+
+.linked > * {
+  margin: 0 4px;
+}
+
+@define-color theme_fg_color $primary-color;
+@define-color theme_text_color $primary-color;
+@define-color theme_bg_color $primary-bg-color;
+@define-color theme_base_color $primary-bg-color;
+@define-color theme_selected_bg_color $secondary-bg-color;
+@define-color theme_selected_fg_color $primary-color;
+@define-color insensitive_bg_color #4a122f;
+@define-color insensitive_fg_color #c01c32;
+@define-color insensitive_base_color #013334;
+@define-color theme_unfocused_fg_color $primary-color;
+@define-color theme_unfocused_text_color $primary-color;
+@define-color theme_unfocused_bg_color $primary-bg-color;
+@define-color theme_unfocused_base_color $primary-bg-color;
+@define-color theme_unfocused_selected_bg_color $secondary-bg-color;
+@define-color theme_unfocused_selected_fg_color $primary-color;
+@define-color unfocused_insensitive_color #c01c32;
+@define-color borders $primary-color;
+@define-color unfocused_borders $primary-color;
+@define-color warning_color #ffbe6f;
+@define-color error_color #CC0000;
+@define-color success_color #29ff89;
+@define-color wm_title shade(#00fFff, 1.8);
+@define-color wm_unfocused_title #00fFff;
+@define-color wm_highlight $accent-color;
+@define-color wm_borders_edge $primary-color;
+@define-color wm_bg_a shade(#002428, 1.2);
+@define-color wm_bg_b #002428;
+@define-color wm_shadow alpha(#57e389, 0.35);
+@define-color wm_border alpha(#57e389, 0.18);
+@define-color wm_button_hover_color_a shade(#002428, 1.3);
+@define-color wm_button_hover_color_b #002428;
+@define-color wm_button_active_color_a shade(#002428, 0.85);
+@define-color wm_button_active_color_b shade(#002428, 0.89);
+@define-color wm_button_active_color_c shade(#002428, 0.9);
+@define-color content_view_bg $primary-bg-color;

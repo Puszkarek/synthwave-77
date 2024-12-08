@@ -1,3 +1,12 @@
+.background,
+GtkApplicationWindow,
+dialog,
+headerbar,
+window {
+  color: #e100ff;
+  background-color: #12141f;
+}
+
 #panel {
   background-color: transparent;
   padding: 0;
@@ -7,7 +16,7 @@
 
 #panel > * {
   box-sizing: border-box;
-  border: 2px solid #7b4b8b;
+  border: 1px solid #e100ff;
   border-radius: 0;
   margin: 2px 6px;
   padding: 0;
@@ -25,4 +34,13 @@
 #panel .clock:hover {
   background-color: #0a0b14;
   filter: none;
+}
+
+.sidebar-row {
+  margin: 0;
+  padding: 8px;
+}
+
+.linked > * {
+  margin: 0 4px;
 }
