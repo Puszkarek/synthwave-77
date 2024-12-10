@@ -1975,7 +1975,7 @@ StScrollBar StButton#hhandle:active {
 
 /* Top Bar */
 #panel {
-  background-color: #211f1f;
+  background-color: #12141f;
   font-weight: bold;
   height: 2.2em;
   transition-duration: 250ms;

@@ -803,7 +803,7 @@ button:hover {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ededed;
   border-color: #282828;
-  border-top-color: #353535;
+  border-top-color: #12141f;
   border-bottom-color: #1b1b1b;
   background-image: image(#383838);
   box-shadow: none;
@@ -844,7 +844,7 @@ button:backdrop {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   box-shadow: none;
   transition: 200ms ease-out;
 }
@@ -922,7 +922,7 @@ button.flat:hover {
   border-color: transparent;
   background-image: none;
   box-shadow: none;
-  background-color: #363636;
+  background-color: #12141f;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-duration: 500ms;
 }
@@ -1648,7 +1648,7 @@ modelbutton.flat arrow.right {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ededed;
   border-color: #282828;
-  border-top-color: #353535;
+  border-top-color: #12141f;
   border-bottom-color: #1b1b1b;
   background-image: image(#383838);
   box-shadow: none;
@@ -1670,7 +1670,7 @@ modelbutton.flat arrow.right {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   box-shadow: none;
 }
 .toolbar button:backdrop:disabled {
@@ -1699,7 +1699,7 @@ list > row button.image-button:not(.flat):hover {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ededed;
   border-color: #282828;
-  border-top-color: #353535;
+  border-top-color: #12141f;
   border-bottom-color: #1b1b1b;
   background-image: image(#383838);
   box-shadow: none;
@@ -3218,7 +3218,7 @@ switch:hover > slider {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ededed;
   border-color: #282828;
-  border-top-color: #353535;
+  border-top-color: #12141f;
   border-bottom-color: #1b1b1b;
   background-image: image(#383838);
   box-shadow: none;
@@ -3714,7 +3714,7 @@ scale > trough > slider:hover {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ededed;
   border-color: #282828;
-  border-top-color: #353535;
+  border-top-color: #12141f;
   border-bottom-color: #1b1b1b;
   background-image: image(#383838);
   box-shadow: none;
@@ -5185,7 +5185,7 @@ colorswatch#add-color-button.activatable:hover > overlay {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ededed;
   border-color: #282828;
-  border-top-color: #353535;
+  border-top-color: #12141f;
   border-bottom-color: #1b1b1b;
   background-image: image(#383838);
   box-shadow: none;
@@ -5286,7 +5286,7 @@ window.solid-csd {
     inset 0 1px rgba(237, 237, 237, 0.07);
 }
 window.solid-csd:backdrop {
-  box-shadow: inset 0 0 0 4px #1b1b1b, inset 0 0 0 3px #353535,
+  box-shadow: inset 0 0 0 4px #1b1b1b, inset 0 0 0 3px #12141f,
     inset 0 1px rgba(237, 237, 237, 0.07);
 }
 window.maximized,
@@ -7203,7 +7203,7 @@ headerbar separator {
 }
 .titlebar:not(headerbar) separator:backdrop,
 headerbar separator:backdrop {
-  background: image(#353535);
+  background: image(#12141f);
 }
 .titlebar:not(headerbar) menu separator,
 .titlebar:not(headerbar) popover separator,
@@ -8659,7 +8659,7 @@ headerbar.selection-mode buttonbox.toggle.suggested-action:hover {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ededed;
   border-color: #282828;
-  border-top-color: #353535;
+  border-top-color: #12141f;
   border-bottom-color: #1b1b1b;
   background-image: image(#383838);
   box-shadow: none;
@@ -8714,7 +8714,7 @@ headerbar.selection-mode buttonbox.toggle.suggested-action:backdrop {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   box-shadow: none;
   border-color: #3c8a64;
 }
@@ -8765,9 +8765,9 @@ paned.titlebar > separator {
   background-color: #303030;
 }
 paned.titlebar > separator:backdrop {
-  color: #353535;
-  background: image(#353535);
-  background-color: #353535;
+  color: #12141f;
+  background: image(#12141f);
+  background-color: #12141f;
 }
 
 window.devel headerbar.titlebar {
@@ -8953,7 +8953,7 @@ switch:hover slider {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ededed;
   border-color: #292929;
-  border-top-color: #363636;
+  border-top-color: #12141f;
   border-bottom-color: #1c1c1c;
   background-image: image(#424242);
   box-shadow: none;
@@ -8975,7 +8975,7 @@ switch:backdrop slider {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   box-shadow: none;
 }
 switch:backdrop:checked slider {
@@ -9174,7 +9174,7 @@ infobar button:backdrop {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   box-shadow: none;
   background-image: image(transparent);
   border-color: rgba(0, 0, 0, 0.1);
@@ -9183,7 +9183,7 @@ infobar button:hover {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ededed;
   border-color: #282828;
-  border-top-color: #353535;
+  border-top-color: #12141f;
   border-bottom-color: #1b1b1b;
   background-image: image(#383838);
   box-shadow: none;
@@ -9322,7 +9322,7 @@ text color for entries, views and content in general on backdrop windows */
 @define-color theme_unfocused_text_color #FFF;
 /*
 widget base background color on backdrop windows */
-@define-color theme_unfocused_bg_color #353535;
+@define-color theme_unfocused_bg_color #12141f;
 /*
 text widgets and the like base background color on backdrop windows */
 @define-color theme_unfocused_base_color #303030;

@@ -4508,7 +4508,7 @@ row:selected scale slider {
   -gtk-icon-shadow: 0 1px black;
   outline-color: rgba(238, 238, 236, 0.3);
   border-color: rgba(0, 0, 0, 0.7);
-  background-color: #353535;
+  background-color: #12141f;
 }
 .osd scale slider:hover {
   color: white;
@@ -4520,7 +4520,7 @@ row:selected scale slider {
   text-shadow: 0 1px black;
   -gtk-icon-shadow: 0 1px black;
   outline-color: rgba(238, 238, 236, 0.3);
-  background-color: #353535;
+  background-color: #12141f;
 }
 .osd scale slider:active {
   color: white;
@@ -4532,7 +4532,7 @@ row:selected scale slider {
   text-shadow: none;
   -gtk-icon-shadow: none;
   outline-color: rgba(238, 238, 236, 0.3);
-  background-color: #353535;
+  background-color: #12141f;
 }
 .osd scale slider:disabled {
   color: #919190;
@@ -4543,7 +4543,7 @@ row:selected scale slider {
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  background-color: #353535;
+  background-color: #12141f;
 }
 .osd scale slider:backdrop {
   color: #eeeeec;
@@ -4554,10 +4554,10 @@ row:selected scale slider {
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  background-color: #353535;
+  background-color: #12141f;
 }
 .osd scale slider:backdrop:disabled {
-  background-color: #353535;
+  background-color: #12141f;
 }
 scale marks,
 scale value {

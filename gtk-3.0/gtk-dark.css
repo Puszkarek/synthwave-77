@@ -31,7 +31,7 @@
 }
 .background:backdrop {
   color: #919190;
-  background-color: #353535;
+  background-color: #12141f;
   text-shadow: none;
   -gtk-icon-shadow: none;
 }
@@ -830,7 +830,7 @@ button:backdrop.flat,
 button:backdrop {
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
@@ -1682,7 +1682,7 @@ stacksidebar row.needs-attention > label:dir(rtl),
 .inline-toolbar toolbutton > button:backdrop {
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
@@ -2603,7 +2603,7 @@ headerbar.selection-mode button.suggested-action:disabled {
 headerbar.selection-mode button.suggested-action:backdrop {
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
@@ -2936,7 +2936,7 @@ treeview.view.separator:backdrop {
 }
 treeview.view:backdrop {
   border-left-color: #636362;
-  border-top: #353535;
+  border-top: #12141f;
 }
 treeview.view:drop(active) {
   border-style: solid none;
@@ -3028,13 +3028,13 @@ treeview.view header button:disabled {
 }
 treeview.view header button:backdrop {
   color: #636362;
-  border-color: #353535;
+  border-color: #12141f;
   border-style: none solid solid none;
   background-image: none;
   background-color: #303030;
 }
 treeview.view header button:backdrop:disabled {
-  border-color: #353535;
+  border-color: #12141f;
   background-image: none;
 }
 treeview.view header button:last-child {
@@ -3052,7 +3052,7 @@ menubar,
 }
 menubar:backdrop,
 .menubar:backdrop {
-  background-color: #353535;
+  background-color: #12141f;
 }
 menubar > menuitem,
 .menubar > menuitem {
@@ -3234,7 +3234,7 @@ menuitem radio:dir(rtl) {
  ***************/
 popover.background {
   padding: 2px;
-  background-color: #353535;
+  background-color: #12141f;
   box-shadow: none;
 }
 .csd popover.background,
@@ -3246,7 +3246,7 @@ popover.background {
   border-color: rgba(23, 23, 23, 0.4);
 }
 popover.background:backdrop {
-  background-color: #353535;
+  background-color: #12141f;
   box-shadow: none;
 }
 popover.background > list,
@@ -3446,7 +3446,7 @@ notebook > header tab:backdrop:checked {
 }
 notebook > header tab:backdrop:checked.reorderable-page {
   border-color: #202020;
-  background-color: #353535;
+  background-color: #12141f;
 }
 notebook > header tab button.flat {
   padding: 0;
@@ -3808,7 +3808,7 @@ switch:backdrop slider {
   transition: 200ms ease-out;
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
@@ -4444,7 +4444,7 @@ scale slider:backdrop {
   transition: 200ms ease-out;
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
@@ -4472,7 +4472,7 @@ row:selected scale slider {
   -gtk-icon-shadow: 0 1px black;
   outline-color: rgba(238, 238, 236, 0.3);
   border-color: rgba(0, 0, 0, 0.7);
-  background-color: #353535;
+  background-color: #12141f;
 }
 .osd scale slider:hover {
   color: white;
@@ -4484,7 +4484,7 @@ row:selected scale slider {
   text-shadow: 0 1px black;
   -gtk-icon-shadow: 0 1px black;
   outline-color: rgba(238, 238, 236, 0.3);
-  background-color: #353535;
+  background-color: #12141f;
 }
 .osd scale slider:active {
   color: white;
@@ -4496,7 +4496,7 @@ row:selected scale slider {
   text-shadow: none;
   -gtk-icon-shadow: none;
   outline-color: rgba(238, 238, 236, 0.3);
-  background-color: #353535;
+  background-color: #12141f;
 }
 .osd scale slider:disabled {
   color: #8a8a89;
@@ -4507,7 +4507,7 @@ row:selected scale slider {
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  background-color: #353535;
+  background-color: #12141f;
 }
 .osd scale slider:backdrop {
   color: #eeeeec;
@@ -4518,10 +4518,10 @@ row:selected scale slider {
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  background-color: #353535;
+  background-color: #12141f;
 }
 .osd scale slider:backdrop:disabled {
-  background-color: #353535;
+  background-color: #12141f;
 }
 scale marks,
 scale value {
@@ -5888,7 +5888,7 @@ paned > separator.wide {
   background-size: 1px 1px, 1px 1px;
 }
 paned > separator.wide:backdrop {
-  background-color: #353535;
+  background-color: #12141f;
   background-image: image(#202020), image(#202020);
 }
 
@@ -6037,7 +6037,7 @@ infobar.warning button:backdrop,
 infobar.error button:backdrop {
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
@@ -6238,7 +6238,7 @@ colorswatch#add-color-button overlay:hover {
 colorswatch#add-color-button overlay:backdrop {
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
@@ -7043,7 +7043,7 @@ list.tweak-categories separator {
 .nautilus-window .path-buttons-box:backdrop {
   color: #a2a2a2;
   border-color: #1d1d1d;
-  background-image: image(#363636);
+  background-image: image(#12141f);
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
@@ -7076,7 +7076,7 @@ list.tweak-categories separator {
 .nautilus-window .nautilus-path-bar > scrolledwindow:backdrop {
   color: #a2a2a2;
   border-color: #1d1d1d;
-  background-image: image(#363636);
+  background-image: image(#12141f);
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
@@ -7342,7 +7342,7 @@ box > list row.list-box-app-row {
   padding: 4px 8px;
 }
 .gedit-search-slider:backdrop {
-  background-color: #353535;
+  background-color: #12141f;
   border-color: #202020;
 }
 
@@ -7396,7 +7396,7 @@ headerbar button image ~ window decoration ~ menu separator {
 }
 .nemo-properties-dialog toolbar stackswitcher.linked button:backdrop {
   color: #919190;
-  background-color: #353535;
+  background-color: #12141f;
 }
 
 .nemo-window .sidebar scrolledwindow.frame.nemo-places-sidebar {
@@ -7506,7 +7506,7 @@ headerbar button image ~ window decoration ~ menu separator {
 .nemo-window toolbar.horizontal.primary-toolbar button:backdrop {
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
@@ -7691,11 +7691,11 @@ normal-button:disabled {
   ***********/
 #live_installer #progress_mode,
 #live_installer #title_eventbox {
-  background-color: #363636;
+  background-color: #12141f;
 }
 #live_installer #progress_mode:backdrop,
 #live_installer #title_eventbox:backdrop {
-  background-color: #363636;
+  background-color: #12141f;
 }
 
 #live_installer #dot_grid .empty {
@@ -7738,7 +7738,7 @@ assistant.background scrolledwindow .vertical checkbutton {
 
 headerbar,
 .titlebar {
-  background: #363636 linear-gradient(to top, #363636, #363636);
+  background: #12141f linear-gradient(to top, #12141f, #12141f);
   box-shadow: none;
   border-color: #242424;
   color: #f7f7f7;
@@ -7750,7 +7750,7 @@ headerbar label .title,
 headerbar:backdrop,
 .titlebar:backdrop {
   border-color: #262626;
-  background-color: #363636;
+  background-color: #12141f;
   box-shadow: none;
 }
 .maximized headerbar,
@@ -7978,7 +7978,7 @@ headerbar .path-bar button:backdrop,
 .titlebar .path-bar button:backdrop {
   color: #a2a2a2;
   border-color: #1d1d1d;
-  background-image: image(#363636);
+  background-image: image(#12141f);
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
@@ -11653,7 +11653,7 @@ headerbar.selection-mode .path-bar button.suggested-action:backdrop,
 .titlebar.selection-mode .path-bar button.suggested-action:backdrop {
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
@@ -11805,7 +11805,7 @@ button.titlebutton:not(.close):not(.appmenu):hover {
     0,
     center center,
     0.3571428571,
-    to(#363636),
+    to(#12141f),
     to(transparent)
   );
 }
@@ -11849,7 +11849,7 @@ button.titlebutton:not(.close):not(.appmenu):active {
     0,
     center center,
     0.3571428571,
-    to(#363636),
+    to(#12141f),
     to(transparent)
   );
 }
@@ -12136,7 +12136,7 @@ switch:backdrop slider {
   transition: 200ms ease-out;
   color: #919190;
   border-color: #202020;
-  background-image: image(#353535);
+  background-image: image(#12141f);
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
@@ -13755,7 +13755,7 @@ tabbar tab:backdrop {
   background-color: #262626;
 }
 tabbar tab:backdrop:checked {
-  background-color: #353535;
+  background-color: #12141f;
 }
 
 tabbar .start-action,
@@ -13884,7 +13884,7 @@ text color for entries, views and content in general on backdrop windows */
 @define-color theme_unfocused_text_color #cccccc;
 /*
 widget base background color on backdrop windows */
-@define-color theme_unfocused_bg_color #353535;
+@define-color theme_unfocused_bg_color #12141f;
 /*
 text widgets and the like base background color on backdrop windows */
 @define-color theme_unfocused_base_color #303030;

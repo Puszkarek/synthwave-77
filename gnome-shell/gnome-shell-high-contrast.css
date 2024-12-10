@@ -186,7 +186,7 @@ stage {
 .hotplug-notification-item:checked,
 .notification-banner .notification-button:checked {
   color: #fff;
-  background-color: #353535;
+  background-color: #12141f;
 }
 .modal-dialog .modal-dialog-linked-button:checked:hover,
 .hotplug-notification-item:checked:hover,
@@ -1975,7 +1975,7 @@ StScrollBar StButton#hhandle:active {
 
 /* Top Bar */
 #panel {
-  background-color: #211f1f;
+  background-color: #12141f;
   font-weight: bold;
   height: 2.2em;
   transition-duration: 250ms;
@@ -2363,7 +2363,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .search-section-content {
-  background-color: #353535;
+  background-color: #12141f;
 
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #eeeeec;
@@ -3317,8 +3317,8 @@ StScrollBar StButton#hhandle:active {
 .login-dialog .modal-dialog-button:focus,
 .unlock-dialog .modal-dialog-button:hover,
 .unlock-dialog .modal-dialog-button:focus {
-  background-color: #353535;
-  border-color: #353535;
+  background-color: #12141f;
+  border-color: #12141f;
 }
 .login-dialog .modal-dialog-button:active,
 .unlock-dialog .modal-dialog-button:active {
