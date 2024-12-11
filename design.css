@@ -5,6 +5,31 @@
   --bg-color: #090b04;
 }
 
+.purple-neon {
+  --primary-color: #e100ff;
+  --primary-color-hover: #b200cc;
+  --primary-color-disabled: #c3a7d1;
+
+  --text-color: #e4d5ea;
+
+  --hover-color: #00fff7;
+  --active-color: #cc8f00;
+
+  --accent-color: #00fff7;
+  --accent-color-hover: #8ffffb;
+  --highlight-color: #9d00b3;
+
+  --primary-background: #12141f;
+  --primary-background-hover: #2d2f54;
+  --secondary-background: #0a0b14;
+  --secondary-background-hover: #21243c;
+
+  --yellow: #ffd700;
+  --red: #ff2e6e;
+  --cyan: #00fff7;
+  --purple: #e100ff;
+}
+
 .purple {
   --primary-color: #7b4b8b;
   --primary-color-hover: #692d7e;
