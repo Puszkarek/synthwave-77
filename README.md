@@ -3,6 +3,10 @@
 - [ ] Slack
 - [ ] Tindal
 - [ ] Gnome Theme
+  - [ ] Background Colors
+    - [ ] #303030
+  - [ ] UI Colors
+    - [ ] #fbb86c
   - [ ] Authentication Theme
   - [ ] Gnome Shell Theme
     - /* Slider */
@@ -18,6 +22,7 @@
 # Manual Steps
 - Copy the files inside gtk-4.0 to ~/.config/gtk-4.0/
 - Set the background and text color in the terminal
+- Go to gnome extensions and disable the Cosmic Workspaces
 - Setup the fonts
   - Install the fonts
   - Set it to use in the:
@@ -31,6 +36,9 @@
     - Terminal
 
 # Dependencies
+
+### Profile Pictures
+- [Noun Project](https://thenounproject.com/browse/icons/term/cyberpunk/?qv=4334514)
 
 ### Icons
 - Install [Suru Plus](https://github.com/gusbemacbe/suru-plus-aspromauros?tab=readme-ov-file#root-directory-recommended)
