@@ -16,6 +16,10 @@
   color: #e4d5ea;
   color: #ff2e6e;
   color: rgba(0, 0, 0, 0);
+  color: rgba(225, 0, 255, 0.3);
+  color: rgba(41, 0, 47, 0.5);
+  color: rgba(41, 0, 47, 0.3);
+  color: rgba(41, 0, 47, 0.7);
 
   /* Not relevant to removal */
   color: #4799a5;
@@ -27,6 +31,7 @@
   color: rgba(43, 41, 40, 0.1);
   color: rgba(255, 255, 255, 0.05);
   color: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 0, 0, 0);
 
   /* Needs to change */
 
@@ -34,17 +39,8 @@
   color: #e25b42;
   color: #75bac4;
   color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.8);
   color: rgba(246, 246, 246, 0.3);
-
-  color: rgb(0, 217, 255);
-  color: rgb(255, 0, 0);
-  color: rgb(0, 225, 255);
-  color: rgb(255, 183, 0);
-
-  color: rgba(99, 177, 188, 0.2);
-  color: rgba(0, 0, 0, 0.5);
-  color: rgba(0, 0, 0, 0.7);
-  color: rgba(99, 177, 188, 0.8);
 }
 
 .purple-neon {

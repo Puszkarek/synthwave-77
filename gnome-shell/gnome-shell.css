@@ -1639,7 +1639,7 @@ StScrollBar StButton#hhandle:active {
 /* Pad OSD */
 .pad-osd-window {
   padding: 32px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(41, 0, 47, 0.7);
 }
 .pad-osd-window .pad-osd-title-box {
   spacing: 12px;
@@ -1986,7 +1986,7 @@ StScrollBar StButton#hhandle:active {
 
 /* Top Bar */
 #panel {
-  background-color: #12141f;
+  background-color: transparent;
   font-weight: bold;
   height: 2.2em;
   transition-duration: 250ms;
@@ -1997,12 +1997,14 @@ StScrollBar StButton#hhandle:active {
   background-color: transparent;
 }
 #panel .panel-button {
+  border: 1px solid #e100ff;
+  margin: 4px;
+  background-color: #12141f;
   font-weight: bold;
-  color: #ddd;
+  color: #e100ff;
   -natural-hpadding: 12px;
   -minimum-hpadding: 6px;
   transition-duration: 150ms;
-  border: 3px solid transparent;
 }
 #panel .panel-button.clock-display .clock {
   transition-duration: 150ms;
@@ -2021,6 +2023,8 @@ StScrollBar StButton#hhandle:active {
 #panel .panel-button:overview,
 #panel .panel-button:focus,
 #panel .panel-button:checked {
+  border-color: #ffd700;
+  color: #ffd700;
   box-shadow: none;
 }
 #panel .panel-button:active.clock-display,
@@ -2042,6 +2046,8 @@ StScrollBar StButton#hhandle:active {
   box-shadow: none;
 }
 #panel .panel-button:hover {
+  color: #00fff7;
+  border-color: #00fff7;
   box-shadow: none;
 }
 #panel .panel-button:hover.clock-display {

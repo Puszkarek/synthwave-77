@@ -1,7 +1,5 @@
 # TODOS
 - [ ] Discord
-- [ ] Slack
-- [ ] Tindal
 - [ ] Gnome Theme
   - [ ] Background Colors
     - [ ] #303030
@@ -16,14 +14,15 @@
     - /* Pop_OS COSMIC Widget styling. */
   - [ ] GTK 3
   - [ ] GTK 4
-- [ ] Zen Browser Theme
-- [ ] Create a zen browser extension that dynamically converts any website theme to our theme
 - [ ] Check https://github.com/ExposedCat/stunning-gnome-de
 
 # Manual Steps
-- Copy the files inside gtk-4.0 to ~/.config/gtk-4.0/
+- Install Pop OS
+- Go to Settings > Desktop > Dock and disable it
+- Go to Tweaks > Appearance > Themes and change the theme and shell theme to it
+- Go to Extensions and disable the Cosmic Workspaces
 - Set the background and text color in the terminal
-- Go to gnome extensions and disable the Cosmic Workspaces
+- Change the Tile windows hint color to `#e100ff`
 - Setup the fonts
   - Install the fonts
   - Set it to use in the:
@@ -36,33 +35,45 @@
     - Gnome Tweaks
     - Terminal
 
-# Dependencies
+## Dependencies
 
 ### Profile Pictures
 - [Noun Project](https://thenounproject.com/browse/icons/term/cyberpunk/?qv=4334514)
 
-### Icons
-- Install [Suru Plus](https://github.com/gusbemacbe/suru-plus-aspromauros?tab=readme-ov-file#root-directory-recommended)
-
-### VSCode
-1. Install this [VSCode Theme]() - (It's the secondary theme that comes from this package)
-2. Remove the icons from the editor to give a more minimalistic look (Optional of course)
-
-### Discord
-- Install [Better Discord](https://betterdiscord.app/)
-To install the theme under ./discord folder
-##### Notes
-- Discord need to be installed with .tar.gz file so it works with Better Discord
-
-### Spotify
-- [Spotify Theme]()
-
-### Zen Browser Theme
-- Install [Floating Bar](https://zen-browser.app/mods/67b12475-1c26-4d13-9156-297383ed8dbf)
-
 ### Fonts
 - [Main - Refinery](https://ifonts.xyz/refinery-font.html)
 - [Mono - Share Tech Mono](https://fonts.google.com/specimen/Share+Tech+Mono)
+
+
+### VSCode
+1. Install this [VSCode Theme](https://marketplace.visualstudio.com/items?itemName=Puszkarek.midnight-mirage-theme) - Use the secondary theme that comes from this package
+2. Remove the icons from the editor to give a more minimalistic look
+
+### Discord
+- Install [Better Discord](https://betterdiscord.app/)
+- Copy the CSS from `./discord/discord.css` and paste it into the `Better Discord` settings
+
+### Slack
+- TODO
+
+### Spotify
+- TODO
+
+### Tidal
+- TODO
+
+### Zen Browser Theme
+- TODO
+- TODO: Create an extension that dynamically converts any website theme to our theme
+
+## System
+
+### Icons
+- TODO
+
+### Sound
+- TODO
+
 
 #### Alternative fonts (Might not be so good for long reading)
 - [Blender Pro](https://en.bestfonts.pro/font/blender-pro)
@@ -73,12 +84,6 @@ To install the theme under ./discord folder
 - https://www.reddit.com/r/WidescreenWallpaper/comments/e5i6v0/samura%C3%AF_ui_cyberpunk_2077_34401440_just_a/#lightbox
 - https://www.wallpaperflare.com/cyberpunk-cyberpunk-2077-binary-red-cd-projekt-red-samurai-wallpaper-udgbz
 - https://www.wallpaperflare.com/cyberpunk-2077-cd-projekt-red-video-games-logotype-wallpaper-gjmik
-
-
-# TODOs (Coming in the future)
-- [ ] Unique VSCode Icons Theme
-- [ ] Unique Gnome Icons Theme
-- [ ] Sound Theme
 
 
 # Inspiration

@@ -2320,7 +2320,6 @@ headerbar {
 .titlebar:backdrop:not(headerbar),
 headerbar:backdrop {
   border-color: #202020;
-  background-color: #ff0000;
   background-image: none;
   box-shadow: none;
   transition: 200ms ease-out;
