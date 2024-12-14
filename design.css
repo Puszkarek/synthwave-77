@@ -1,8 +1,50 @@
-.green {
-  --primary-color: #a7d3a0;
-  --text-color: #b5cdb0;
-  --accent-color: #4b5b8b;
-  --bg-color: #090b04;
+.colors-to-remove {
+  /* Theme colors applied */
+  color: #00fff7;
+  color: #e100ff;
+  color: #12141f;
+  color: #12141f33;
+  color: #12141f7a;
+  color: #c3a7d1;
+  color: #8ffffb;
+  color: #cc8f00;
+  color: #0a0b14;
+  color: #21243c;
+  color: #ffd700;
+  color: #b200cc;
+  color: #2d2f54;
+  color: #e4d5ea;
+  color: #ff2e6e;
+  color: rgba(0, 0, 0, 0);
+
+  /* Not relevant to removal */
+  color: #4799a5;
+  color: #5e5d5c;
+  color: #387881;
+  color: #eeeeee;
+  color: #c4c3c2;
+  color: #ffffff;
+  color: rgba(43, 41, 40, 0.1);
+  color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.1);
+
+  /* Needs to change */
+
+  color: #e56a54;
+  color: #e25b42;
+  color: #75bac4;
+  color: rgba(0, 0, 0, 0.3);
+  color: rgba(246, 246, 246, 0.3);
+
+  color: rgb(0, 217, 255);
+  color: rgb(255, 0, 0);
+  color: rgb(0, 225, 255);
+  color: rgb(255, 183, 0);
+
+  color: rgba(99, 177, 188, 0.2);
+  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.7);
+  color: rgba(99, 177, 188, 0.8);
 }
 
 .purple-neon {
@@ -11,6 +53,10 @@
   --primary-color-disabled: #c3a7d1;
 
   --text-color: #e4d5ea;
+  --indicador-color: rgba(225, 0, 255, 0.3);
+  --backdrop-color: rgba(41, 0, 47, 0.5);
+  --backdrop-hover-color: rgba(41, 0, 47, 0.3);
+  --backdrop-active-color: rgba(41, 0, 47, 0.7);
 
   --hover-color: #00fff7;
   --active-color: #cc8f00;
@@ -25,33 +71,8 @@
   --secondary-background-hover: #21243c;
 
   --yellow: #ffd700;
+  --orange: #ffa500;
   --red: #ff2e6e;
   --cyan: #00fff7;
   --purple: #e100ff;
-}
-
-.purple {
-  --primary-color: #7b4b8b;
-  --primary-color-hover: #692d7e;
-  --primary-color-disabled: #9777a3;
-  --text-color: #c4b0cd;
-  --accent-color: #4b5b8b;
-  --highlight-color: #7b4b8b;
-  --primary-background: #12141f; /* Lighter */
-  --primary-background-hover: #2d2f54;
-  --secondary-background: #0a0b14; /* Darker */
-  --secondary-background-hover: #21243c;
-  --yellow: #ffdd00;
-  --red: #ff1f1f;
-  --cyan: #00ffff;
-  --purple: #e100ff;
-}
-
-.backup {
-  --bg-0: #0a0b14;
-  --bg-0: #0d0a14;
-  --bg-0: #140a0a;
-  --bg-0: #12141f;
-  --bg-0: #14121f;
-  --accent-color: #ac00e6;
 }
