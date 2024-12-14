@@ -13,6 +13,7 @@
     - .switcher-list .item-box:hover
     - .nm-dialog-scroll-view
     - #panel .panel-button
+    - /* Pop_OS COSMIC Widget styling. */
   - [ ] GTK 3
   - [ ] GTK 4
 - [ ] Zen Browser Theme
