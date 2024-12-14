@@ -347,7 +347,6 @@ stage {
 .login-dialog-not-listed-label,
 .lg-completions-text,
 .caps-lock-warning-label,
-#dash,
 .icon-label-button-container,
 .prompt-dialog-error-label,
 .prompt-dialog-info-label,
@@ -1703,7 +1702,7 @@ StScrollBar StButton#hhandle:active {
 }
 .switcher-list .item-box:drop {
   border: 1px solid #00fff7;
-  background-color: rgba(99, 177, 188, 0.2);
+  background-color: rgba(41, 0, 47, 0.5);
 }
 .switcher-list .item-box:hover {
   background: none;
@@ -2387,52 +2386,60 @@ StScrollBar StButton#hhandle:active {
 }
 .list-search-result:hover,
 .search-provider-icon:hover {
-  background-color: rgba(246, 246, 246, 0.1);
+  border-color: #00fff7;
+  background-color: #21243c;
 }
 .list-search-result:selected,
 .search-provider-icon:selected,
 .list-search-result:focus,
 .search-provider-icon:focus {
-  background-color: rgba(246, 246, 246, 0.13);
+  border-color: #ffd700;
+  background-color: #21243c;
 }
 .list-search-result:selected:hover,
 .search-provider-icon:selected:hover,
 .list-search-result:focus:hover,
 .search-provider-icon:focus:hover {
-  background-color: rgba(246, 246, 246, 0.16);
+  border-color: #00fff7;
+  background-color: #21243c;
 }
 .list-search-result:selected:active,
 .search-provider-icon:selected:active,
 .list-search-result:focus:active,
 .search-provider-icon:focus:active {
-  background-color: rgba(246, 246, 246, 0.13);
+  border-color: #ffd700;
+  background-color: #21243c;
 }
 .list-search-result:active,
 .search-provider-icon:active {
-  background-color: rgba(246, 246, 246, 0.16);
+  border-color: #00fff7;
+  background-color: #21243c;
 }
 .list-search-result:outlined,
 .search-provider-icon:outlined,
 .list-search-result:checked,
 .search-provider-icon:checked {
-  background-color: rgba(246, 246, 246, 0.19);
+  border-color: #ffd700;
+  background-color: #21243c;
 }
 .list-search-result:outlined:active,
 .search-provider-icon:outlined:active,
 .list-search-result:checked:active,
 .search-provider-icon:checked:active {
-  background-color: rgba(246, 246, 246, 0.22);
+  border-color: #ffd700;
+  background-color: #21243c;
 }
 .list-search-result:outlined:hover,
 .search-provider-icon:outlined:hover,
 .list-search-result:checked:hover,
 .search-provider-icon:checked:hover {
-  background-color: rgba(246, 246, 246, 0.25);
+  border-color: #ffd700;
+  background-color: #21243c;
 }
 .list-search-result:drop,
 .search-provider-icon:drop {
-  border: 2px solid rgba(99, 177, 188, 0.8);
-  background-color: rgba(99, 177, 188, 0.2);
+  border: 2px solid #00fff7;
+  background-color: rgba(41, 0, 47, 0.5);
 }
 
 .grid-search-results {
@@ -2471,106 +2478,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .list-search-result .list-search-result-description {
-  color: #919191;
-}
-
-/* Dash */
-#dash {
-  margin-top: 12px;
-  background: red;
-}
-#dash .placeholder {
-  background-image: none;
-  background-size: contain;
-  height: 32px;
-}
-#dash .empty-dash-drop-target {
-  width: 32px;
-  height: 32px;
-}
-#dash .app-well-app-running-dot {
-  margin-bottom: 14px;
-}
-
-.dash-background {
-  background-color: #ff0000;
-
-  padding: 12px;
-  spacing: 6px;
-  margin-bottom: 12px;
-}
-
-.dash-item-container > * {
-  margin: 0 2px;
-}
-
-.dash-item-container:ltr:first-child {
-  margin-left: 0;
-}
-
-.dash-item-container:rtl:first-child {
-  margin-right: 0;
-}
-
-.dash-item-container .app-well-app .overview-icon,
-.dash-item-container .grid-search-result .overview-icon {
-  padding: 6px;
-}
-
-.dash-item-container .show-apps .overview-icon {
-  background-color: transparent;
-}
-
-.dash-item-container .show-apps:hover .overview-icon {
-  background-color: rgba(246, 246, 246, 0.1);
-}
-
-.dash-item-container .show-apps:selected .overview-icon,
-.dash-item-container .show-apps:focus .overview-icon {
-  background-color: rgba(246, 246, 246, 0.13);
-}
-.dash-item-container .show-apps:selected .overview-icon:hover .overview-icon,
-.dash-item-container .show-apps:focus .overview-icon:hover .overview-icon {
-  background-color: rgba(246, 246, 246, 0.16);
-}
-.dash-item-container .show-apps:selected .overview-icon:active .overview-icon,
-.dash-item-container .show-apps:focus .overview-icon:active .overview-icon {
-  background-color: rgba(246, 246, 246, 0.13);
-}
-
-.dash-item-container .show-apps:active .overview-icon {
-  background-color: rgba(246, 246, 246, 0.16);
-}
-
-.dash-item-container .show-apps:outlined .overview-icon,
-.dash-item-container .show-apps:checked .overview-icon {
-  background-color: rgba(246, 246, 246, 0.19);
-}
-.dash-item-container .show-apps:outlined .overview-icon:active .overview-icon,
-.dash-item-container .show-apps:checked .overview-icon:active .overview-icon {
-  background-color: rgba(246, 246, 246, 0.22);
-}
-.dash-item-container .show-apps:outlined .overview-icon:hover .overview-icon,
-.dash-item-container .show-apps:checked .overview-icon:hover .overview-icon {
-  background-color: rgba(246, 246, 246, 0.25);
-}
-
-.dash-item-container .show-apps:drop .overview-icon {
-  border: 2px solid rgba(99, 177, 188, 0.8);
-  background-color: rgba(99, 177, 188, 0.2);
-}
-
-.dash-item-container .show-apps,
-.dash-item-container .app-well-app,
-.dash-item-container .grid-search-result {
-  padding-bottom: 12px;
-}
-
-.dash-separator {
-  width: 1px;
-  margin: 0 4px;
-  background-color: #12141f33;
-  margin-bottom: 12px;
+  color: #e4d5ea;
 }
 
 .vertical-overview.workspace-thumbnails,
@@ -2578,15 +2486,6 @@ StScrollBar StButton#hhandle:active {
 .workspace-thumbnail {
   background-color: #12141f33;
   border-radius: 0 !important;
-}
-
-.dash-label {
-  color: #00fff7;
-  background-color: #12141f33;
-
-  padding: 6px 12px;
-  text-align: center;
-  -y-offset: 8px;
 }
 
 /* App Grid */
@@ -2609,56 +2508,64 @@ StScrollBar StButton#hhandle:active {
 
 .app-well-app:hover .overview-icon,
 .grid-search-result:hover .overview-icon {
-  background-color: rgba(246, 246, 246, 0.1);
+  border-color: #00fff7;
+  background-color: #0a0b14;
 }
 
 .app-well-app:selected .overview-icon,
 .grid-search-result:selected .overview-icon,
 .app-well-app:focus .overview-icon,
 .grid-search-result:focus .overview-icon {
-  background-color: rgba(246, 246, 246, 0.13);
+  border-color: #ffd700;
+  background-color: #0a0b14;
 }
 .app-well-app:selected .overview-icon:hover .overview-icon,
 .grid-search-result:selected .overview-icon:hover .overview-icon,
 .app-well-app:focus .overview-icon:hover .overview-icon,
 .grid-search-result:focus .overview-icon:hover .overview-icon {
-  background-color: rgba(246, 246, 246, 0.16);
+  border-color: #00fff7;
+  background-color: #0a0b14;
 }
 .app-well-app:selected .overview-icon:active .overview-icon,
 .grid-search-result:selected .overview-icon:active .overview-icon,
 .app-well-app:focus .overview-icon:active .overview-icon,
 .grid-search-result:focus .overview-icon:active .overview-icon {
-  background-color: rgba(246, 246, 246, 0.13);
+  border-color: #00fff7;
+  background-color: #0a0b14;
 }
 
 .app-well-app:active .overview-icon,
 .grid-search-result:active .overview-icon {
-  background-color: rgba(246, 246, 246, 0.16);
+  border-color: #00fff7;
+  background-color: #0a0b14;
 }
 
 .app-well-app:outlined .overview-icon,
 .grid-search-result:outlined .overview-icon,
 .app-well-app:checked .overview-icon,
 .grid-search-result:checked .overview-icon {
-  background-color: rgba(246, 246, 246, 0.19);
+  border-color: #ffd700;
+  background-color: #0a0b14;
 }
 .app-well-app:outlined .overview-icon:active .overview-icon,
 .grid-search-result:outlined .overview-icon:active .overview-icon,
 .app-well-app:checked .overview-icon:active .overview-icon,
 .grid-search-result:checked .overview-icon:active .overview-icon {
-  background-color: rgba(246, 246, 246, 0.22);
+  border-color: #ffd700;
+  background-color: #0a0b14;
 }
 .app-well-app:outlined .overview-icon:hover .overview-icon,
 .grid-search-result:outlined .overview-icon:hover .overview-icon,
 .app-well-app:checked .overview-icon:hover .overview-icon,
 .grid-search-result:checked .overview-icon:hover .overview-icon {
-  background-color: rgba(246, 246, 246, 0.25);
+  border-color: #ffd700;
+  background-color: #0a0b14;
 }
 
 .app-well-app:drop .overview-icon,
 .grid-search-result:drop .overview-icon {
-  border: 2px solid rgba(99, 177, 188, 0.8);
-  background-color: rgba(99, 177, 188, 0.2);
+  border: 2px solid #00fff7;
+  background-color: rgba(41, 0, 47, 0.5);
 }
 
 .app-well-app .overview-icon,
@@ -2669,69 +2576,80 @@ StScrollBar StButton#hhandle:active {
 .app-well-app .overview-icon.overview-icon-with-label > StBoxLayout,
 .grid-search-result .overview-icon.overview-icon-with-label > StBoxLayout {
   spacing: 6px;
+  color: #e100ff;
 }
 
 .app-well-app.app-folder .overview-icon,
 .app-folder.grid-search-result .overview-icon {
-  background-color: rgba(246, 246, 246, 0.19);
+  background-color: #0a0b14;
 }
 
 .app-well-app.app-folder:hover .overview-icon,
 .app-folder.grid-search-result:hover .overview-icon {
-  background-color: rgba(246, 246, 246, 0.1);
+  border-color: #00fff7;
+  background-color: #21243c;
 }
 
 .app-well-app.app-folder:selected .overview-icon,
 .app-folder.grid-search-result:selected .overview-icon,
 .app-well-app.app-folder:focus .overview-icon,
 .app-folder.grid-search-result:focus .overview-icon {
-  background-color: rgba(246, 246, 246, 0.13);
+  border-color: #ffd700;
+  background-color: #21243c;
 }
 .app-well-app.app-folder:selected .overview-icon:hover .overview-icon,
 .app-folder.grid-search-result:selected .overview-icon:hover .overview-icon,
 .app-well-app.app-folder:focus .overview-icon:hover .overview-icon,
 .app-folder.grid-search-result:focus .overview-icon:hover .overview-icon {
-  background-color: rgba(246, 246, 246, 0.16);
+  border-color: #ffd700;
+  background-color: #21243c;
 }
 .app-well-app.app-folder:selected .overview-icon:active .overview-icon,
 .app-folder.grid-search-result:selected .overview-icon:active .overview-icon,
 .app-well-app.app-folder:focus .overview-icon:active .overview-icon,
 .app-folder.grid-search-result:focus .overview-icon:active .overview-icon {
-  background-color: rgba(246, 246, 246, 0.13);
+  border-color: #ffd700;
+  background-color: #21243c;
 }
 
 .app-well-app.app-folder:active .overview-icon,
 .app-folder.grid-search-result:active .overview-icon {
-  background-color: rgba(246, 246, 246, 0.16);
+  border-color: #00fff7;
+  background-color: #21243c;
 }
 
 .app-well-app.app-folder:outlined .overview-icon,
 .app-folder.grid-search-result:outlined .overview-icon,
 .app-well-app.app-folder:checked .overview-icon,
 .app-folder.grid-search-result:checked .overview-icon {
-  background-color: rgba(246, 246, 246, 0.19);
+  border-color: #ffd700;
+  background-color: #21243c;
 }
 .app-well-app.app-folder:outlined .overview-icon:active .overview-icon,
 .app-folder.grid-search-result:outlined .overview-icon:active .overview-icon,
 .app-well-app.app-folder:checked .overview-icon:active .overview-icon,
 .app-folder.grid-search-result:checked .overview-icon:active .overview-icon {
-  background-color: rgba(246, 246, 246, 0.22);
+  border-color: #ffd700;
+  background-color: #21243c;
 }
 .app-well-app.app-folder:outlined .overview-icon:hover .overview-icon,
 .app-folder.grid-search-result:outlined .overview-icon:hover .overview-icon,
 .app-well-app.app-folder:checked .overview-icon:hover .overview-icon,
 .app-folder.grid-search-result:checked .overview-icon:hover .overview-icon {
-  background-color: rgba(246, 246, 246, 0.25);
+  border-color: #ffd700;
+  background-color: #21243c;
 }
 
 .app-well-app.app-folder:drop .overview-icon,
 .app-folder.grid-search-result:drop .overview-icon {
-  border: 2px solid rgba(99, 177, 188, 0.8);
-  background-color: rgba(99, 177, 188, 0.2);
+  border: 2px solid #00fff7;
+  background-color: rgba(41, 0, 47, 0.5);
 }
 
 .app-folder-dialog {
-  background-color: #3b3b3b;
+  background-color: #0a0b14;
+  border: 1px solid #e100ff;
+  color: #e100ff;
 }
 .app-folder-dialog .folder-name-container {
   padding: 24px 36px 0;
@@ -2743,7 +2661,7 @@ StScrollBar StButton#hhandle:active {
 }
 .app-folder-dialog .folder-name-container .folder-name-label {
   padding: 5px 7px;
-  color: #12141f;
+  color: #e100ff;
 }
 .app-folder-dialog .folder-name-container .edit-folder-button {
   padding: 0;
@@ -3247,10 +3165,10 @@ StScrollBar StButton#hhandle:active {
   color: #e4d5ea;
 }
 .lg-dialog .actor-link:hover {
-  color: #c4c3c2;
+  color: #00fff7;
 }
 .lg-dialog .actor-link:active {
-  color: #5e5d5c;
+  color: #e4d5ea;
 }
 
 .lg-completions-text {
@@ -3262,7 +3180,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .lg-obj-inspector-button {
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  border: 1px solid #e100ff;
   padding: 4px;
 }
 .lg-obj-inspector-button:hover {
@@ -3666,7 +3584,6 @@ StScrollBar StButton#hhandle:active {
   font-weight: bold;
   padding: 0 12px;
   color: #e100ff;
-  background-color: rgba(246, 246, 246, 0.1);
 }
 
 .screen-shield-background {
@@ -3694,37 +3611,6 @@ StScrollBar StButton#hhandle:active {
 #unlockDialogNotifications StButton#hhandle:active {
   color: #ffd700;
   background-color: inherit;
-}
-
-/* Pop_OS COSMIC Widget styling. */
-/* Pop_OS COSMIC Dock styling, append !important to any changed rules */
-.cosmic-dock #dock {
-  border: 1px solid #e100ff;
-  background-color: #0a0b14;
-  margin: 4px !important;
-}
-
-.cosmic-dock.extended #dock {
-  margin: 0 !important;
-}
-
-.cosmic-dock.extended.side #dock {
-  border-top-width: 0 !important;
-  border-bottom-width: 0 !important;
-}
-
-.cosmic-dock.extended.side.left #dock {
-  border-left-width: 0 !important;
-}
-
-.cosmic-dock.extended.side.right #dock {
-  border-right-width: 0 !important;
-}
-
-.cosmic-dock.extended.bottom #dock {
-  border-bottom-width: 0 !important;
-  border-left-width: 0 !important;
-  border-right-width: 0 !important;
 }
 
 * {
