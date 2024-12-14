@@ -480,13 +480,13 @@ StEntry StLabel.hint-text {
 .slider {
   height: 15px;
   -barlevel-height: 3px;
-  -barlevel-background-color: rgba(43, 41, 40, 0.1);
+  -barlevel-background-color: #e4d5ea;
   -barlevel-border-width: 1px;
-  -barlevel-border-color: rgba(43, 41, 40, 0.1);
+  -barlevel-border-color: #e4d5ea;
   -barlevel-active-background-color: #00fff7;
   -barlevel-active-border-color: #00fff7;
-  -barlevel-overdrive-color: #e56a54;
-  -barlevel-overdrive-border-color: #e25b42;
+  -barlevel-overdrive-color: #ff2e6e;
+  -barlevel-overdrive-border-color: #ff2e6e;
   -barlevel-overdrive-separator-width: 1px;
   -slider-handle-radius: 7.5px;
   -slider-handle-border-width: 1px;
@@ -1621,9 +1621,9 @@ StScrollBar StButton#hhandle:active {
   height: 6px;
   min-width: 10.9em;
   -barlevel-height: 6px;
-  -barlevel-background-color: rgba(246, 246, 246, 0.3);
-  -barlevel-active-background-color: #12141f;
-  -barlevel-overdrive-color: #e56a54;
+  -barlevel-background-color: #e4d5ea;
+  -barlevel-active-background-color: #00fff7;
+  -barlevel-overdrive-color: #ff2e6e;
   -barlevel-overdrive-separator-width: 3px;
 }
 .osd-window .level:first-child {
