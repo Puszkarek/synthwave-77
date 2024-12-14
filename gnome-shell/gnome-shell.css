@@ -1710,7 +1710,7 @@ StScrollBar StButton#hhandle:active {
 }
 .switcher-list .separator {
   width: 1px;
-  background: rgba(200, 200, 200, 0.5);
+  background: #e100ff;
 }
 .switcher-list .thumbnail-box {
   padding: 2px;
@@ -2581,7 +2581,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .dash-label {
-  color: #12141f;
+  color: #00fff7;
   background-color: #12141f33;
 
   padding: 6px 12px;
@@ -2885,12 +2885,12 @@ StScrollBar StButton#hhandle:active {
 .user-icon {
   background-size: contain;
   border-radius: 0;
-  color: #0a0b14;
+  color: #e100ff;
 
   icon-size: 4.36em;
 }
 .user-icon:hover {
-  color: #21243c;
+  color: #00fff7;
 }
 .user-icon StIcon {
   background-color: #00fff7;
@@ -2915,7 +2915,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .lightbox {
-  background-color: black;
+  background-color: #0a0b14;
 }
 
 .flashspot {
@@ -2970,33 +2970,35 @@ StScrollBar StButton#hhandle:active {
   border-style: solid;
 
   box-shadow: none;
-  color: #12141f;
-  background-color: #4b4b4b;
+  color: #e100ff;
+  background-color: #12141f;
 }
 .keyboard-key:focus {
-  color: #12141f;
-  background-color: rgba(60, 73, 75, 0.73);
+  color: #00fff7;
+  background-color: #2d2f54;
   box-shadow: none;
 }
 .keyboard-key:focus:hover {
-  background-color: rgba(71, 84, 86, 0.73);
+  color: #00fff7;
+  background-color: #2d2f54;
   box-shadow: none;
 }
 .keyboard-key:focus:active {
-  background-color: rgba(75, 88, 90, 0.73);
+  color: #00fff7;
+  background-color: #2d2f54;
   box-shadow: none;
 }
 .keyboard-key:hover {
-  color: #12141f;
-  background-color: #555555;
+  color: #00fff7;
+  background-color: #12141f;
 }
 .keyboard-key:active {
-  color: #12141f;
-  background-color: #5d5d5d;
+  color: #00fff7;
+  background-color: #12141f;
 }
 .keyboard-key:checked {
-  color: #12141f;
-  background-color: #6a6a6a;
+  color: #8ffffb;
+  background-color: #12141f;
 }
 .keyboard-key:grayed {
   background-color: #eeeeee;
@@ -3004,46 +3006,44 @@ StScrollBar StButton#hhandle:active {
   border-color: rgba(0, 0, 0, 0.7);
 }
 .keyboard-key.default-key {
-  color: #12141f;
-  background-color: #2f2f2f;
+  color: #e100ff;
+  background-color: #12141f;
 }
 .keyboard-key.default-key:hover {
-  color: #12141f;
-  background-color: #393939;
+  color: #00fff7;
+  background-color: #12141f;
 }
 .keyboard-key.default-key:active {
-  color: #12141f;
-  background-color: #414141;
+  color: #00fff7;
+  background-color: #12141f;
 }
 .keyboard-key.default-key:checked {
-  color: #12141f;
-  background-color: #4e4e4e;
+  color: #00fff7;
+  background-color: #12141f;
 }
 .keyboard-key.enter-key {
-  color: #12141f;
-  background-color: #6eb6c1;
-
-  color: #12141f;
+  color: #e100ff;
+  background-color: #12141f;
 }
 .keyboard-key.enter-key:hover {
-  color: #12141f;
-  background-color: #7cbdc7;
+  color: #00fff7;
+  background-color: #12141f;
 }
 .keyboard-key.enter-key:active {
-  color: #12141f;
-  background-color: #87c3cb;
+  color: #00fff7;
+  background-color: #12141f;
 }
 .keyboard-key.enter-key:checked {
-  color: #12141f;
-  background-color: #99ccd3;
+  color: #00fff7;
+  background-color: #12141f;
 }
 .keyboard-key.shift-key-uppercase {
-  background-color: #777777;
-  color: rgba(44, 44, 44, 0.7);
+  color: #e100ff;
+  background-color: #12141f;
 }
 .keyboard-key.shift-key-uppercase:hover {
-  background-color: #838383;
-  color: rgba(57, 57, 57, 0.7);
+  color: #00fff7;
+  background-color: #12141f;
 }
 .keyboard-key StIcon {
   icon-size: 24px;
@@ -3373,7 +3373,7 @@ StScrollBar StButton#hhandle:active {
 .login-dialog .modal-dialog-button:default:active,
 .unlock-dialog .modal-dialog-button:default:active {
   background-color: #4ca3b0;
-  color: black;
+  color: #0a0b14;
 }
 .login-dialog .modal-dialog-button:default:insensitive,
 .unlock-dialog .modal-dialog-button:default:insensitive {
@@ -3639,7 +3639,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .screen-shield-background {
-  background: black;
+  background: #0a0b14;
   box-shadow: none;
 }
 
