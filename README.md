@@ -1,17 +1,9 @@
 # TODOS
 - [ ] Discord
-- [ ] Gnome Theme
-  - [ ] Background Colors
-    - [ ] #303030
-  - [ ] UI Colors
-    - [ ] #fbb86c
-  - [ ] Authentication Theme
-  - [ ] Gnome Shell Theme
-    - /* Slider */
-    - .switcher-list .item-box:hover
-    - .nm-dialog-scroll-view
-    - #panel .panel-button
-    - /* Pop_OS COSMIC Widget styling. */
+- [ ] Gnome Themes
+  - [ ] Authentication
+  - [ ] Gnome Shell
+    - [ ] Modify svg icons
   - [ ] GTK 3
   - [ ] GTK 4
 - [ ] Check https://github.com/ExposedCat/stunning-gnome-de
@@ -91,6 +83,7 @@
 - https://github.com/refact0r/system24?tab=readme-ov-fileS
 - https://github.com/spicetify
 - https://www.reddit.com/r/unixporn/comments/18oryzo/waylandswallpaper
+
 # Developer Resources
 - https://developer.gnome.org/hig/
 - https://developer.gnome.org/hig/resources.html

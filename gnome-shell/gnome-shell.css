@@ -440,40 +440,36 @@ StEntry StLabel.hint-text {
 .check-box StBin {
   width: 24px;
   height: 24px;
-  border: 1px solid #e100ff;
+  background-image: url("./checkbox-off.svg");
 }
 
 .check-box:hover StBin {
-  border: 1px solid #00fff7;
+  /* TODO */
 }
 
 .check-box:focus StBin {
-  border: 1px solid #00fff7;
+  background-image: url("./checkbox-off-focused.svg");
 }
 
 .check-box:checked StBin {
-  border: 1px solid #e100ff;
-  background: #e100ff;
-  background-image: none;
+  background-image: url("./checkbox.svg");
 }
 
 .check-box:focus:checked StBin {
-  border: 1px solid #00fff7;
-  background: #e100ff;
-  background-image: none;
+  background-image: url("./checkbox-focused.svg");
 }
 
 /* Switches */
 .toggle-switch {
   color: #e100ff;
-  height: 22px;
-  width: 22px;
-  border: 1px solid #e100ff;
-  background-image: none;
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  background-image: url("./toggle-off.svg");
 }
+
 .toggle-switch:checked {
-  background: #e100ff;
-  background-image: none;
+  background-image: url("./toggle-on.svg");
 }
 
 /* Slider */
@@ -902,7 +898,7 @@ StScrollBar StButton#hhandle:active {
   outline-color: #e100ff;
 }
 .calendar .calendar-day-with-events {
-  background-image: url("resource:///org/gnome/shell/theme/calendar-today-light.svg");
+  background-image: url("./calendar-today-light.svg");
   background-size: contain;
 }
 .calendar .calendar-week-number {
@@ -1514,7 +1510,7 @@ StScrollBar StButton#hhandle:active {
 
 /* Welcome dialog */
 .welcome-dialog-image {
-  background-image: url("resource:///org/gnome/shell/theme/gnome-shell-start.svg");
+  background-image: url("./gnome-shell-start.svg");
   background-size: contain;
   /* Reasonable maximum dimensions */
   height: 300px;
@@ -1660,7 +1656,6 @@ StScrollBar StButton#hhandle:active {
 
 .switcher-list {
   padding: 10px;
-
   box-shadow: none;
 }
 .switcher-list .switcher-list-item-container {
@@ -2768,7 +2763,8 @@ StScrollBar StButton#hhandle:active {
 }
 
 .workspace-thumbnails .placeholder {
-  background: #00fff7;
+  background-image: url("./workspace-placeholder.svg");
+  background-size: contain;
   width: 18px;
 }
 
