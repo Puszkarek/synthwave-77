@@ -55,7 +55,8 @@
   --backdrop-active-color: rgba(41, 0, 47, 0.7);
 
   --hover-color: #00fff7;
-  --active-color: #cc8f00;
+  --active-color: #ffd700;
+  --active-disabled-color: #d1caa7;
 
   --accent-color: #00fff7;
   --accent-color-hover: #8ffffb;
