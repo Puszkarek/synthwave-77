@@ -1,5 +1,9 @@
-[Desktop Entry]
+[X-GNOME-Metatheme]
+Name=SynthWave 77
 Type=X-GNOME-Metatheme
-Name=SynthWave-77
-Comment=A retro cyberpunk theme
+Comment=A cyberpunk theme with a synthwave aesthetic
 Encoding=UTF-8
+GtkTheme=SynthWave 77
+IconTheme=Pop
+CursorTheme=Pop
+CursorSize=24

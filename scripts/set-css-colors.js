@@ -1,7 +1,11 @@
 const fs = require("fs");
+// Update paths to be relative to the script's location
+const path = require('path');
+const scriptDir = path.dirname(__filename);
 
-const gtk3Path = "./gtk-3.0/gtk.css";
-const gtk4Path = "./gtk-4.0/gtk.css";
+const gtk3Path = path.join(scriptDir, "../gtk-3.0/gtk.css");
+const gtk4Path = path.join(scriptDir, "../gtk-4.0/gtk.css");
+
 
 const bgColor = "#12141f";
 const backdropBgColor = "#2d2f54";
