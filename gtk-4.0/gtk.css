@@ -846,9 +846,8 @@ notebook > header > tabs > arrow:backdrop,
 button:backdrop.flat,
 button:backdrop {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #c3a7d1;
-  border-color: #d5d0cc;
-  background-image: image(#f6f5f4);
+  color: #e4d5ea;
+  background: #2d2f54;
   box-shadow: none;
   transition: 200ms ease-out;
 }
@@ -1673,21 +1672,19 @@ modelbutton.flat arrow.right {
 .toolbar button:disabled {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #c3a7d1;
-  border-color: #d5d0cc;
-  background-image: image(#faf9f8);
+  border-color: #c3a7d1;
 }
 .toolbar button:backdrop {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #c3a7d1;
-  border-color: #d5d0cc;
-  background-image: image(#f6f5f4);
+  color: #e4d5ea;
+  background: #2d2f54;
   box-shadow: none;
 }
 .toolbar button:backdrop:disabled {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #d4cfca;
-  border-color: #d5d0cc;
-  background-image: image(#faf9f8);
+  color: #c3a7d1;
+  border-color: #c3a7d1;
+  background: #2d2f54;
   box-shadow: none;
 }
 
@@ -5345,34 +5342,32 @@ window {
   border-width: 0px;
 }
 window.csd {
-  box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.23);
+  box-shadow: none;
   margin: 0px;
   border-radius: 0;
 }
 window.csd:backdrop {
-  box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px rgba(0, 0, 0, 0.2),
-    0 0 0 1px rgba(0, 0, 0, 0.18);
+  box-shadow: none;
+
   transition: 200ms ease-out;
 }
 window.csd.popup {
   border-radius: 0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
+  box-shadow: none;
 }
 window.csd.dialog.message {
   border-radius: 0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
+  box-shadow: none;
 }
 window.solid-csd {
   margin: 0;
   padding: 4px;
-  border: solid 1px #cdc7c2;
+  border: 1px solid #e100ff;
   border-radius: 0;
-  box-shadow: inset 0 0 0 4px #cdc7c2, inset 0 0 0 3px #574f4a,
-    inset 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: none;
 }
 window.solid-csd:backdrop {
-  box-shadow: inset 0 0 0 4px #cdc7c2, inset 0 0 0 3px #f6f5f4,
-    inset 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: none;
 }
 window.maximized,
 window.fullscreen {
@@ -5385,10 +5380,10 @@ window.tiled-left,
 window.tiled-right,
 window.tiled-bottom {
   border-radius: 0;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18), 0 0 0 20px transparent;
+  box-shadow: none;
 }
 window:backdrop {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18), 0 0 0 20px transparent;
+  box-shadow: none;
 }
 window.popup {
   box-shadow: none;
@@ -5722,10 +5717,10 @@ headerbar {
   min-height: 46px;
   border-width: 1px 0px 0px;
   border-style: solid;
-  border-color: #736861;
+  border-color: #e100ff;
   border-radius: 0;
-  color: rgba(255, 255, 255, 0.8);
-  background: #574f4a;
+  color: #e100ff;
+  background: #12141f;
 }
 .titlebar:not(headerbar) label .title,
 headerbar label .title {
@@ -7317,7 +7312,7 @@ headerbar switch:backdrop {
 }
 .titlebar:not(headerbar) switch:disabled,
 headerbar switch:disabled {
-  background-color: #574f4a;
+  background-color: #12141f;
   border-color: #cdc7c2;
 }
 .titlebar:not(headerbar) switch:backdrop,
@@ -7340,7 +7335,7 @@ headerbar switch slider:checked {
 }
 .titlebar:not(headerbar) switch slider:disabled,
 headerbar switch slider:disabled {
-  background-color: #574f4a;
+  background-color: #12141f;
   border-color: #cdc7c2;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #c3a7d1;
@@ -8848,9 +8843,8 @@ headerbar.selection-mode buttonbox.toggle.suggested-action:disabled {
 headerbar.selection-mode button.suggested-action:backdrop,
 headerbar.selection-mode buttonbox.toggle.suggested-action:backdrop {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #c3a7d1;
-  border-color: #d5d0cc;
-  background-image: image(#f6f5f4);
+  color: #e4d5ea;
+  background-image: #2d2f54;
   box-shadow: none;
   border-color: #53a260;
 }
@@ -8907,17 +8901,17 @@ paned.titlebar > separator:backdrop {
 }
 
 window.devel headerbar.titlebar {
-  background: #574f4a
+  background: #12141f
       cross-fade(10% -gtk-icontheme("system-run-symbolic"), image(transparent))
       90% 0/256px 256px no-repeat,
     linear-gradient(to right, transparent 65%, rgba(251, 184, 108, 0.2)),
     linear-gradient(to top, #332e2c, #3b3633 3px, #4c4541);
 }
 window.devel headerbar.titlebar:backdrop {
-  background: #574f4a
+  background: #12141f
       cross-fade(10% -gtk-icontheme("system-run-symbolic"), image(transparent))
       90% 0/256px 256px no-repeat,
-    image(#574f4a);
+    image(#12141f);
   /* background-color would flash */
 }
 
@@ -9476,7 +9470,7 @@ text color for entries, views and content in general on backdrop windows */
 @define-color theme_unfocused_text_color #000;
 /*
 widget base background color on backdrop windows */
-@define-color theme_unfocused_bg_color #f6f5f4;
+@define-color theme_unfocused_bg_color #2d2f54;
 /*
 text widgets and the like base background color on backdrop windows */
 @define-color theme_unfocused_base_color #fcfcfc;
