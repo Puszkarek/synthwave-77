@@ -3556,48 +3556,38 @@ notebook > stack:not(:only-child):backdrop {
  * Scrollbars *
  **************/
 scrollbar {
-  background-color: #cecece;
+  background-color: transparent;
   transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 * {
   -gtkscrollbar-has-backward-stepper: false;
   -gtkscrollbar-has-forward-stepper: false;
 }
-scrollbar.top {
-  border-bottom: 1px solid rgba(200, 200, 200, 0.5);
-}
-scrollbar.bottom {
-  border-top: 1px solid rgba(200, 200, 200, 0.5);
-}
-scrollbar.left {
-  border-right: 1px solid rgba(200, 200, 200, 0.5);
-}
-scrollbar.right {
-  border-left: 1px solid rgba(200, 200, 200, 0.5);
-}
+
 scrollbar:backdrop {
-  background-color: #efedec;
-  border-color: #d5d0cc;
+  background-color: transparent;
+  border-color: #e100ff;
   transition: 200ms ease-out;
 }
 scrollbar slider {
-  min-width: 8px;
-  min-height: 8px;
+  min-width: 5px;
+  min-height: 5px;
   margin: -1px;
   border: 4px solid transparent;
-  border-radius: 10px;
+  border-radius: 0;
   background-clip: padding-box;
-  background-color: #7e8182;
+  background-color: #e100ff;
   transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 1;
 }
 scrollbar slider:hover {
-  background-color: #565b5c;
+  background-color: #00fff7;
 }
 scrollbar slider:hover:active {
-  background-color: #3aaebc;
+  background-color: #00fff7;
 }
 scrollbar slider:backdrop {
-  background-color: #cecfce;
+  background-color: #e4d5ea;
 }
 scrollbar slider:disabled {
   background-color: transparent;
@@ -3613,52 +3603,12 @@ scrollbar.fine-tune.horizontal slider {
 scrollbar.fine-tune.vertical slider {
   border-width: 4px 5px;
 }
-scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
-  border-color: transparent;
-  opacity: 0.4;
-  background-color: transparent;
-}
-scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
-  margin: 0;
-  min-width: 3px;
-  min-height: 3px;
-  background-color: #292929;
-  border: 1px solid white;
-}
-scrollbar.overlay-indicator:not(.dragging):not(.hovering) button {
-  min-width: 5px;
-  min-height: 5px;
-  background-color: #292929;
-  background-clip: padding-box;
-  border-radius: 100%;
-  border: 1px solid white;
-  -gtk-icon-source: none;
-}
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
-  margin: 0 2px;
-  min-width: 40px;
-}
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button {
-  margin: 1px 2px;
-  min-width: 5px;
-}
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
-  margin: 2px 0;
-  min-height: 40px;
-}
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical button {
-  margin: 2px 1px;
-  min-height: 5px;
-}
-scrollbar.overlay-indicator.dragging,
-scrollbar.overlay-indicator.hovering {
-  opacity: 0.8;
-}
+
 scrollbar.horizontal slider {
-  min-width: 40px;
+  min-width: 12px;
 }
 scrollbar.vertical slider {
-  min-height: 40px;
+  min-height: 12px;
 }
 scrollbar button {
   padding: 0;
@@ -3673,7 +3623,7 @@ scrollbar button {
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  color: #7e8182;
+  color: transparent;
 }
 scrollbar button:hover {
   border-color: transparent;
@@ -3682,7 +3632,7 @@ scrollbar button:hover {
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  color: #565b5c;
+  color: #00fff7;
 }
 scrollbar button:active,
 scrollbar button:checked {
@@ -3692,7 +3642,7 @@ scrollbar button:checked {
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  color: #3aaebc;
+  color: #ffd700;
 }
 scrollbar button:disabled {
   border-color: transparent;
@@ -3701,7 +3651,7 @@ scrollbar button:disabled {
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  color: rgba(126, 129, 130, 0.2);
+  color: transparent;
 }
 scrollbar button:backdrop {
   border-color: transparent;
@@ -3710,7 +3660,7 @@ scrollbar button:backdrop {
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  color: #cecfce;
+  color: transparent;
 }
 scrollbar button:backdrop:disabled {
   border-color: transparent;
@@ -3719,7 +3669,7 @@ scrollbar button:backdrop:disabled {
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  color: rgba(206, 207, 206, 0.2);
+  color: transparent;
 }
 scrollbar.vertical button.down {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
