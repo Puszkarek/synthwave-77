@@ -14,11 +14,12 @@
   -gtkwidget-text-handle-height: 24;
   -gtkdialog-button-spacing: 4;
   -gtkdialog-action-area-border: 0;
-  outline-color: alpha(currentColor, 0.3);
-  outline-style: dashed;
+
+  outline-color: transparent;
+  outline-style: solid;
   outline-offset: -3px;
   outline-width: 1px;
-  -gtk-outline-radius: 2px;
+  -gtk-outline-radius: 0;
   -gtk-secondary-caret-color: #48b9c7;
 }
 
@@ -4249,34 +4250,24 @@ treeview.view radio:selected {
 progressbar trough,
 scale fill,
 scale trough {
-  border: 1px solid rgba(200, 200, 200, 0.5);
-  border-radius: 3px;
-  background-color: rgba(41, 41, 41, 0.1);
+  border: 1px solid #e100ff;
+  background-color: #e100ff;
+  transition: 200ms ease-out;
 }
 progressbar trough:disabled,
 scale fill:disabled,
 scale trough:disabled {
-  background-color: #faf9f8;
+  border-color: #e4d5ea;
+  background-color: #e4d5ea;
 }
-progressbar trough:backdrop,
-scale fill:backdrop,
-scale trough:backdrop {
-  background-color: #eae8e6;
-  border-color: #d5d0cc;
-  transition: 200ms ease-out;
-}
-progressbar trough:backdrop:disabled,
-scale fill:backdrop:disabled,
-scale trough:backdrop:disabled {
-  background-color: #faf9f8;
-}
+
 row:selected progressbar trough,
 progressbar row:selected trough,
 row:selected scale fill,
 scale row:selected fill,
 row:selected scale trough,
 scale row:selected trough {
-  border-color: #185fb4;
+  border-color: #ffd700;
 }
 .osd progressbar trough,
 progressbar .osd trough,
@@ -4284,8 +4275,8 @@ progressbar .osd trough,
 scale .osd fill,
 .osd scale trough,
 scale .osd trough {
-  border-color: rgba(0, 0, 0, 0.7);
-  background-color: rgba(0, 0, 0, 0.5);
+  border-color: #e100ff;
+  background-color: #e100ff;
 }
 .osd progressbar trough:disabled,
 progressbar .osd trough:disabled,
@@ -4293,46 +4284,33 @@ progressbar .osd trough:disabled,
 scale .osd fill:disabled,
 .osd scale trough:disabled,
 scale .osd trough:disabled {
-  background-color: rgba(71, 71, 71, 0.5);
+  border-color: #e4d5ea;
+  background-color: #e4d5ea;
 }
 
 progressbar progress,
 scale highlight {
-  border: 1px solid #3f8993;
-  border-radius: 3px;
-  background-color: #63b1bc;
+  border: 3px solid #00fff7;
+  background-color: #00fff7;
 }
-progressbar progress:disabled,
-scale highlight:disabled {
-  background-color: transparent;
-  border-color: transparent;
-}
-progressbar progress:backdrop,
-scale highlight:backdrop {
-  border-color: #63b1bc;
-}
-progressbar progress:backdrop:disabled,
-scale highlight:backdrop:disabled {
-  background-color: transparent;
-  border-color: transparent;
-}
+
 row:selected progressbar progress,
 progressbar row:selected progress,
 row:selected scale highlight,
 scale row:selected highlight {
-  border-color: #185fb4;
+  border-color: #ffd700;
 }
 .osd progressbar progress,
 progressbar .osd progress,
 .osd scale highlight,
 scale .osd highlight {
-  border-color: rgba(0, 0, 0, 0.7);
+  border-color: #e100ff;
 }
 .osd progressbar progress:disabled,
 progressbar .osd progress:disabled,
 .osd scale highlight:disabled,
 scale .osd highlight:disabled {
-  border-color: transparent;
+  border-color: #e100ff;
 }
 
 scale {
@@ -4362,147 +4340,86 @@ scale.fine-tune.vertical {
 scale.fine-tune slider {
   margin: -6px;
 }
-scale.fine-tune fill,
-scale.fine-tune highlight,
-scale.fine-tune trough {
-  border-radius: 5px;
-  -gtk-outline-radius: 7px;
-}
+
 scale trough {
   outline-offset: 2px;
-  -gtk-outline-radius: 5px;
 }
-scale fill:backdrop,
-scale fill {
-  background-color: rgba(200, 200, 200, 0.5);
-}
-scale fill:disabled:backdrop,
-scale fill:disabled {
-  border-color: transparent;
-  background-color: transparent;
-}
+
 .osd scale fill {
-  background-color: rgba(91, 91, 90, 0.775);
+  background-color: #00fff7;
 }
 .osd scale fill:disabled:backdrop,
 .osd scale fill:disabled {
-  border-color: transparent;
-  background-color: transparent;
+  border-color: #c3a7d1;
 }
 scale slider {
-  color: #292929;
-  outline-color: rgba(41, 41, 41, 0.3);
-  border-color: rgba(185, 185, 185, 0.5);
+  color: #00fff7;
+  border-color: #00625f;
+  background-color: #00fff7;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  background-image: linear-gradient(to bottom, #12141f 20%, #12141f 90%);
   box-shadow: none;
-  border: 1px solid rgba(177, 177, 177, 0.5);
-  border-radius: 100%;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-property: background, border, box-shadow;
 }
 scale slider:hover {
-  color: #292929;
-  outline-color: rgba(41, 41, 41, 0.3);
-  border-color: rgba(185, 185, 185, 0.5);
-  background-image: linear-gradient(to bottom, #12141f 10%, #12141f 90%);
+  color: #e100ff;
+  border-color: #e100ff;
   box-shadow: none;
 }
 scale slider:active {
-  border-color: #3f8993;
+  border-color: #ffd700;
 }
 scale slider:disabled {
-  color: #929595;
-  border-color: #cdc7c2;
-  background-image: image(#faf9f8);
-  text-shadow: none;
-  -gtk-icon-shadow: none;
-  box-shadow: none;
-}
-scale slider:backdrop {
-  transition: 200ms ease-out;
-  color: #929595;
-  border-color: #d5d0cc;
-  background-image: #2d2f54;
-  text-shadow: none;
-  -gtk-icon-shadow: none;
-  box-shadow: none;
-}
-scale slider:backdrop:disabled {
   color: #c3a7d1;
-  border-color: #d5d0cc;
-  background-image: image(#faf9f8);
+  border-color: #c3a7d1;
+
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
 }
+
 row:selected scale slider:disabled,
 row:selected scale slider {
-  border-color: #185fb4;
+  border-color: #ffd700;
 }
 .osd scale slider {
-  color: #eeeeec;
-  border-color: rgba(0, 0, 0, 0.7);
-  background-color: transparent;
-  background-image: image(rgba(53, 53, 53, 0.7));
+  color: #00fff7;
+  border-color: #37ff00;
+  background-color: #00fff7;
+
   background-clip: padding-box;
   box-shadow: none;
-  text-shadow: 0 1px black;
   -gtk-icon-shadow: 0 1px black;
-  outline-color: rgba(238, 238, 236, 0.3);
-  border-color: rgba(0, 0, 0, 0.7);
-  background-color: #353535;
 }
 .osd scale slider:hover {
-  color: white;
-  border-color: rgba(0, 0, 0, 0.7);
-  background-color: transparent;
-  background-image: image(rgba(83, 83, 83, 0.7));
+  color: #e100ff;
+  border-color: #e100ff;
+
   background-clip: padding-box;
   box-shadow: none;
   text-shadow: 0 1px black;
   -gtk-icon-shadow: 0 1px black;
-  outline-color: rgba(238, 238, 236, 0.3);
-  background-color: #353535;
 }
 .osd scale slider:active {
-  color: white;
-  border-color: rgba(0, 0, 0, 0.7);
-  background-color: transparent;
-  background-image: image(rgba(0, 0, 0, 0.7));
+  color: #ffd700;
+  border-color: #ffd700;
+
   background-clip: padding-box;
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  outline-color: rgba(238, 238, 236, 0.3);
-  background-color: #353535;
 }
 .osd scale slider:disabled {
-  color: #919190;
-  border-color: rgba(0, 0, 0, 0.7);
-  background-color: transparent;
-  background-image: image(rgba(71, 71, 71, 0.5));
+  color: #c3a7d1;
+  border-color: #c3a7d1;
+
   background-clip: padding-box;
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  background-color: #353535;
 }
-.osd scale slider:backdrop {
-  color: #eeeeec;
-  border-color: rgba(0, 0, 0, 0.7);
-  background-color: transparent;
-  background-image: image(rgba(53, 53, 53, 0.7));
-  background-clip: padding-box;
-  box-shadow: none;
-  text-shadow: none;
-  -gtk-icon-shadow: none;
-  background-color: #353535;
-}
-.osd scale slider:backdrop:disabled {
-  background-color: #353535;
-}
+
 scale marks,
 scale value {
   color: alpha(currentColor, 0.55);
@@ -4557,12 +4474,7 @@ scale.vertical.fine-tune indicator {
 scale.horizontal.marks-before:not(.marks-after) slider {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-horz-scale-has-marks-above.png"),
-    url("assets/slider-horz-scale-has-marks-above@2.png")
-  );
+
   min-height: 26px;
   min-width: 22px;
   margin-top: -14px;
@@ -4577,12 +4489,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
 scale.horizontal.marks-before:not(.marks-after) slider:hover {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-horz-scale-has-marks-above-hover.png"),
-    url("assets/slider-horz-scale-has-marks-above-hover@2.png")
-  );
+
   min-height: 26px;
   min-width: 22px;
   margin-top: -14px;
@@ -4597,12 +4504,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
 scale.horizontal.marks-before:not(.marks-after) slider:active {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-horz-scale-has-marks-above-active.png"),
-    url("assets/slider-horz-scale-has-marks-above-active@2.png")
-  );
+
   min-height: 26px;
   min-width: 22px;
   margin-top: -14px;
@@ -4617,12 +4519,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
 scale.horizontal.marks-before:not(.marks-after) slider:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-horz-scale-has-marks-above-insensitive.png"),
-    url("assets/slider-horz-scale-has-marks-above-insensitive@2.png")
-  );
+
   min-height: 26px;
   min-width: 22px;
   margin-top: -14px;
@@ -4637,12 +4534,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
 scale.horizontal.marks-before:not(.marks-after) slider:backdrop {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-horz-scale-has-marks-above-backdrop.png"),
-    url("assets/slider-horz-scale-has-marks-above-backdrop@2.png")
-  );
+
   min-height: 26px;
   min-width: 22px;
   margin-top: -14px;
@@ -4657,12 +4549,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
 scale.horizontal.marks-before:not(.marks-after) slider:backdrop:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-horz-scale-has-marks-above-backdrop-insensitive.png"),
-    url("assets/slider-horz-scale-has-marks-above-backdrop-insensitive@2.png")
-  );
+
   min-height: 26px;
   min-width: 22px;
   margin-top: -14px;
@@ -4677,12 +4564,7 @@ scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
 scale.horizontal.marks-after:not(.marks-before) slider {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-horz-scale-has-marks-below.png"),
-    url("assets/slider-horz-scale-has-marks-below@2.png")
-  );
+
   min-height: 26px;
   min-width: 22px;
   margin-bottom: -14px;
@@ -4697,12 +4579,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
 scale.horizontal.marks-after:not(.marks-before) slider:hover {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-horz-scale-has-marks-below-hover.png"),
-    url("assets/slider-horz-scale-has-marks-below-hover@2.png")
-  );
+
   min-height: 26px;
   min-width: 22px;
   margin-bottom: -14px;
@@ -4717,12 +4594,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
 scale.horizontal.marks-after:not(.marks-before) slider:active {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-horz-scale-has-marks-below-active.png"),
-    url("assets/slider-horz-scale-has-marks-below-active@2.png")
-  );
+
   min-height: 26px;
   min-width: 22px;
   margin-bottom: -14px;
@@ -4737,12 +4609,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
 scale.horizontal.marks-after:not(.marks-before) slider:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-horz-scale-has-marks-below-insensitive.png"),
-    url("assets/slider-horz-scale-has-marks-below-insensitive@2.png")
-  );
+
   min-height: 26px;
   min-width: 22px;
   margin-bottom: -14px;
@@ -4757,12 +4624,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
 scale.horizontal.marks-after:not(.marks-before) slider:backdrop {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-horz-scale-has-marks-below-backdrop.png"),
-    url("assets/slider-horz-scale-has-marks-below-backdrop@2.png")
-  );
+
   min-height: 26px;
   min-width: 22px;
   margin-bottom: -14px;
@@ -4777,12 +4639,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
 scale.horizontal.marks-after:not(.marks-before) slider:backdrop:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-horz-scale-has-marks-below-backdrop-insensitive.png"),
-    url("assets/slider-horz-scale-has-marks-below-backdrop-insensitive@2.png")
-  );
+
   min-height: 26px;
   min-width: 22px;
   margin-bottom: -14px;
@@ -4797,12 +4654,7 @@ scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
 scale.vertical.marks-before:not(.marks-after) slider {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-vert-scale-has-marks-above.png"),
-    url("assets/slider-vert-scale-has-marks-above@2.png")
-  );
+
   min-height: 22px;
   min-width: 26px;
   margin-left: -14px;
@@ -4817,12 +4669,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune slider {
 scale.vertical.marks-before:not(.marks-after) slider:hover {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-vert-scale-has-marks-above-hover.png"),
-    url("assets/slider-vert-scale-has-marks-above-hover@2.png")
-  );
+
   min-height: 22px;
   min-width: 26px;
   margin-left: -14px;
@@ -4837,12 +4684,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune slider {
 scale.vertical.marks-before:not(.marks-after) slider:active {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-vert-scale-has-marks-above-active.png"),
-    url("assets/slider-vert-scale-has-marks-above-active@2.png")
-  );
+
   min-height: 22px;
   min-width: 26px;
   margin-left: -14px;
@@ -4857,12 +4699,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune slider {
 scale.vertical.marks-before:not(.marks-after) slider:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-vert-scale-has-marks-above-insensitive.png"),
-    url("assets/slider-vert-scale-has-marks-above-insensitive@2.png")
-  );
+
   min-height: 22px;
   min-width: 26px;
   margin-left: -14px;
@@ -4877,12 +4714,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune slider {
 scale.vertical.marks-before:not(.marks-after) slider:backdrop {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-vert-scale-has-marks-above-backdrop.png"),
-    url("assets/slider-vert-scale-has-marks-above-backdrop@2.png")
-  );
+
   min-height: 22px;
   min-width: 26px;
   margin-left: -14px;
@@ -4897,12 +4729,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune slider {
 scale.vertical.marks-before:not(.marks-after) slider:backdrop:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-vert-scale-has-marks-above-backdrop-insensitive.png"),
-    url("assets/slider-vert-scale-has-marks-above-backdrop-insensitive@2.png")
-  );
+
   min-height: 22px;
   min-width: 26px;
   margin-left: -14px;
@@ -4917,12 +4744,7 @@ scale.vertical.marks-before:not(.marks-after).fine-tune slider {
 scale.vertical.marks-after:not(.marks-before) slider {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-vert-scale-has-marks-below.png"),
-    url("assets/slider-vert-scale-has-marks-below@2.png")
-  );
+
   min-height: 22px;
   min-width: 26px;
   margin-right: -14px;
@@ -4937,12 +4759,7 @@ scale.vertical.marks-after:not(.marks-before).fine-tune slider {
 scale.vertical.marks-after:not(.marks-before) slider:hover {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-vert-scale-has-marks-below-hover.png"),
-    url("assets/slider-vert-scale-has-marks-below-hover@2.png")
-  );
+
   min-height: 22px;
   min-width: 26px;
   margin-right: -14px;
@@ -4957,12 +4774,7 @@ scale.vertical.marks-after:not(.marks-before).fine-tune slider {
 scale.vertical.marks-after:not(.marks-before) slider:active {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-vert-scale-has-marks-below-active.png"),
-    url("assets/slider-vert-scale-has-marks-below-active@2.png")
-  );
+
   min-height: 22px;
   min-width: 26px;
   margin-right: -14px;
@@ -4977,12 +4789,7 @@ scale.vertical.marks-after:not(.marks-before).fine-tune slider {
 scale.vertical.marks-after:not(.marks-before) slider:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-vert-scale-has-marks-below-insensitive.png"),
-    url("assets/slider-vert-scale-has-marks-below-insensitive@2.png")
-  );
+
   min-height: 22px;
   min-width: 26px;
   margin-right: -14px;
@@ -4997,12 +4804,7 @@ scale.vertical.marks-after:not(.marks-before).fine-tune slider {
 scale.vertical.marks-after:not(.marks-before) slider:backdrop {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-vert-scale-has-marks-below-backdrop.png"),
-    url("assets/slider-vert-scale-has-marks-below-backdrop@2.png")
-  );
+
   min-height: 22px;
   min-width: 26px;
   margin-right: -14px;
@@ -5017,12 +4819,7 @@ scale.vertical.marks-after:not(.marks-before).fine-tune slider {
 scale.vertical.marks-after:not(.marks-before) slider:backdrop:disabled {
   margin: -10px;
   border-style: none;
-  border-radius: 0;
-  background-color: transparent;
-  background-image: -gtk-scaled(
-    url("assets/slider-vert-scale-has-marks-below-backdrop-insensitive.png"),
-    url("assets/slider-vert-scale-has-marks-below-backdrop-insensitive@2.png")
-  );
+
   min-height: 22px;
   min-width: 26px;
   margin-right: -14px;
@@ -5039,7 +4836,7 @@ scale.color {
   min-width: 0;
 }
 scale.color trough {
-  background-image: image(rgba(200, 200, 200, 0.5));
+  background-color: #00fff7;
   background-repeat: no-repeat;
 }
 scale.color.horizontal {
@@ -5048,8 +4845,6 @@ scale.color.horizontal {
 scale.color.horizontal trough {
   padding-bottom: 4px;
   background-position: 0 -3px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 scale.color.horizontal slider:dir(ltr):hover,
 scale.color.horizontal slider:dir(ltr):backdrop,
@@ -5061,6 +4856,7 @@ scale.color.horizontal slider:dir(rtl):backdrop,
 scale.color.horizontal slider:dir(rtl):disabled,
 scale.color.horizontal slider:dir(rtl):backdrop:disabled,
 scale.color.horizontal slider:dir(rtl) {
+  color: #00fff7;
   margin-bottom: -15px;
   margin-top: 6px;
 }
@@ -5070,14 +4866,13 @@ scale.color.vertical:dir(ltr) {
 scale.color.vertical:dir(ltr) trough {
   padding-left: 4px;
   background-position: 3px 0;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
 }
 scale.color.vertical:dir(ltr) slider:hover,
 scale.color.vertical:dir(ltr) slider:backdrop,
 scale.color.vertical:dir(ltr) slider:disabled,
 scale.color.vertical:dir(ltr) slider:backdrop:disabled,
 scale.color.vertical:dir(ltr) slider {
+  color: #00fff7;
   margin-left: -15px;
   margin-right: 6px;
 }
@@ -5087,14 +4882,13 @@ scale.color.vertical:dir(rtl) {
 scale.color.vertical:dir(rtl) trough {
   padding-right: 4px;
   background-position: -3px 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
 }
 scale.color.vertical:dir(rtl) slider:hover,
 scale.color.vertical:dir(rtl) slider:backdrop,
 scale.color.vertical:dir(rtl) slider:disabled,
 scale.color.vertical:dir(rtl) slider:backdrop:disabled,
 scale.color.vertical:dir(rtl) slider {
+  color: #00fff7;
   margin-right: -15px;
   margin-left: 6px;
 }
