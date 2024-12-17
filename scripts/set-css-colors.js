@@ -1,11 +1,10 @@
 const fs = require("fs");
 // Update paths to be relative to the script's location
-const path = require('path');
+const path = require("path");
 const scriptDir = path.dirname(__filename);
 
 const gtk3Path = path.join(scriptDir, "../gtk-3.0/gtk.css");
 const gtk4Path = path.join(scriptDir, "../gtk-4.0/gtk.css");
-
 
 const bgColor = "#12141f";
 const backdropBgColor = "#2d2f54";
@@ -29,17 +28,8 @@ const updateBackgroundColors = (cssText) => {
     `background: ${bgColor};`
   );
 
-  // Backdrop background color replacements with multi-line support
-  updatedCss = updatedCss.replace(
-    /([^{]+):backdrop\s*{([^}]+)}/g,
-    (match, selector, properties) => {
-      const updatedProperties = properties.replace(
-        /background(-color)?:\s*(?!none|transparent)([^;}]+(?:\n[^;}]+)*)(;|\})/g,
-        `background-color: ${backdropBgColor};`
-      );
-      return `${selector}:backdrop {${updatedProperties}}`;
-    }
-  );
+  // Remove all backdrop selectors and their content
+  updatedCss = updatedCss.replace(/[^{]+:backdrop\s*{[^}]*}/g, "");
 
   return updatedCss;
 };
@@ -56,9 +46,12 @@ const updateFontColors = (cssText) => {
 
   colorProperties.forEach((pattern) => {
     updatedCss = updatedCss.replace(pattern, (match, content, ending) => {
-      if (match.includes('border:') || match.includes('outline:')) {
+      if (match.includes("border:") || match.includes("outline:")) {
         // Handle both alpha() function and direct color values
-        return match.replace(/alpha\([^)]+\)|(?:#|rgb|rgba|hsl|hsla)[^;}]+/, primaryColor +';');
+        return match.replace(
+          /alpha\([^)]+\)|(?:#|rgb|rgba|hsl|hsla)[^;}]+/,
+          primaryColor + ";"
+        );
       }
       return match.replace(/[^:]+$/, primaryColor + ending);
     });
@@ -75,9 +68,12 @@ const updateFontColors = (cssText) => {
         updatedProperties = updatedProperties.replace(
           pattern,
           (match, content, ending) => {
-            if (match.includes('border:') || match.includes('outline:')) {
+            if (match.includes("border:") || match.includes("outline:")) {
               // Handle both alpha() function and direct color values
-              return match.replace(/alpha\([^)]+\)|(?:#|rgb|rgba|hsl|hsla)[^;}]+/, primaryHoverColor +';');
+              return match.replace(
+                /alpha\([^)]+\)|(?:#|rgb|rgba|hsl|hsla)[^;}]+/,
+                primaryHoverColor + ";"
+              );
             }
             return match.replace(/[^:]+$/, primaryHoverColor + ending);
           }
@@ -88,7 +84,10 @@ const updateFontColors = (cssText) => {
       if (!updatedProperties.includes("color:")) {
         updatedProperties = `color: ${primaryHoverColor};${updatedProperties}`;
       }
-      if (!updatedProperties.includes("border-color:") && !!updatedProperties.includes("border:")) {
+      if (
+        !updatedProperties.includes("border-color:") &&
+        !!updatedProperties.includes("border:")
+      ) {
         updatedProperties = `border-color: ${primaryHoverColor};${updatedProperties}`;
       }
 
@@ -107,9 +106,12 @@ const updateFontColors = (cssText) => {
         updatedProperties = updatedProperties.replace(
           pattern,
           (match, content, ending) => {
-            if (match.includes('border:') || match.includes('outline:')) {
+            if (match.includes("border:") || match.includes("outline:")) {
               // Handle both alpha() function and direct color values
-              return match.replace(/alpha\([^)]+\)|(?:#|rgb|rgba|hsl|hsla)[^;}]+/, primaryActiveColor+';');
+              return match.replace(
+                /alpha\([^)]+\)|(?:#|rgb|rgba|hsl|hsla)[^;}]+/,
+                primaryActiveColor + ";"
+              );
             }
             return match.replace(/[^:]+$/, primaryActiveColor + ending);
           }
@@ -120,7 +122,10 @@ const updateFontColors = (cssText) => {
       if (!updatedProperties.includes("color:")) {
         updatedProperties = `color: ${primaryActiveColor};${updatedProperties}`;
       }
-      if (!updatedProperties.includes("border-color:") && !!updatedProperties.includes("border:")) {
+      if (
+        !updatedProperties.includes("border-color:") &&
+        !!updatedProperties.includes("border:")
+      ) {
         updatedProperties = `border-color: ${primaryActiveColor};${updatedProperties}`;
       }
 

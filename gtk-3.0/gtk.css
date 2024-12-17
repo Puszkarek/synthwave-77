@@ -30,9 +30,11 @@
   color: #e100ff;
   background-color: #12141f;
 }
+
 .background:backdrop {
-  color: #e4d5ea;
-  background-color: #2d2f54;
+  color: #e100ff;
+  background-color: #1b1d2b;
+
   text-shadow: none;
   -gtk-icon-shadow: none;
 }
@@ -48,24 +50,19 @@
 }
 
 .gtkstyle-fallback {
-  color: #292929;
-  background-color: #12141f;
+  color: #e100ff;
 }
 .gtkstyle-fallback:hover {
-  color: #292929;
-  background-color: white;
+  color: #00fff7;
 }
 .gtkstyle-fallback:active {
-  color: #292929;
-  background-color: #dddddd;
+  color: #ffd700;
 }
 .gtkstyle-fallback:disabled {
-  color: #929595;
-  background-color: #faf9f8;
+  color: #c3a7d1;
 }
 .gtkstyle-fallback:selected {
-  color: #000;
-  background-color: #48b9c7;
+  color: #ffd700;
 }
 
 .view,
@@ -76,28 +73,12 @@ textview text {
   color: #e100ff;
   background-color: #12141f;
 }
-.view:backdrop,
-iconview:backdrop,
-.view text:backdrop,
-iconview text:backdrop,
-textview text:backdrop {
-  color: #323232;
-  background-color: #fcfcfc;
-}
-.view:backdrop:disabled,
-iconview:backdrop:disabled,
-.view text:backdrop:disabled,
-iconview text:backdrop:disabled,
-textview text:backdrop:disabled {
-  color: #c3a7d1;
-}
 .view:disabled,
 iconview:disabled,
 .view text:disabled,
 iconview text:disabled,
 textview text:disabled {
-  color: #929595;
-  background-color: #faf9f8;
+  color: #e100ff;
 }
 .view:selected:focus,
 iconview:selected:focus,
@@ -109,11 +90,11 @@ textview text:selected:focus,
 .view text:selected,
 iconview text:selected,
 textview text:selected {
-  border-radius: 3px;
+  color: #ffd700;
 }
 
 textview border {
-  background-color: #fbfbfb;
+  background-color: #e100ff;
 }
 
 .rubberband,
@@ -122,25 +103,21 @@ rubberband,
 .content-view .rubberband,
 treeview.view rubberband,
 flowbox rubberband {
-  border: 1px solid #349ca8;
-  background-color: rgba(52, 156, 168, 0.2);
+  border: 1px solid #e100ff;
 }
 
 flowbox flowboxchild {
   padding: 3px;
 }
 flowbox flowboxchild:selected {
+  color: #ffd700;
   outline-offset: -2px;
 }
 
 .content-view .tile {
   margin: 2px;
-  background-color: transparent;
-  border-radius: 0;
+
   padding: 0;
-}
-.content-view .tile:backdrop {
-  background-color: transparent;
 }
 .content-view .tile:active,
 .content-view .tile:selected {
@@ -154,47 +131,35 @@ label {
   caret-color: currentColor;
 }
 label selection {
-  background-color: #48b9c7;
-  color: #000;
+  background-color: #ffd700;
+  color: #12141f;
 }
 label:disabled {
-  color: #929595;
-}
-button label:disabled {
-  color: inherit;
-}
-label:disabled:backdrop {
   color: #c3a7d1;
 }
-button label:disabled:backdrop {
-  color: inherit;
+button label:disabled {
+  color: #c3a7d1;
 }
+
 label.error {
-  color: #e56a54;
+  color: #e100ff;
 }
 label.error:disabled {
-  color: rgba(229, 106, 84, 0.5);
-}
-label.error:disabled:backdrop {
-  color: rgba(229, 106, 84, 0.4);
+  color: #e100ff;
 }
 
 .dim-label,
 .titlebar:not(headerbar) .subtitle,
 headerbar .subtitle,
 label.separator {
-  opacity: 0.7;
+  opacity: 1;
   text-shadow: none;
 }
 
 assistant .sidebar {
-  background-color: #12141f;
-  border-top: 1px solid rgba(200, 200, 200, 0.5);
+  border-top: 1px solid #e100ff;
 }
-assistant .sidebar:backdrop {
-  background-color: #fcfcfc;
-  border-color: #d5d0cc;
-}
+
 
 assistant.csd .sidebar {
   border-top-style: none;
@@ -205,7 +170,7 @@ assistant .sidebar label {
 }
 
 assistant .sidebar label.highlight {
-  background-color: #cdcdcd;
+  background-color: #0a0b14;
 }
 
 .osd .scale-popup,
@@ -218,22 +183,15 @@ popover.background.osd,
 popover.background.touch-selection,
 popover.background.magnifier,
 .osd {
-  color: #eeeeec;
+  color: #e100ff;
   border: none;
-  background-color: rgba(53, 53, 53, 0.7);
+  background-color: #0a0b14;
+
   background-clip: padding-box;
   text-shadow: 0 1px black;
   -gtk-icon-shadow: 0 1px black;
 }
-.osd .scale-popup:backdrop,
-.app-notification:backdrop,
-popover.background.osd:backdrop,
-popover.background.touch-selection:backdrop,
-popover.background.magnifier:backdrop,
-.osd:backdrop {
-  text-shadow: none;
-  -gtk-icon-shadow: none;
-}
+
 
 /*********************
  * Spinner Animation *
@@ -246,18 +204,18 @@ popover.background.magnifier:backdrop,
 
 spinner {
   background: none;
-  opacity: 0;
+    opacity: 0;
   -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
 }
-spinner:backdrop {
-  color: #929595;
-}
+
 spinner:checked {
+  color: #ffd700;
   opacity: 1;
   animation: spin 1s linear infinite;
 }
 spinner:checked:disabled {
-  opacity: 0.5;
+  color: #c3a7d1;
+  opacity: 1;
 }
 
 /**********************
@@ -317,11 +275,11 @@ entry {
   padding-left: 8px;
   padding-right: 8px;
   border: 1px solid;
-  border-radius: 4px;
+
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #e100ff;
-  border-color: rgba(200, 200, 200, 0.5);
-  background-color: #12141f;
+  border-color: #e100ff;
+
   box-shadow: none;
 }
 spinbutton:not(.vertical) image.left,
@@ -334,51 +292,36 @@ entry image.right {
 }
 spinbutton.flat:not(.vertical),
 entry.flat:focus,
-entry.flat:backdrop,
 entry.flat:disabled,
 entry.flat {
   min-height: 0;
   padding: 2px;
   background-color: transparent;
   border-color: transparent;
-  border-radius: 0;
 }
 spinbutton:focus:not(.vertical),
 entry:focus {
   box-shadow: none;
-  border-color: #ffad00;
+  border-color: #00fff7;
 }
 spinbutton:disabled:not(.vertical),
 entry:disabled {
-  color: #929595;
-  border-color: rgba(200, 200, 200, 0.5);
-  background-color: #faf9f8;
-  box-shadow: none;
-}
-spinbutton:backdrop:not(.vertical),
-entry:backdrop {
-  color: #323232;
-  border-color: #d5d0cc;
-  background-color: #fcfcfc;
-  box-shadow: none;
-  transition: 200ms ease-out;
-}
-spinbutton:backdrop:disabled:not(.vertical),
-entry:backdrop:disabled {
   color: #c3a7d1;
-  border-color: #d5d0cc;
-  background-color: #faf9f8;
+  border-color: #c3a7d1;
+
   box-shadow: none;
 }
+
+
 spinbutton.error:not(.vertical),
 entry.error {
-  color: #e56a54;
-  border-color: #e56a54;
+  color: #ff2e6e;
+  border-color: #ff2e6e;
 }
 spinbutton.error:focus:not(.vertical),
 entry.error:focus {
   box-shadow: none;
-  border-color: #e56a54;
+  border-color: #e100ff;
 }
 spinbutton.error:not(.vertical) selection,
 entry.error selection {
@@ -3557,7 +3500,7 @@ notebook > stack:not(:only-child):backdrop {
  * Scrollbars *
  **************/
 scrollbar {
-  background-color: transparent;
+  background-color: #12141f;
   transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 * {
@@ -3565,17 +3508,12 @@ scrollbar {
   -gtkscrollbar-has-forward-stepper: false;
 }
 
-scrollbar:backdrop {
-  background-color: transparent;
-  border-color: #e100ff;
-  transition: 200ms ease-out;
-}
 scrollbar slider {
   min-width: 5px;
   min-height: 5px;
   margin: -1px;
   border: 4px solid transparent;
-  border-radius: 0;
+
   background-clip: padding-box;
   background-color: #e100ff;
   transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -3586,9 +3524,6 @@ scrollbar slider:hover {
 }
 scrollbar slider:hover:active {
   background-color: #00fff7;
-}
-scrollbar slider:backdrop {
-  background-color: #e4d5ea;
 }
 scrollbar slider:disabled {
   background-color: transparent;
@@ -3616,11 +3551,10 @@ scrollbar button {
   min-width: 12px;
   min-height: 12px;
   border-style: none;
-  border-radius: 0;
+
   transition-property: min-height, min-width, color;
   border-color: transparent;
   background-color: transparent;
-  background-image: none;
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
@@ -3629,7 +3563,6 @@ scrollbar button {
 scrollbar button:hover {
   border-color: transparent;
   background-color: transparent;
-  background-image: none;
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
@@ -3639,7 +3572,7 @@ scrollbar button:active,
 scrollbar button:checked {
   border-color: transparent;
   background-color: transparent;
-  background-image: none;
+
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
@@ -3648,25 +3581,6 @@ scrollbar button:checked {
 scrollbar button:disabled {
   border-color: transparent;
   background-color: transparent;
-  background-image: none;
-  box-shadow: none;
-  text-shadow: none;
-  -gtk-icon-shadow: none;
-  color: transparent;
-}
-scrollbar button:backdrop {
-  border-color: transparent;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none;
-  text-shadow: none;
-  -gtk-icon-shadow: none;
-  color: transparent;
-}
-scrollbar button:backdrop:disabled {
-  border-color: transparent;
-  background-color: transparent;
-  background-image: none;
   box-shadow: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
@@ -3695,109 +3609,108 @@ treeview ~ scrollbar.vertical {
  **********/
 switch {
   outline-offset: -4px;
-  border: 1px solid rgba(200, 200, 200, 0.5);
-  border-radius: 14px;
-  color: #292929;
-  background-color: #e1dedb;
+  border: 1px solid #e100ff;
+
+  color: #e100ff;
+
   text-shadow: 0 1px rgba(0, 0, 0, 0.1);
   /* only show i / o for the accessible theme */
 }
 switch:checked {
-  color: #000;
-  border-color: #ffad00;
-  background-color: #ffad00;
+  color: #ffd700;
+  border-color: #ffd700;
+
   text-shadow: 0 1px rgba(24, 95, 180, 0.5), 0 0 2px rgba(255, 255, 255, 0.6);
 }
 switch:disabled {
-  color: #929595;
-  border-color: rgba(200, 200, 200, 0.5);
-  background-color: #faf9f8;
+  color: #e100ff;
+  border-color: #e100ff;
+
   text-shadow: none;
 }
 switch:backdrop {
-  color: #929595;
-  border-color: #d5d0cc;
-  background-color: #eae8e6;
+  color: #e100ff;
+  border-color: #e100ff;
+
   text-shadow: none;
   transition: 200ms ease-out;
 }
 switch:backdrop:checked {
-  color: #f6f5f4;
-  border-color: #ffad00;
-  background-color: #ffad00;
+  color: #ffd700;
+  border-color: #ffd700;
 }
 switch:backdrop:disabled {
-  color: #c3a7d1;
-  border-color: #d5d0cc;
-  background-color: #faf9f8;
+  color: #e100ff;
+  border-color: #e100ff;
 }
 switch slider {
   margin: -1px;
   min-width: 24px;
   min-height: 24px;
   border: 1px solid;
-  border-radius: 50%;
+
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -gtk-outline-radius: 20px;
   color: #e100ff;
-  outline-color: rgba(41, 41, 41, 0.3);
-  border-color: rgba(185, 185, 185, 0.5);
+
+  border-color: #e100ff;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  background-image: linear-gradient(to bottom, #12141f 20%, #12141f 90%);
+
   box-shadow: none;
 }
 switch image {
-  color: transparent;
+  color: #e100ff;
 }
 switch:hover slider {
-  color: #292929;
-  outline-color: rgba(41, 41, 41, 0.3);
-  border-color: rgba(185, 185, 185, 0.5);
-  background-image: linear-gradient(to bottom, #12141f 10%, #12141f 90%);
+  color: #00fff7;
+
+  border-color: #00fff7;
+
   box-shadow: none;
 }
 switch:checked > slider {
-  border: 1px solid #ffad00;
+  border-color: #ffd700;
+  color: #ffd700;
+  border: 1px solid #ffd700;
 }
 switch:disabled slider {
-  color: #929595;
-  border-color: #cdc7c2;
-  background-image: image(#faf9f8);
+  color: #e100ff;
+  border-color: #e100ff;
+
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
 }
 switch:backdrop slider {
   transition: 200ms ease-out;
-  color: #929595;
-  border-color: #d5d0cc;
-  background-image: #2d2f54;
+  color: #e100ff;
+  border-color: #e100ff;
+
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
 }
 switch:backdrop:checked > slider {
-  border-color: #ffad00;
+  border-color: #ffd700;
 }
 switch:backdrop:disabled slider {
-  color: #c3a7d1;
-  border-color: #d5d0cc;
-  background-image: image(#faf9f8);
+  color: #e100ff;
+  border-color: #e100ff;
+
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: none;
 }
 row:selected switch {
   box-shadow: none;
-  border-color: #ffad00;
+  border-color: #ffd700;
 }
 row:selected switch:backdrop {
-  border-color: #ffad00;
+  border-color: #ffd700;
 }
 row:selected switch > slider:checked,
 row:selected switch > slider {
-  border-color: #ffad00;
+  border-color: #ffd700;
 }
 
 /*************************
@@ -3809,10 +3722,8 @@ iconview.content-view.check:not(list),
   margin: 4px;
   min-width: 32px;
   min-height: 32px;
-  color: transparent;
-  background-color: #ffad00;
-  border-radius: 5px;
-  background-image: none;
+  color: #e100ff;
+
   transition: 200ms;
   box-shadow: none;
   border-width: 0;
@@ -3826,10 +3737,8 @@ iconview.content-view.check:hover:not(list),
   margin: 4px;
   min-width: 32px;
   min-height: 32px;
-  color: transparent;
-  background-color: #ffad00;
-  border-radius: 5px;
-  background-image: none;
+  color: #00fff7;
+
   transition: 200ms;
   box-shadow: none;
   border-width: 0;
@@ -13727,7 +13636,7 @@ tabbar .end-action:dir(ltr) > * {
 
 .tab-drag-icon tab {
   min-height: 26px;
-  background-color: #fefefe;
+
   box-shadow: none;
   margin: 25px;
 }
@@ -13738,12 +13647,9 @@ tabbar tab,
 }
 tabbar tab.needs-attention,
 .tab-drag-icon tab.needs-attention {
-  background-image: radial-gradient(
-    ellipse at bottom,
-    rgba(255, 255, 255, 0.8),
-    rgba(72, 185, 199, 0.2) 15%,
-    rgba(72, 185, 199, 0) 15%
-  );
+  background-color: #ff2e6e;
+  outline: 1px solid #0a0b14;
+  color: #0a0b14;
 }
 tabbar tab .tab-close-button,
 tabbar tab .tab-indicator,
@@ -13753,24 +13659,30 @@ tabbar tab .tab-indicator,
   margin: 0;
   min-width: 24px;
   min-height: 24px;
-  border-radius: 99px;
+
   border: none;
   box-shadow: none;
   -gtk-icon-shadow: none;
   text-shadow: none;
-  background: none;
 }
 tabbar tab .tab-close-button:hover,
 tabbar tab .tab-indicator.clickable:hover,
 .tab-drag-icon tab .tab-close-button:hover,
 .tab-drag-icon tab .tab-indicator.clickable:hover {
-  background: alpha(#292929, 0.15);
+  color: #00fff7;
 }
 tabbar tab .tab-close-button:active,
 tabbar tab .tab-indicator.clickable:active,
 .tab-drag-icon tab .tab-close-button:active,
 .tab-drag-icon tab .tab-indicator.clickable:active {
-  background: alpha(black, 0.2);
+  color: #ffd700;
+}
+
+* {
+  border-radius: 0;
+  -gtk-outline-radius: 0;
+  -gtk-outline-top-left-radius: 0;
+  -gtk-outline-top-right-radius: 0;
 }
 
 /* GTK NAMED COLORS
@@ -13811,7 +13723,7 @@ text color for entries, views and content in general on backdrop windows */
 @define-color theme_unfocused_text_color #272727;
 /*
 widget base background color on backdrop windows */
-@define-color theme_unfocused_bg_color #2d2f54;
+@define-color theme_unfocused_bg_color #1b1d2b;
 /*
 text widgets and the like base background color on backdrop windows */
 @define-color theme_unfocused_base_color #fcfcfc;
