@@ -6,33 +6,12 @@ const scriptDir = path.dirname(__filename);
 const gtk3Path = path.join(scriptDir, "../gtk-3.0/gtk.css");
 const gtk4Path = path.join(scriptDir, "../gtk-4.0/gtk.css");
 
-const bgColor = "#12141f";
-const backdropBgColor = "#2d2f54";
 
 const primaryColor = "#e100ff";
 const primaryHoverColor = "#00fff7";
 const primaryActiveColor = "#ffd700";
 
-const updateBackgroundColors = (cssText) => {
-  let updatedCss = cssText;
 
-  // Regular background color replacements, handling multi-line values
-  updatedCss = updatedCss.replace(
-    /background(-color)?:\s*(?!backdrop|none|transparent)([^;}]+(?:\n[^;}]+)*)(;|\})/g,
-    `background-color: ${bgColor};`
-  );
-
-  // Background image replacements, handling multi-line values
-  updatedCss = updatedCss.replace(
-    /background-image:\s*(?!none|transparent)([^;}]+(?:\n[^;}]+)*)(;|\})/g,
-    `background: ${bgColor};`
-  );
-
-  // Remove all backdrop selectors and their content
-  updatedCss = updatedCss.replace(/[^{]+:backdrop\s*{[^}]*}/g, "");
-
-  return updatedCss;
-};
 
 const updateFontColors = (cssText) => {
   let updatedCss = cssText;
@@ -151,10 +130,8 @@ const sharpRadius = (cssText) => {
 
 const updateCSS = (originalCSS) => {
   const colorsUpdated = updateFontColors(originalCSS);
-  const sharpRadiusUpdated = sharpRadius(colorsUpdated);
-  const finalCSS = updateBackgroundColors(sharpRadiusUpdated);
+return sharpRadius(colorsUpdated);
 
-  return finalCSS;
 };
 
 const gtk3 = fs.readFileSync(gtk3Path, "utf8");

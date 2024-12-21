@@ -64,6 +64,7 @@
   --backdrop-active-color: rgba(41, 0, 47, 0.7);
 
   --hover-color: #00fff7;
+  --selection-color: #006561;
   --active-color: #ffd700;
   --active-disabled-color: #d1caa7;
 
@@ -80,6 +81,7 @@
   --yellow: #ffd700;
   --orange: #ffa500;
   --red: #ff2e6e;
+  --green: #00ff00;
   --cyan: #00fff7;
   --purple: #e100ff;
 }
