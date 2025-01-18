@@ -440,7 +440,7 @@ StEntry StLabel.hint-text {
 .check-box StBin {
   width: 24px;
   height: 24px;
-  background-image: url("./checkbox-off.svg");
+  background-image: url("./assets/checkbox-off.svg");
 }
 
 .check-box:hover StBin {
@@ -448,15 +448,15 @@ StEntry StLabel.hint-text {
 }
 
 .check-box:focus StBin {
-  background-image: url("./checkbox-off-focused.svg");
+  background-image: url("./assets/checkbox-off-focused.svg");
 }
 
 .check-box:checked StBin {
-  background-image: url("./checkbox.svg");
+  background-image: url("./assets/checkbox.svg");
 }
 
 .check-box:focus:checked StBin {
-  background-image: url("./checkbox-focused.svg");
+  background-image: url("./assets/checkbox-focused.svg");
 }
 
 /* Switches */
@@ -465,11 +465,11 @@ StEntry StLabel.hint-text {
   height: 20px;
   width: 20px;
   background-size: contain;
-  background-image: url("./toggle-off.svg");
+  background-image: url("./assets/toggle-off.svg");
 }
 
 .toggle-switch:checked {
-  background-image: url("./toggle-on.svg");
+  background-image: url("./assets/toggle-on.svg");
 }
 
 /* Slider */
@@ -898,7 +898,7 @@ StScrollBar StButton#hhandle:active {
   outline-color: #e100ff;
 }
 .calendar .calendar-day-with-events {
-  background-image: url("./calendar-today-light.svg");
+  background-image: url("./assets/calendar-today-light.svg");
   background-size: contain;
 }
 .calendar .calendar-week-number {
@@ -1510,7 +1510,7 @@ StScrollBar StButton#hhandle:active {
 
 /* Welcome dialog */
 .welcome-dialog-image {
-  background-image: url("./gnome-shell-start.svg");
+  background-image: url("./assets/gnome-shell-start.svg");
   background-size: contain;
   /* Reasonable maximum dimensions */
   height: 300px;
@@ -2763,7 +2763,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .workspace-thumbnails .placeholder {
-  background-image: url("./workspace-placeholder.svg");
+  background-image: url("./assets/workspace-placeholder.svg");
   background-size: contain;
   width: 18px;
 }

@@ -15,6 +15,7 @@
 - Install Pop OS
 - Go to Settings > Desktop > Dock and disable it
 - Go to Tweaks > Appearance > Themes and change the theme and shell theme to it
+    - May need to install https://extensions.gnome.org/extension/19/user-themes/
 - Go to Extensions and disable the Cosmic Workspaces
 - Set the background and text color in the terminal
 - Change the Tile windows hint color to `#e100ff`

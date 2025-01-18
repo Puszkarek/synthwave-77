@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "dev": "sass --no-source-map src/gnome:/home/$USER/.themes/militech-77 --style expanded --watch",
+    "build": "sass --no-source-map src/gnome:dist/militech-77 --style expanded"
+  },
   "dependencies": {
     "sass": "^1.82.0"
   }

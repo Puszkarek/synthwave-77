@@ -1,9 +1,9 @@
 [X-GNOME-Metatheme]
-Name=SynthWave 77
+Name=Militech 77
 Type=X-GNOME-Metatheme
-Comment=A cyberpunk theme with a synthwave aesthetic
+Comment=A cyberpunk theme with a cyberpunk aesthetic
 Encoding=UTF-8
-GtkTheme=SynthWave 77
+GtkTheme=Militech 77
 IconTheme=Pop
 CursorTheme=Pop
 CursorSize=24
