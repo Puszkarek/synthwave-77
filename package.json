@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev": "sass --no-source-map src/gnome:/home/$USER/.themes/militech-77 --style expanded --watch & find src/gnome -type d -name 'assets' -exec bash -c 'mkdir -p \"/home/$USER/.themes/militech-77/$(dirname \"{}\" | sed \"s|src/gnome/||\")/\" && cp -r \"{}\" \"/home/$USER/.themes/militech-77/$(dirname \"{}\" | sed \"s|src/gnome/||\")/\"' \\;",
-    "build": "sass --no-source-map src/gnome:dist/militech-77 --style expanded && find src/gnome -type d -name 'assets' -exec bash -c 'mkdir -p \"dist/militech-77/$(dirname \"{}\" | sed \"s|src/gnome/||\")/\" && cp -r \"{}\" \"dist/militech-77/$(dirname \"{}\" | sed \"s|src/gnome/||\")/\"' \\;"
+    "dev": "sass --no-source-map src/gnome:/home/$USER/.themes/synthwave-77 --style expanded --watch & find src/gnome -type d -name 'assets' -exec bash -c 'mkdir -p \"/home/$USER/.themes/synthwave-77/$(dirname \"{}\" | sed \"s|src/gnome/||\")/\" && cp -r \"{}\" \"/home/$USER/.themes/synthwave-77/$(dirname \"{}\" | sed \"s|src/gnome/||\")/\"' \\;",
+    "build": "sass --no-source-map src/gnome:dist/synthwave-77 --style expanded && find src/gnome -type d -name 'assets' -exec bash -c 'mkdir -p \"dist/synthwave-77/$(dirname \"{}\" | sed \"s|src/gnome/||\")/\" && cp -r \"{}\" \"dist/synthwave-77/$(dirname \"{}\" | sed \"s|src/gnome/||\")/\"' \\;"
   },
   "dependencies": {
     "sass": "^1.82.0"
