@@ -1,0 +1,362 @@
+:root {
+  --user-profile-linear-gradient: linear-gradient(
+    160deg,
+    #50a581 1.22%,
+    #2e4958 40.51%,
+    #0c0c0c 79.07%
+  );
+  --wave-border-radius--none: 0px;
+  --wave-border-radius--extra-small: 0px;
+  --wave-border-radius--small: 0px;
+  --wave-border-radius--regular: 0px;
+  --wave-border-radius--full: 0px;
+  --wave-color-material-dark: #25252580;
+  --wave-color-material-light: #ededed33;
+  --wave-color-opacity-accent-dark-ultra-thick: #3d8f88cc;
+  --wave-color-opacity-accent-darkest-ultra-thick: #141f1e;
+  --wave-color-opacity-accent-fill-regular: #21feec66;
+  --wave-color-opacity-accent-fill-thin: #21feec33;
+  --wave-color-opacity-accent-fill-ultra-thick: #21feeccc;
+  --wave-color-opacity-accent-fill-ultra-thin: #21feec1a;
+  --wave-color-opacity-base-bright-thick: #0a0b1499;
+  --wave-color-opacity-base-bright-thin: #0a0b1433;
+  --wave-color-opacity-base-bright-transparent: #0a0b14;
+  --wave-color-opacity-base-bright-ultra-thick: #0a0b14cc;
+  --wave-color-opacity-base-brighter-ultra-thick: #12141fcc;
+  --wave-color-opacity-base-brightest-regular: #30303666;
+  --wave-color-opacity-base-brightest-thin: #30303633;
+  --wave-color-opacity-base-brightest-ultra-thin: #3030361a;
+  --wave-color-opacity-base-fill-regular: #12141f66;
+  --wave-color-opacity-base-fill-thick: #12141f99;
+  --wave-color-opacity-base-fill-thin: #12141f33;
+  --wave-color-opacity-base-fill-transparent: #12141f;
+  --wave-color-opacity-base-fill-ultra-thick: #12141fcc;
+  --wave-color-opacity-base-fill-ultra-thin: #12141f1a;
+  --wave-color-opacity-contrast-fill-regular: #e100ff66;
+  --wave-color-opacity-contrast-fill-thick: #e100ff99;
+  --wave-color-opacity-contrast-fill-thin: #e100ff33;
+  --wave-color-opacity-contrast-fill-transparent: #e100ff;
+  --wave-color-opacity-contrast-fill-ultra-thick: #e100ff;
+  --wave-color-opacity-contrast-fill-ultra-thin: #e100ff00;
+  --wave-color-opacity-rainbow-blue-thin: #33a7ff33;
+  --wave-color-opacity-rainbow-yellow-fill-regular: #ffd43266;
+  --wave-color-opacity-rainbow-yellow-fill-thin: #ffd43233;
+  --wave-color-opacity-rainbow-yellow-fill-ultra-thick: #ffd432cc;
+  --wave-color-opacity-rainbow-yellow-fill-ultra-thin: #ffd4321a;
+  --wave-color-opacity-special-fill-regular: #ffbe7d66;
+  --wave-color-opacity-special-fill-thin: #ffbe7d33;
+  --wave-color-opacity-special-fill-ultra-thick: #ffbe7dcc;
+  --wave-color-opacity-special-fill-ultra-thin: #ffbe7d1a;
+  --wave-color-services-facebook: #1877f2;
+  --wave-color-services-instagram-red: #e1306c;
+  --wave-color-services-mtn: #f8c000;
+  --wave-color-services-musix-orange: #f63;
+  --wave-color-services-musix-pink: #ff0e83;
+  --wave-color-services-play: #47237b;
+  --wave-color-services-plus: #088655;
+  --wave-color-services-snapchat: #fffc00;
+  --wave-color-services-sprint: #ffdd05;
+  --wave-color-services-t-mobile: #e30074;
+  --wave-color-services-tik-tok-blue: #69c9d0;
+  --wave-color-services-tik-tok-red: #ee1d52;
+  --wave-color-services-twitter: #1da1f2;
+  --wave-color-services-viacom-1: #00f;
+  --wave-color-services-viacom-2: #7666aa;
+  --wave-color-services-viacom-3: #d700c2;
+  --wave-color-services-viacom-4: #ff4851;
+  --wave-color-services-viacom-5: #ffd800;
+  --wave-color-services-vivo: #670099;
+  --wave-color-services-vodafone: #e61107;
+  --wave-color-services-waze: #1da1f2;
+  --wave-color-solid-accent-bright: #66fff3;
+  --wave-color-solid-accent-brighter: #99fff7;
+  --wave-color-solid-accent-dark: #3d8f88;
+  --wave-color-solid-accent-darker: #244240;
+  --wave-color-solid-accent-darkest: #141f1e;
+  --wave-color-solid-accent-fill: #3fe;
+  --wave-color-solid-base-bright: #0a0b14;
+  --wave-color-solid-base-brighter: #12141f;
+  --wave-color-solid-base-brightest: #303036;
+  --wave-color-solid-base-fill: #12141f;
+  --wave-color-solid-contrast-dark: #8e8f61;
+  --wave-color-solid-contrast-darker: #7a7a51;
+  --wave-color-solid-contrast-darkest: #5b5c3c;
+  --wave-color-solid-contrast-fill: #e100ff;
+  --wave-color-solid-rainbow-blue-fill: #33a7ff;
+  --wave-color-solid-rainbow-green-brighter: #99ffd4;
+  --wave-color-solid-rainbow-green-dark: #33996e;
+  --wave-color-solid-rainbow-green-darker: #244235;
+  --wave-color-solid-rainbow-green-darkest: #141f1a;
+  --wave-color-solid-rainbow-green-fill: #33ffa9;
+  --wave-color-solid-rainbow-orange-fill: #ffc45c;
+  --wave-color-solid-rainbow-purple-fill: #8f00ff;
+  --wave-color-solid-rainbow-red-bright: #ff666c;
+  --wave-color-solid-rainbow-red-brighter: #ff999d;
+  --wave-color-solid-rainbow-red-dark: #993337;
+  --wave-color-solid-rainbow-red-darker: #422425;
+  --wave-color-solid-rainbow-red-darkest: #1f1415;
+  --wave-color-solid-rainbow-red-fill: #ff4242;
+  --wave-color-solid-rainbow-yellow-bright: #ffdf66;
+  --wave-color-solid-rainbow-yellow-brighter: #fffae5;
+  --wave-color-solid-rainbow-yellow-dark: #998433;
+  --wave-color-solid-rainbow-yellow-darker: #423c24;
+  --wave-color-solid-rainbow-yellow-darkest: #1f1c14;
+  --wave-color-solid-rainbow-yellow-fill: #ffd432;
+  --wave-color-solid-special-bright: #ffd9b3;
+  --wave-color-solid-special-brighter: #fff2e5;
+  --wave-color-solid-special-dark: #963;
+  --wave-color-solid-special-darker: #423324;
+  --wave-color-solid-special-darkest: #1f1a14;
+  --wave-color-solid-special-fill: #ffbf80;
+  --wave-color-solid-warning-bright: #ff668f;
+  --wave-color-solid-warning-brighter: #ff99b4;
+  --wave-color-solid-warning-dark: #99334e;
+  --wave-color-solid-warning-darker: #42242c;
+  --wave-color-solid-warning-darkest: #1f1417;
+  --wave-color-solid-warning-fill: #ff3269;
+  --wave-color-text-disabled: var(--wave-color-solid-base-brightest);
+  --wave-color-text-link: var(--wave-color-solid-accent-fill);
+  --wave-color-text-main: var(--wave-color-solid-contrast-fill);
+  --wave-color-text-placeholder: var(--wave-color-solid-base-brightest);
+  --wave-color-text-secondary: var(--wave-color-solid-contrast-darker);
+  --wave-color-text-tertiary: var(--wave-color-solid-contrast-darkest);
+  --wave-color-text-danger: var(--wave-color-solid-rainbow-red-fill);
+  --wave-font-weight--bold: 700;
+  --wave-font-weight--demi: 600;
+  --wave-font-weight--medium: 500;
+  --wave-opacity--ultra-thin: 0.05;
+  --wave-opacity--thin: 0.1;
+  --wave-opacity--regular: 0.4;
+  --wave-opacity--thick: 0.6;
+  --wave-opacity--ultra-thick: 0.8;
+  --wave-spacing--extra-extra-large: 64px;
+  --wave-spacing--extra-large: 40px;
+  --wave-spacing--large: 24px;
+  --wave-spacing--medium: 20px;
+  --wave-spacing--regular: 16px;
+  --wave-spacing--small: 12px;
+  --wave-spacing--extra-small: 8px;
+  --wave-spacing--extra-extra-small: 4px;
+}
+
+html,
+body {
+  font-family: "Refinery 75 Medium";
+}
+
+* {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+#sidebar {
+  border-right: 1px solid var(--wave-color-solid-contrast-fill);
+}
+
+.player--gAOQG {
+  border-top: 1px solid var(--wave-color-solid-contrast-fill);
+}
+
+[data-wave-color="textSecondary"] {
+  color: var(--wave-color-solid-base-fill);
+}
+
+[data-test="view-all-link"],
+[data-wave-color="textDefault"] {
+  color: var(--wave-color-solid-contrast-fill);
+}
+
+._wave-badge-text_1oxl7_32,
+.moreContainer--JnBwQ button,
+.container--EyHIK,
+[data-test="view-all-link"],
+.image--WhS8s,
+a.sidebarItem--cxxFL,
+[data-type="button"],
+[data-type="search-field"] {
+  border-radius: 0;
+}
+
+[data-type="search-field__input"] {
+  background-color: var(--wave-color-solid-base-fill);
+  outline: 1px solid var(--wave-color-solid-contrast-fill);
+}
+
+[data-test="view-all-link"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  outline: 1px solid var(--wave-color-solid-contrast-fill);
+}
+
+[data-test="view-all-link"] > span {
+  color: var(--wave-color-solid-contrast-fill);
+}
+
+.image--GvA3J,
+.image--WhS8s {
+  outline: 1px solid var(--wave-color-solid-contrast-fill);
+}
+
+a.sidebarItem--cxxFL:hover {
+  background-color: transparent;
+  outline: 1px solid var(--wave-color-solid-contrast-fill);
+}
+
+.enable-scrollbar-styles ::-webkit-scrollbar-thumb {
+  background: var(--wave-color-solid-contrast-fill);
+  outline: 1px solid var(--wave-color-solid-base-fill);
+  border-radius: 0px;
+}
+
+.enable-scrollbar-styles ::-webkit-scrollbar-corner,
+.enable-scrollbar-styles ::-webkit-scrollbar-track {
+  background: var(--wave-color-solid-base-fill);
+}
+
+button {
+  color: var(--wave-color-solid-contrast-fill);
+}
+
+.button--XV8ps,
+.variantPrimary--pjymy {
+  background-color: transparent;
+  outline: 1px solid var(--wave-color-solid-contrast-fill);
+}
+
+.button--XV8ps,
+.button--XV8ps > span,
+.variantPrimary--pjymy {
+  color: var(--wave-color-solid-contrast-fill);
+}
+
+.button--XV8ps:hover > span {
+  color: var(--wave-color-solid-base-fill);
+}
+
+.button--XV8ps:hover,
+.variantPrimary--pjymy:hover {
+  background-color: var(--wave-color-solid-contrast-fill);
+  color: var(--wave-color-solid-base-fill);
+}
+
+.moreContainer--JnBwQ button {
+  height: 42px;
+  width: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--wave-color-solid-contrast-fill);
+  background-color: transparent;
+  outline: 1px solid var(--wave-color-solid-contrast-fill);
+}
+.moreContainer--JnBwQ button:hover {
+  background-color: var(--wave-color-solid-contrast-fill);
+  color: var(--wave-color-solid-base-fill);
+}
+
+.baseButton--rqEqg {
+  background-color: transparent;
+  outline: 1px solid var(--wave-color-solid-contrast-fill);
+  color: var(--wave-color-solid-contrast-fill);
+}
+
+.baseButton--rqEqg:hover {
+  background-color: transparent;
+  background-color: var(--wave-color-solid-contrast-fill);
+  color: var(--wave-color-solid-base-fill);
+}
+
+._wave-badge-text_1oxl7_32 {
+  height: 100%;
+  width: 100%;
+}
+
+html,
+body {
+  color: var(--wave-color-solid-contrast-fill);
+}
+
+.nowPlayingContainer--ILXLc {
+  background-image: none;
+  background: var(--wave-color-solid-base-fill) !important;
+}
+
+.range--JNSfg {
+  background-color: transparent;
+  outline: 1px solid var(--wave-color-solid-contrast-fill);
+}
+
+.button--N_bdY,
+.css-13iwoog {
+  border-radius: 0;
+}
+
+.css-13iwoog,
+[data-type="mediaItem"]:hover,
+.suggestedItemContainer--jlHOR:hover:not(.disabled--ng3sK) {
+  background-color: transparent;
+}
+
+.suggestedItemContainer--jlHOR:not(.disabled--ng3sK),
+[data-type="mediaItem"] {
+  border: 1px solid transparent;
+}
+.suggestedItemContainer--jlHOR:hover:not(.disabled--ng3sK),
+[data-type="mediaItem"]:hover {
+  background-color: transparent;
+  border-radius: 0;
+  border-color: var(--wave-color-solid-contrast-fill);
+}
+
+.explicitBadge--iCXD0 {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.explicitBadge--iCXD0,
+.explicit--Cmk9y {
+  position: relative;
+}
+.explicit--Cmk9y::before {
+  content: "E";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 16px;
+  height: 16px;
+
+  background: var(--wave-color-solid-base-fill);
+  outline: 1px solid var(--wave-color-solid-contrast-fill);
+  color: var(--wave-color-solid-contrast-fill);
+  border-radius: 0;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.container--sRPa5 {
+  border-radius: 0;
+}
+
+[data-wave-color="textSecondary"] {
+  color: var(--wave-color-solid-contrast-fill);
+}
+
+[data-type="media-table__row"]:hover {
+  outline: 1px solid var(--wave-color-solid-contrast-fill);
+}
+
+.tableRow--ZX5ab:hover:not(.tableRowSelected--kIhi3) > div,
+.tableRow--ZX5ab:hover:not(.tableRowSelected--kIhi3) > div:last-child,
+.tableRow--ZX5ab:hover:not(.tableRowSelected--kIhi3) > div:first-child,
+.tableRow--ZX5ab:hover > div {
+  background-color: transparent;
+  border-radius: 0;
+}

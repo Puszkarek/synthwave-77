@@ -1,0 +1,772 @@
+:root {
+  --theme-body-font-size: 11px;
+  --theme-code-font-size: 11px;
+  --theme-code-line-height: calc(15 / 11);
+  --theme-toolbar-height: 24px;
+  --theme-toolbar-tall-height: 28px;
+  --theme-focus-outline-color: var(--primary-color);
+  --theme-focus-textinput-outline-color: var(--primary-color);
+  --theme-focus-outline-size: 1px;
+  --theme-focus-outline: var(--theme-focus-outline-size) solid
+    var(--theme-focus-outline-color);
+  --theme-outline-offset: 0px;
+  --theme-outline-box-shadow-size: calc(
+    2px + var(--theme-focus-outline-size) + var(--theme-outline-offset)
+  );
+  --theme-outline-box-shadow: 0 0 0 var(--theme-outline-box-shadow-size)
+    var(--theme-body-background);
+  --expression-item-height: 20.5px;
+  --animation-curve: cubic-bezier(0.07, 0.95, 0, 1);
+  --dimmed-highlighter-box-content-color: hsl(197, 71%, 73%, 0.3);
+  --magenta-50: #ff1ad9;
+  --magenta-65: #dd00a9;
+  --magenta-70: #b5007f;
+  --purple-50: #9400ff;
+  --purple-60: #8000d7;
+  --purple-30: #c069ff;
+  --blue-30: #75baff;
+  --blue-40: #45a1ff;
+  --blue-50: #0a84ff;
+  --blue-50-a30: rgba(10, 132, 255, 0.3);
+  --blue-55: #0074e8;
+  --blue-60: #0060df;
+  --blue-70: #003eaa;
+  --blue-80: #002275;
+  --teal-60: #00c8d7;
+  --teal-70: #008ea4;
+  --green-50: #30e60b;
+  --green-60: #12bc00;
+  --green-70: #058b00;
+  --yellow-50: #ffe900;
+  --yellow-60: #d7b600;
+  --yellow-65: #be9b00;
+  --yellow-70: #a47f00;
+  --yellow-75: #8b6801;
+  --yellow-80: #715100;
+  --red-05: #ffe6e8;
+  --red-20: #ffb3d2;
+  --red-40: #ff3b6b;
+  --red-40-a90: rgba(255, 59, 107, 0.9);
+  --red-50: #ff0039;
+  --red-60: #d70022;
+  --red-70: #a4000f;
+  --grey-10: #f9f9fa;
+  --grey-10-a20: rgba(249, 249, 250, 0.2);
+  --grey-10-a25: rgba(249, 249, 250, 0.25);
+  --grey-10-a30: rgba(249, 249, 250, 0.3);
+  --grey-20: #ededf0;
+  --grey-25: #e0e0e2;
+  --grey-30: #d7d7db;
+  --grey-40: #b1b1b3;
+  --grey-43: #a4a4a4;
+  --grey-45: #939395;
+  --grey-50: #737373;
+  --grey-55: #5c5c5f;
+  --grey-60: #4a4a4f;
+  --grey-70: #38383d;
+  --grey-80: #2a2a2e;
+  --grey-85: #1b1b1d;
+  --grey-90: #0c0c0d;
+  --grey-90-a10: rgba(12, 12, 13, 0.1);
+  --grey-90-a20: rgba(12, 12, 13, 0.2);
+  --grey-90-a30: rgba(12, 12, 13, 0.3);
+  --theme-body-background: var(--primary-background);
+  --theme-body-emphasized-background: var(--secondary-background);
+  --theme-body-alternate-emphasized-background: var(--secondary-background);
+  --theme-sidebar-background: var(--secondary-background);
+  --theme-tab-toolbar-background: transparent;
+  --theme-toolbar-background: transparent;
+  --theme-toolbar-color: var(--primary-color);
+  --theme-toolbar-selected-color: var(--secondary-color);
+  --theme-toolbar-highlighted-color: var(--secondary-color);
+  --theme-toolbar-background-hover: transparent;
+  --theme-toolbar-background-alt: light-dark(#f5f5f5, var(--grey-85));
+  --theme-toolbar-background-highlighted: light-dark(#b9dcff, var(--blue-60));
+  --theme-toolbar-error-background: light-dark(var(--red-05), var(--red-70));
+  --theme-toolbar-hover: var(--secondary-color);
+  --theme-toolbar-hover-active: var(var(--secondary-color));
+  --theme-toolbar-separator: var(--primary-color);
+  --toolbarbutton-background: transparent;
+  --toolbarbutton-hover-background: transparent;
+  --toolbarbutton-focus-background: transparent;
+  --toolbarbutton-focus-color: var(--secondary-color);
+  --toolbarbutton-checked-background: transparent;
+  --toolbarbutton-checked-focus-background: transparent;
+  --toolbarbutton-checked-color: var(--tertiary-color);
+  --theme-button-background: light-dark(
+    rgba(12, 12, 13, 0.05),
+    rgba(249, 249, 250, 0.1)
+  );
+  --theme-button-active-background: light-dark(
+    rgba(12, 12, 13, 0.1),
+    rgba(249, 249, 250, 0.15)
+  );
+  --theme-accordion-header-background: light-dark(
+    var(--theme-toolbar-background),
+    #232327
+  );
+  --theme-accordion-header-hover: light-dark(
+    var(--theme-toolbar-hover),
+    #2a2a2e
+  );
+  --theme-selection-background: light-dark(var(--blue-55), #204e8a);
+  --theme-selection-background-hover: light-dark(#f0f9fe, #353b48);
+  --theme-selection-focus-background: light-dark(
+    var(--toolbarbutton-hover-background),
+    var(--grey-60)
+  );
+  --theme-selection-color: #ffffff;
+  --theme-text-selection-background: light-dark(rgb(185, 215, 253), #353b48);
+  --theme-text-selection-unfocused-background: light-dark(
+    rgb(210, 210, 210),
+    var(--theme-text-selection-background)
+  );
+  --theme-splitter-color: light-dark(var(--grey-25), var(--grey-70));
+  --theme-emphasized-splitter-color: light-dark(var(--grey-30), var(--grey-60));
+  --theme-emphasized-splitter-color-hover: light-dark(
+    var(--grey-40),
+    var(--grey-50)
+  );
+  --theme-icon-color: light-dark(
+    rgba(12, 12, 13, 0.8),
+    rgba(249, 249, 250, 0.7)
+  );
+  --theme-icon-hover-color: var(--theme-icon-color);
+  --theme-icon-dimmed-color: light-dark(
+    rgba(135, 135, 137, 0.9),
+    rgba(147, 147, 149, 0.9)
+  );
+  --theme-icon-disabled-color: var(--theme-icon-dimmed-color);
+  --theme-icon-checked-color: var(--tertiary-color);
+  --theme-icon-error-color: light-dark(var(--red-60), var(--red-40));
+  --theme-icon-warning-color: light-dark(var(--yellow-65), var(--yellow-60));
+  --theme-comment: light-dark(var(--grey-55), var(--grey-45));
+  --theme-body-color: light-dark(var(--grey-70), var(--grey-40));
+  --theme-link-color: light-dark(var(--blue-60), #75bfff);
+  --theme-internal-link-color: light-dark(var(--blue-70), var(--blue-40));
+  --theme-text-color-alt: light-dark(var(--grey-50), var(--grey-45));
+  --theme-text-color-inactive: light-dark(var(--grey-40), var(--grey-50));
+  --theme-text-color-error: light-dark(var(--red-60), var(--grey-10));
+  --theme-text-color-strong: light-dark(var(--grey-90), var(--grey-30));
+  --theme-stack-trace-text: light-dark(var(--red-70), var(--red-20));
+  --theme-highlight-green: light-dark(var(--green-70), #86de74);
+  --theme-highlight-blue: light-dark(var(--blue-55), #75bfff);
+  --theme-highlight-purple: light-dark(var(--blue-70), #b98eff);
+  --theme-highlight-red: light-dark(var(--magenta-65), #ff7de9);
+  --theme-highlight-yellow: #fff89e;
+  --theme-highlight-bluegrey: light-dark(#0072ab, #5e88b0);
+  --theme-highlight-lightorange: light-dark(#d97e00, #d99b28);
+  --theme-highlight-orange: light-dark(#f13c00, #d96629);
+  --theme-highlight-pink: light-dark(#b82ee5, #df80ff);
+  --theme-highlight-gray: light-dark(#dde1e4, #e9f4fe);
+  --theme-graphs-purple: light-dark(#b693eb, #df80ff);
+  --theme-graphs-yellow: light-dark(#efc052, #d99b28);
+  --theme-graphs-orange: light-dark(#d97e00, #d96629);
+  --theme-graphs-grey: light-dark(#cccccc, #757873);
+  --theme-graphs-full-red: #f00;
+  --theme-popup-background: light-dark(Field, var(--grey-60));
+  --theme-popup-color: light-dark(FieldText, rgb(249, 249, 250));
+  --theme-popup-border-color: light-dark(ThreeDShadow, #27272b);
+  --theme-popup-dimmed: light-dark(
+    hsla(0, 0%, 80%, 0.3),
+    rgba(249, 249, 250, 0.1)
+  );
+  --theme-popup-hover-background: var(--theme-popup-dimmed);
+  --theme-popup-hover-color: var(--theme-popup-color);
+  --theme-toolbarbutton-background: none;
+  --theme-toolbarbutton-color: light-dark(var(--grey-70), var(--grey-40));
+  --theme-toolbarbutton-hover-background: color-mix(
+    in srgb,
+    currentColor 14%,
+    transparent
+  );
+  --theme-toolbarbutton-checked-background: transparent;
+  --theme-toolbarbutton-checked-color: var(--tertiary-color);
+  --theme-toolbarbutton-checked-hover-background: transparent;
+  --theme-toolbarbutton-checked-hover-color: var(--secondary-color);
+  --theme-toolbarbutton-active-background: transparent;
+  --theme-select-background: transparent;
+  --theme-select-color: var(--secondary-color);
+  --theme-select-hover-border-color: var(--secondary-color);
+  --theme-warning-background: light-dark(hsl(54, 100%, 92%), hsl(42, 37%, 19%));
+  --theme-warning-border: light-dark(
+    rgba(215, 182, 0, 0.28),
+    hsl(60, 30%, 26%)
+  );
+  --theme-warning-color: light-dark(var(--yellow-80), hsl(43, 94%, 81%));
+  --theme-contrast-background: light-dark(#fff699, #4f4b1f);
+  --theme-contrast-background-alpha: light-dark(
+    rgba(255, 233, 0, 0.4),
+    rgba(255, 233, 0, 0.15)
+  );
+  --theme-contrast-color: light-dark(black, white);
+  --theme-contrast-border: light-dark(var(--yellow-70), var(--yellow-65));
+  --theme-search-results-background: var(--theme-contrast-background);
+  --theme-search-results-color: var(--theme-contrast-color);
+  --theme-search-results-border-color: var(--theme-contrast-border);
+}
+
+:root {
+  --text-color: #e4d5ea;
+
+  --primary-color: #e100ff;
+  --primary-color-hover: #b200cc;
+  --primary-color-disabled: #c3a7d1;
+
+  --secondary-color: #00fff7;
+  --secondary-color-hover: #8ffffb;
+  --secondary-color-disabled: #fff;
+
+  --tertiary-color: #ffd700;
+  --tertiary-color-hover: #fff;
+  --tertiary-color-disabled: #d1caa7;
+
+  --indicador-color: rgba(225, 0, 255, 0.3);
+  --backdrop-color: rgba(41, 0, 47, 0.5);
+  --backdrop-hover-color: rgba(41, 0, 47, 0.3);
+  --backdrop-active-color: rgba(41, 0, 47, 0.7);
+
+  --hover-color: #00fff7;
+  --selection-color: #006561;
+  --active-color: #ffd700;
+  --active-disabled-color: #d1caa7;
+
+  --accent-color: #00fff7;
+  --accent-color-hover: #8ffffb;
+  --highlight-color: #9d00b3;
+
+  --primary-background-hover: transparent;
+  --primary-backdrop-background: #1b1d2b;
+  --secondary-background: #0a0b14;
+  --secondary-background-hover: transparent;
+
+  --yellow: #ffd700;
+  --orange: #ffa500;
+  --red: #ff2e6e;
+  --green: #00ff00;
+  --cyan: #00fff7;
+  --purple: #e100ff;
+
+  --vertical-tabs-scrollbar-color: var(--primary-background);
+  --vertical-tabs-scrollbar-color: var(--primary-background);
+  --background-color: var(--primary-background);
+  --arrowpanel-background: var(--secondary-background);
+  --background-color-box: var(--secondary-background);
+  --background-color-canvas: Canvas;
+  --background-color-critical: light-dark(#ffe8e8, #690f22);
+  --background-color-information: light-dark(#deeafc, #003070);
+  --background-color-success: light-dark(#d8eedc, #004725);
+  --background-color-warning: light-dark(#ffebcd, #5a3100);
+  --button-background-color: transparent;
+  --button-background-color-active: transparent;
+  --button-background-color-destructive: light-dark(#d7264c, #f37f98);
+  --button-background-color-destructive-active: light-dark(#8a1831, #ffe8e8);
+  --button-background-color-destructive-disabled: light-dark(#d7264c, #f37f98);
+  --button-background-color-destructive-hover: light-dark(#ac1e3d, #ffbdc5);
+  --button-background-color-disabled: transparent;
+  --button-background-color-ghost: transparent;
+  --button-background-color-ghost-active: transparent;
+  --button-background-color-ghost-disabled: transparent;
+  --button-background-color-ghost-hover: transparent;
+  --button-background-color-hover: transparent;
+  --button-background-color-primary: transparent;
+  --button-background-color-primary-active: transparent;
+  --button-background-color-primary-disabled: transparent;
+  --button-background-color-primary-hover: transparent;
+  --ext-theme-background-transition: background-color 0.1s
+    cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  --in-content-button-background: transparent;
+  --in-content-button-background-hover: transparent;
+  --in-content-page-background: color-mix(
+    in srgb,
+    #ffb787 1%,
+    light-dark(#ebebeb, #202020) 99%
+  );
+  --in-content-primary-button-background: transparent;
+  --in-content-primary-button-background-active: transparent;
+  --in-content-primary-button-background-hover: transparent;
+  --lwt-background-alignment: right top;
+  --lwt-background-tiling: no-repeat;
+  --newtab-background-color: var(--primary-background);
+  --newtab-background-color-secondary: var(--secondary-background);
+  --panel-banner-item-background-color: transparent;
+  --primary-backdrop-background: var(--primary-backdrop-background);
+  --primary-background: #12141f;
+  --primary-background-hover: #2d2f54;
+  --secondary-background: #0a0b14;
+  --secondary-background-hover: #21243c;
+  --short-notification-background: #0250bb;
+  --sidebar-background-color: var(--secondary-background);
+  --tab-collapsed-background-width: 36px;
+  --tab-hover-background-color: transparent;
+  --tab-pinned-expanded-background-width: 40px;
+  --tabpanel-background-color: transparent;
+  --toolbar-field-background-color: transparent;
+  --toolbar-field-focus-background-color: transparent;
+  --toolbarbutton-active-background: transparent;
+  --toolbarbutton-hover-background: transparent;
+  --urlbarView-action-button-background-color: transparent;
+  --urlbarView-action-button-hover-background-color: transparent;
+  --urlbarView-highlight-background: transparent;
+  --urlbarView-hover-background: transparent;
+  --urlbarView-result-button-background-opacity: 60%;
+  --urlbarView-result-button-hover-background-color: transparent;
+  --urlbarView-result-button-selected-background-color: inherit;
+  --zen-dialog-background: light-dark(#ebebeb, #202020);
+  --zen-in-content-dialog-background: light-dark(#ebebeb, #202020);
+  --zen-main-browser-background: light-dark(
+    light-dark(#ebebeb, #202020),
+    color-mix(in srgb, #ffb787 1%, light-dark(#ebebeb, #202020) 99%)
+  );
+  --zen-main-browser-background-toolbar: light-dark(
+    light-dark(#ebebeb, #202020),
+    color-mix(in srgb, #ffb787 1%, light-dark(#ebebeb, #202020) 99%)
+  );
+  --zen-urlbar-background: var(--primary-background);
+
+  --arrowpanel-border-radius: 0;
+  --arrowpanel-menuitem-border-radius: 0;
+  --border-radius-circle: 0;
+  --zen-dialog-background: var(--secondary-background);
+  --toolbarbutton-icon-fill: var(--primary-color);
+  --toolbarbutton-active-background: transparent;
+  --panel-separator-color: var(--primary-color);
+  --zen-colors-border: var(--primary-color);
+
+  --urlbar-box-hover-text-color: var(--secondary-color);
+  --toolbarbutton-hover-outline-color: var(--secondary-color);
+  --panel-item-hover-bgcolor: transparent;
+  --panel-item-active-bgcolor: transparent;
+  --theme-body-color: var(--primary-color);
+  --theme-popup-background: var(--secondary-color);
+  --theme-tab-toolbar-background: var(--secondary-background);
+
+  --toolbar-color: var(--primary-color);
+}
+
+#navigator-toolbox {
+  --border-radius-medium: 0;
+  --tab-border-radius: 0;
+}
+
+body {
+  --zen-border-radius: 0;
+}
+
+#browser,
+#tabbrowser-tabpanels {
+  border: 1px solid var(--primary-color);
+}
+
+#browser {
+  --zen-main-browser-background: var(--primary-background);
+}
+
+.urlbar-input-container {
+  --toolbarbutton-border-radius: 0;
+  border-radius: 0;
+}
+
+#nav-bar {
+  outline: 1px solid var(--primary-color);
+}
+
+.tabbrowser-tab:hover {
+  background-color: transparent;
+  background: transparent;
+  color: var(--secondary-color);
+  border: 1px solid black;
+}
+
+#tabbrowser-tabs {
+  --tab-selected-bgcolor: none;
+  color: var(--primary-color);
+  --tab-selected-textcolor: var(--secondary-color);
+  --tab-hover-background-color: transparent;
+}
+
+.tabbrowser-tab {
+  border: 1px solid transparent;
+}
+
+.tabbrowser-tab:hover {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.toolbarbutton {
+  color: var(--primary-color);
+}
+
+#navigator-toolbox {
+  --border-radius-medium: 0;
+  --tab-border-radius: 0;
+  --tab-hover-background-color: transparent;
+  --toolbarbutton-hover-background: transparent;
+  --toolbarbutton-hover-outline-color: var(--primary-color);
+}
+
+toolbarbutton:hover {
+  color: var(--secondary-color);
+}
+
+toolbarbutton:active {
+  background-color: transparent;
+}
+
+#urlbar-background {
+  --zen-toolbar-element-bg: transparent;
+  outline: 1px solid var(--primary-color);
+}
+
+#urlbar {
+  --toolbarbutton-border-radius: 0;
+  border: 1px solid var(--primary-color);
+}
+
+#urlbar {
+  --toolbarbutton-border-radius: 0;
+  --urlbarView-separator-color: var(--primary-color);
+  --urlbarView-hover-background: transparent;
+  --urlbarView-highlight-background: transparent;
+}
+
+.urlbarView-row {
+  border: 1px solid transparent;
+  margin: 0 3px;
+  &:hover {
+    color: var(--primary-color);
+    background-color: transparent !important;
+    border: 1px solid var(--secondary-color);
+  }
+}
+
+#titlebar {
+  --zen-dialog-background: var(--secondary-background);
+}
+
+@media (-moz-bool-pref: "zen.view.compact") {
+  :root:not([customizing]):not([inDOMFullscreen="true"]) {
+    @media (-moz-bool-pref: "zen.view.compact.hide-tabbar") or (-moz-bool-pref: "zen.view.use-single-toolbar") {
+      & #navigator-toolbox:not([animate="true"]) #titlebar {
+        background: var(--secondary-background) !important;
+        outline-color: var(--primary-color) !important;
+      }
+    }
+  }
+}
+
+.urlbarView-url {
+  color: var(--primary-color) !important;
+}
+
+#urlbar:is([focused], [open]) {
+  --toolbar-field-focus-color: var(--primary-color);
+}
+
+.urlbarView-row {
+  &:hover {
+    color: var(--secondary-color);
+    & .urlbarView-url,
+    & .urlbarView-title-separator::before {
+      color: var(--secondary-color) !important;
+    }
+  }
+}
+
+.urlbarView-row {
+  &:hover {
+    & .urlbarView-favicon {
+      background-color: transparent !important;
+    }
+  }
+}
+
+.urlbarView-row {
+  &[selected] {
+    --urlbarView-highlight-color: var(--secondary-color);
+  }
+}
+
+.urlbarView-title-separator::before {
+  color: var(--secondary-color) !important;
+}
+
+panel toolbarseparator {
+  --panel-separator-color: var(--primary-color);
+}
+
+toolbar .toolbarbutton-1 {
+  & > .toolbarbutton-icon,
+  & > .toolbarbutton-text,
+  & > .toolbarbutton-badge-stack {
+    --toolbarbutton-border-radius: 0;
+    --toolbarbutton-outline: transparent;
+  }
+}
+
+#urlbar {
+  --zen-colors-border: var(--primary-color);
+  --urlbarView-separator-color: var(--primary-color);
+}
+
+#urlbar[open] {
+  & #urlbar-background {
+    outline-color: transparent !important;
+    background-color: var(--secondary-background) !important;
+    margin: 0;
+    border: 1px solid var(--primary-color) !important;
+  }
+}
+
+.toolbarbutton-badge-stack,
+.toolbarbutton-icon {
+  fill: var(--secondary-color);
+}
+
+.zen-sidebar-action-button:hover,
+.chromeclass-toolbar-additional:hover {
+  outline: 1px solid var(--secondary-color);
+}
+
+:is(menupopup, panel):where([type="arrow"]) {
+  --arrowpanel-background: var(--secondary-background);
+  --arrowpanel-color: var(--secondary-color);
+  --panel-color: var(--secondary-color);
+  --panel-border-radius: 0;
+}
+
+:is(
+    panelview .toolbarbutton-1,
+    toolbarbutton.subviewbutton,
+    .widget-overflow-list .toolbarbutton-1,
+    .toolbaritem-combined-buttons:is(
+        :not([cui-areatype="toolbar"]),
+        [overflowedItem="true"]
+      )
+      > toolbarbutton
+  ) {
+  --panel-item-hover-bgcolor: transparent;
+  --panel-item-active-bgcolor: transparent;
+
+  &:not([disabled]):hover {
+    background: transparent;
+    outline: 1px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+}
+
+:is(
+    panelview .toolbarbutton-1,
+    toolbarbutton.subviewbutton,
+    .widget-overflow-list .toolbarbutton-1,
+    .toolbaritem-combined-buttons:is(
+        :not([cui-areatype="toolbar"]),
+        [overflowedItem="true"]
+      )
+      > toolbarbutton
+  ) {
+  &:not([disabled]):hover {
+    &:active {
+      --panel-item-active-bgcolor: transparent;
+    }
+  }
+}
+
+menu,
+menuitem {
+  color: var(--primary-color);
+}
+
+menu,
+menuitem {
+  &:where([_moz-menuactive]:not([disabled="true"])) {
+    background-color: transparent;
+    color: var(--secondary-color);
+  }
+}
+
+#urlbar:not([breakout-extend="true"])
+  #identity-box.chromeUI:not([pageproxystate="invalid"])
+  #identity-icon-box {
+  border-radius: 0 !important;
+}
+
+#identity-box.chromeUI:not([pageproxystate="invalid"]) {
+  & #identity-icon-box {
+    background: transparent !important;
+  }
+}
+
+.urlbar-page-action {
+  color: var(--primary-color);
+  border-radius: 0;
+  --urlbar-box-hover-bgcolor: transparent;
+}
+
+#urlbar .urlbar-page-action,
+#urlbar #tracking-protection-icon-container,
+#urlbar:not([breakout-extend="true"])
+  #identity-box:is(:not(.chromeUI), [pageproxystate="invalid"])
+  #identity-icon-box {
+  border-radius: 0 !important;
+}
+
+.urlbar-input-container {
+  color: var(--primary-color);
+}
+
+.urlbar-input-container:hover {
+  color: var(--secondary-color);
+}
+
+.tab-background {
+  &:is([selected], [multiselected]) {
+    --tab-selected-bgcolor: none;
+    --tab-selected-shadow: none;
+    --tab-selected-outline-color: var(--secondary-color);
+  }
+}
+
+.tab-background {
+  --border-radius-medium: 0;
+
+  .tabbrowser-tab:hover > .tab-stack > &:not([selected], [multiselected]) {
+    --tab-hover-background-color: transparent;
+    --tab-hover-outline-color: var(--primary-color);
+  }
+}
+
+#vertical-pinned-tabs-container-separator {
+  background: var(--primary-color) !important;
+}
+
+:root {
+  --arrowpanel-menuitem-border-radius: 0;
+
+  --uc-contextmenu-border-radius: 0;
+  --uc-contextmenu-menuitem-border-radius: 0;
+
+  --zen-colors-border: var(--primary-color);
+  ---zen-panel-radius: 0;
+  --panel-border-radius: 0;
+  --panel-item-hover-bgcolor: transparent;
+  --panel-item-active-bgcolor: transparent;
+}
+
+menuseparator::before {
+  --panel-separator-color: var(--primary-color);
+}
+
+menupopup,
+panel {
+  --arrowpanel-background: var(--secondary-background);
+  --zen-appcontent-border: 1px solid var(--primary-color);
+  --panel-border-radius: 0;
+  ---zen-panel-radius: 0;
+  --panel-item-hover-bgcolor: transparent;
+  --panel-item-active-bgcolor: transparent;
+  border-radius: 0;
+}
+
+menupopup,
+panel {
+  &::part(content) {
+    --panel-border-radius: 0;
+  }
+}
+
+* {
+  border-radius: 0 !important;
+}
+
+/* app menu */
+.addon-banner-item,
+.panel-banner-item {
+  --arrowpanel-menuitem-border-radius: 0;
+}
+
+/* firefox profile avatar in appmenu */
+#appMenu-fxa-label2::before {
+  border-radius: 0;
+}
+
+/* zoom controls */
+#appMenu-zoom-controls {
+  --panel-separator-color: var(--primary-color);
+}
+
+#appMenu-zoom-controls > #appMenu-fullscreen-button2::before {
+  --panel-separator-color: var(--primary-color);
+}
+
+#appMenu-zoomReduce-button2:not([disabled], [open], :active):is(:hover),
+#appMenu-zoomEnlarge-button2:not([disabled], [open], :active):is(:hover),
+#appMenu-fullscreen-button2:not([disabled], [open], :active):is(:hover),
+#appMenu-zoomReset-button2:not([disabled], [open], :active):is(:hover) {
+  --panel-item-hover-bgcolor: transparent;
+  --panel-item-active-bgcolor: transparent;
+}
+
+#appMenu-zoomReduce-button2:not([disabled]):is([open], :hover:active),
+#appMenu-zoomEnlarge-button2:not([disabled]):is([open], :hover:active),
+#appMenu-fullscreen-button2:not([disabled]):is([open], :hover:active),
+#appMenu-zoomReset-button2:not([disabled]):is([open], :hover:active) {
+  --panel-item-hover-bgcolor: transparent;
+  --panel-item-active-bgcolor: transparent;
+}
+
+menupopup::part(content),
+panel::part(content) {
+  --zen-appcontent-border: 1px solid var(--primary-color);
+}
+
+/* Context menu */
+menu,
+menuitem {
+  &:where([_moz-menuactive]:not([disabled="true"])) {
+    --button-hover-bgcolor: transparent;
+    --button-hover-color: var(--secondary-color);
+  }
+}
+
+.workspace-trigger {
+  --input-border-color: var(--primary-color);
+  border-radius: 0;
+  --zen-colors-tertiary: var(--secondary-background);
+}
+
+#editBMPanel_workspaceList {
+  --zen-colors-border: var(--primary-color);
+  border-radius: 0;
+  --zen-colors-tertiary: var(--secondary-background);
+  background-color: var(--zen-colors-tertiary);
+  box-shadow: none;
+}
+
+toolbar {
+  --toolbarbutton-active-background: transparent;
+}
+
+#nav-bar-overflow-button {
+  height: 26px;
+  width: 26px;
+  margin-right: 2px !important;
+}
+
+.identity-box-button,
+#tracking-protection-icon-container {
+  &:hover:not([open="true"]) {
+    --urlbar-box-hover-bgcolor: transparent;
+    --urlbar-box-hover-text-color: var(--secondary-color);
+  }
+}
+
+.identity-box-button,
+#tracking-protection-icon-container {
+  &:hover:active,
+  &[open="true"] {
+    --urlbar-box-active-bgcolor: transparent;
+    --toolbarbutton-active-outline-color: var(--secondary-color);
+  }
+}

@@ -6,12 +6,9 @@ const scriptDir = path.dirname(__filename);
 const gtk3Path = path.join(scriptDir, "../gtk-3.0/gtk.css");
 const gtk4Path = path.join(scriptDir, "../gtk-4.0/gtk.css");
 
-
 const primaryColor = "#e100ff";
 const primaryHoverColor = "#00fff7";
 const primaryActiveColor = "#ffd700";
-
-
 
 const updateFontColors = (cssText) => {
   let updatedCss = cssText;
@@ -130,8 +127,7 @@ const sharpRadius = (cssText) => {
 
 const updateCSS = (originalCSS) => {
   const colorsUpdated = updateFontColors(originalCSS);
-return sharpRadius(colorsUpdated);
-
+  return sharpRadius(colorsUpdated);
 };
 
 const gtk3 = fs.readFileSync(gtk3Path, "utf8");

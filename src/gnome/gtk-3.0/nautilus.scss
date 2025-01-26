@@ -1,0 +1,166 @@
+.nautilus-window {
+  /* Path bar */
+}
+.nautilus-window .path-buttons-box {
+  border: 1px solid;
+  border-radius: 0;
+  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  color: #e100ff;
+  outline-color: #e100ff;
+  border-color: #e100ff;
+  border-bottom-color: #e100ff;
+}
+.nautilus-window .path-buttons-box button {
+  border: none;
+}
+.nautilus-window .nautilus-path-bar .popup {
+  margin: 6px 0;
+}
+.nautilus-window .nautilus-path-bar > scrolledwindow {
+  color: #e100ff;
+  outline-color: #e100ff;
+  border-color: #e100ff;
+  border-bottom-color: #e100ff;
+
+  margin: 6px 0px 6px 0px;
+  border-radius: 0;
+  border-width: 1px;
+  border-style: solid;
+  transition: 200ms ease-out;
+}
+.nautilus-window .nautilus-path-bar > scrolledwindow viewport,
+.nautilus-window .nautilus-path-bar > scrolledwindow viewport box {
+  border: none;
+}
+.nautilus-window .nautilus-path-bar > scrolledwindow undershoot.left {
+  border-radius: 0;
+}
+.nautilus-window .nautilus-path-bar > scrolledwindow undershoot.right {
+}
+.nautilus-window .nautilus-path-bar > button {
+  margin: 0;
+}
+.nautilus-window .nautilus-path-bar > button.toggle {
+  border-left-width: 0;
+}
+.nautilus-window .nautilus-path-bar .path-buttons-box button {
+  margin: 0px;
+  border-radius: 0;
+  border-width: 0px;
+}
+.nautilus-window .nautilus-path-bar .path-buttons-box button:hover {
+  color: #00fff7;
+}
+.nautilus-window .nautilus-path-bar .path-buttons-box button:not(:hover),
+.nautilus-window .nautilus-path-bar .path-buttons-box button.current-dir {
+  color: #00fff7;
+}
+.nautilus-window
+  .nautilus-path-bar
+  .path-buttons-box
+  button:not(.current-dir):hover
+  label {
+  color: #00fff7;
+  opacity: 1;
+}
+.nautilus-window entry.search > * {
+  margin: 5px;
+}
+.nautilus-window paned box.floating-bar {
+  color: #e100ff;
+  border: none;
+  border-radius: 0;
+  /* stop upload folder button */
+}
+.nautilus-window paned box.floating-bar button.circular.flat.image-button,
+.nautilus-window
+  paned
+  box.floating-bar
+  button.circular.flat.image-button:hover {
+  border-color: #00fff7;
+  color: #00fff7;
+  margin: 2px;
+}
+.nautilus-window
+  paned
+  box.floating-bar
+  button.circular.flat.image-button:hover {
+  color: #00fff7;
+}
+.nautilus-window .searchbar-container searchbar {
+  border-color: #e100ff;
+}
+.nautilus-window treeview:drop(active):focus {
+  color: #ffd700;
+  border-bottom: 1px solid #4e9a06;
+}
+.nautilus-window treeview.view header button {
+  border-color: #e100ff;
+  border-left: 1px;
+}
+.nautilus-window treeview.view header button:hover {
+  color: #00fff7;
+}
+.nemo-window .view:selected,
+.nemo-window iconview:selected,
+scrolledwindow widget.view:selected {
+  color: #ffd700;
+  border-radius: 0;
+}
+.nautilus-window .nautilus-list-view .view,
+.nautilus-window .nautilus-list-view iconview {
+  border-bottom: 1px solid rgba(200, 200, 200, 0);
+}
+.nautilus-window .nautilus-list-view .view.dnd,
+.nautilus-window .nautilus-list-view iconview.dnd {
+  border-style: none;
+}
+.nautilus-window .nautilus-list-view .view button,
+.nautilus-window .nautilus-list-view iconview button {
+  border: 1px solid #e100ff;
+  border-top-width: 0;
+  border-left-width: 0;
+  color: #e100ff;
+}
+.nautilus-window .nautilus-list-view .view button:first-child,
+.nautilus-window .nautilus-list-view iconview button:first-child {
+  border-left-width: 0px;
+}
+.nautilus-window notebook > header {
+}
+.nautilus-window paned > separator {
+}
+.nautilus-window .nautilus-canvas-item.dim-label,
+.nautilus-window label.nautilus-canvas-item.separator,
+.nautilus-window headerbar .nautilus-canvas-item.subtitle,
+headerbar .nautilus-window .nautilus-canvas-item.subtitle,
+.nautilus-window .titlebar:not(headerbar) .nautilus-canvas-item.subtitle,
+.titlebar:not(headerbar) .nautilus-window .nautilus-canvas-item.subtitle,
+.nautilus-window .nautilus-list-dim-label {
+  color: #e100ff;
+}
+.nautilus-window .nautilus-canvas-item.dim-label:selected,
+.nautilus-window label.nautilus-canvas-item.separator:selected,
+.nautilus-window headerbar .nautilus-canvas-item.subtitle:selected,
+headerbar .nautilus-window .nautilus-canvas-item.subtitle:selected,
+.nautilus-window
+  .titlebar:not(headerbar)
+  .nautilus-canvas-item.subtitle:selected,
+.titlebar:not(headerbar)
+  .nautilus-window
+  .nautilus-canvas-item.subtitle:selected,
+.nautilus-window .nautilus-list-dim-label:selected {
+  color: #ffd700;
+}
+.nautilus-window .nautilus-canvas-item {
+  -gtk-outline-radius: 4px;
+  outline-offset: -2px;
+}
+.nautilus-window .nautilus-canvas-item:selected {
+  outline-color: #ffd700;
+}
+
+.nautilus-desktop-window .nautilus-desktop.view,
+.nautilus-desktop-window iconview.nautilus-desktop {
+  color: #e100ff;
+}

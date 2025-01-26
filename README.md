@@ -15,11 +15,15 @@
 - Install Pop OS
 - Go to Settings > Desktop > Dock and disable it
 - Go to Tweaks > Appearance > Themes and change the theme and shell theme to it
-    - May need to install https://extensions.gnome.org/extension/19/user-themes/
+  - May need to install https://extensions.gnome.org/extension/19/user-themes/
 - Go to Extensions and disable the Cosmic Workspaces
 - Set the background and text color in the terminal
+- Zen
+  - move the `userChrome.css` to `/home/$USER/.var/app/io.github.zen_browser.zen/.zen/3dt4pgkk.Default (beta)/chrome/userChrome.css`
 - Change the Tile windows hint color to `#e100ff`
 - Run `ln -sf "$(pwd)/gtk-4.0/gtk.css" ~/.config/gtk-4.0/gtk.css`
+- Install `https://extensions.gnome.org/extension/5237/rounded-window-corners/`
+  - Set the radius to 0 and the border width to 1 with the accent color to `#e100ff`
 - Setup the fonts
   - Install the fonts
   - Set it to use in the:

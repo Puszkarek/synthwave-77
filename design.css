@@ -1,4 +1,4 @@
-.militech-neon {
+.purple-neon {
   --text-color: #e4d5ea;
 
   --primary-color: #e100ff;
@@ -41,10 +41,12 @@
   --purple: #e100ff;
 }
 
-.purple-neon {
+.militech-neon {
   --text-color: #e4d5ea;
 
-  --primary-color: #e100ff;
+  --primary-color: #999a69;
+  --test: #c6c78a;
+
   --primary-color-hover: #b200cc;
   --primary-color-disabled: #c3a7d1;
 
@@ -70,7 +72,7 @@
   --accent-color-hover: #8ffffb;
   --highlight-color: #9d00b3;
 
-  --primary-background: #12141f;
+  --primary-background: #111614;
   --primary-backdrop-background: #1b1d2b;
   --primary-background-hover: #2d2f54;
   --secondary-background: #0a0b14;
@@ -81,5 +83,5 @@
   --red: #ff2e6e;
   --green: #00ff00;
   --cyan: #00fff7;
-  --purple: #e100ff;
+  --purple: #999a69;
 }
