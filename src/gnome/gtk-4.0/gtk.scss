@@ -348,7 +348,6 @@ entry > text > block-cursor {
 spinbutton.vertical > text.flat,
 spinbutton.flat:not(.vertical),
 entry.flat:focus-within,
-entry.flat:backdrop,
 entry.flat:disabled,
 entry.flat {
   min-height: 0;
@@ -830,53 +829,6 @@ button:checked:active {
   background: $primary_background_color;
   box-shadow: none;
 }
-notebook > header > tabs > arrow:backdrop,
-button:backdrop.flat,
-button:backdrop {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  background-color: $backdrop_background_color;
-  box-shadow: none;
-  transition: 200ms ease-out;
-}
-notebook > header > tabs > arrow:backdrop:not(:disabled),
-button:backdrop.flat:not(:disabled),
-button:backdrop:not(:disabled) {
-  -gtk-icon-filter: none;
-}
-notebook > header > tabs > arrow:backdrop:active,
-notebook > header > tabs > arrow:backdrop:checked,
-button:backdrop.flat:active,
-button:backdrop.flat:checked,
-button:backdrop:active,
-button:backdrop:checked {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #ffd700;
-  border-color: #ffd700;
-  background: $primary_background_color;
-  box-shadow: none;
-}
-notebook > header > tabs > arrow:backdrop:disabled,
-button:backdrop.flat:disabled,
-button:backdrop:disabled {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  border-color: #e100ff;
-  background: $primary_background_color;
-  box-shadow: none;
-}
-notebook > header > tabs > arrow:backdrop:disabled:active,
-notebook > header > tabs > arrow:backdrop:disabled:checked,
-button:backdrop.flat:disabled:active,
-button:backdrop.flat:disabled:checked,
-button:backdrop:disabled:active,
-button:backdrop:disabled:checked {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #ffd700;
-  border-color: #ffd700;
-  background: $primary_background_color;
-  box-shadow: none;
-}
 notebook > header > tabs > arrow:disabled,
 button:disabled {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -935,15 +887,10 @@ button.flat:checked {
   background: $primary_background_color;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-button.sidebar-button:backdrop,
-notebook > header > tabs > arrow:backdrop,
-windowcontrols button:backdrop,
 button.sidebar-button:disabled,
 notebook > header > tabs > arrow:disabled,
 windowcontrols button:disabled,
-button.flat:backdrop,
-button.flat:disabled,
-button.flat:backdrop:disabled {
+button.flat:disabled {
   border-color: #e100ff;
   background: $primary_background_color;
   background: $primary_background_color;
@@ -988,14 +935,6 @@ row:selected
 row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled) {
   color: #ffd700;
   border-color: #ffd700;
-}
-row:selected
-  button.sidebar-button:not(:active):not(:checked):not(:hover):not(
-    disabled
-  ):backdrop,
-row:selected
-  button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop {
-  color: #ffd700;
 }
 
 button.osd {
@@ -1077,9 +1016,7 @@ popover.background.magnifier button:active,
 .app-notification button:checked,
 popover.background.touch-selection button:checked,
 popover.background.magnifier button:checked,
-.osd button:active:backdrop,
 .osd button:active,
-.osd button:checked:backdrop,
 .osd button:checked {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ffd700;
@@ -1092,7 +1029,6 @@ popover.background.magnifier button:checked,
 .app-notification button:disabled,
 popover.background.touch-selection button:disabled,
 popover.background.magnifier button:disabled,
-.osd button:disabled:backdrop,
 .osd button:disabled {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #e100ff;
@@ -1244,9 +1180,7 @@ button.suggested-action:disabled:checked {
   background: $primary_background_color;
   background-clip: padding-box;
 }
-.osd button.suggested-action:active:backdrop,
 .osd button.suggested-action:active,
-.osd button.suggested-action:checked:backdrop,
 .osd button.suggested-action:checked {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ffd700;
@@ -1256,7 +1190,6 @@ button.suggested-action:disabled:checked {
   background-clip: padding-box;
   box-shadow: none;
 }
-.osd button.suggested-action:disabled:backdrop,
 .osd button.suggested-action:disabled {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #e100ff;
@@ -1356,9 +1289,7 @@ button.destructive-action:disabled:checked {
   background: $primary_background_color;
   background-clip: padding-box;
 }
-.osd button.destructive-action:active:backdrop,
 .osd button.destructive-action:active,
-.osd button.destructive-action:checked:backdrop,
 .osd button.destructive-action:checked {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ffd700;
@@ -1368,7 +1299,6 @@ button.destructive-action:disabled:checked {
   background-clip: padding-box;
   box-shadow: none;
 }
-.osd button.destructive-action:disabled:backdrop,
 .osd button.destructive-action:disabled {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #e100ff;
@@ -1420,11 +1350,7 @@ stackswitcher > button.needs-attention > image {
   background-repeat: no-repeat;
   background-position: right 3px, right 4px;
 }
-stacksidebar row.needs-attention > label:backdrop,
-stackswitcher > button.needs-attention > label:backdrop,
-stackswitcher > button.needs-attention > image:backdrop {
-  background-size: 6px 6px, 0 0;
-}
+
 stacksidebar row.needs-attention > label:dir(rtl),
 stackswitcher > button.needs-attention > label:dir(rtl),
 stackswitcher > button.needs-attention > image:dir(rtl) {
@@ -1554,28 +1480,12 @@ modelbutton.flat arrow.right {
   color: #e100ff;
   border-color: #e100ff;
 }
-.toolbar button:backdrop {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  background-color: $backdrop_background_color;
-  box-shadow: none;
-}
-.toolbar button:backdrop:disabled {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  border-color: #e100ff;
-  background: $primary_background_color;
-  box-shadow: none;
-}
 
 button.color {
   padding: 4px;
 }
 button.color > colorswatch:only-child {
   box-shadow: 0 1px rgba(0, 0, 0, 0.1);
-}
-button.color > colorswatch:only-child,
-button.color > colorswatch:only-child > overlay {
 }
 .osd button.color > colorswatch:only-child {
   box-shadow: none;
@@ -1768,10 +1678,6 @@ spinbutton:not(.vertical) > text {
 
   box-shadow: none;
   padding: 6px;
-}
-.osd spinbutton:not(.vertical) > text:backdrop:disabled,
-spinbutton:not(.vertical) > text:backdrop:disabled {
-  background: $primary_background_color;
 }
 spinbutton:not(.vertical) > button.image-button.up:not(.flat),
 spinbutton:not(.vertical) > button.image-button.down:not(.flat) {
@@ -2048,12 +1954,6 @@ searchbar > revealer > box {
   border-color: #e100ff;
   background: $primary_background_color;
 }
-searchbar > revealer > box:backdrop {
-  border-color: #e100ff;
-  background-color: $backdrop_background_color;
-  box-shadow: none;
-  transition: 200ms ease-out;
-}
 
 /**************
  * GtkInfoBar *
@@ -2144,10 +2044,8 @@ headerbar {
   background: $primary_background_color;
   /* Darken switchbuttons for headerbars. issue #1588 */
 }
-.titlebar:backdrop:not(headerbar),
 headerbar:backdrop {
   border-color: #e100ff;
-  background-color: $backdrop_background_color;
   background-color: $backdrop_background_color;
   transition: 200ms ease-out;
 }
@@ -2170,31 +2068,6 @@ headerbar button.toggle:checked {
   background: $primary_background_color;
   border-color: #ffd700;
   border-top-color: #ffd700;
-}
-.titlebar:not(headerbar) stackswitcher > button:checked:backdrop,
-.titlebar:not(headerbar) button.toggle:checked:backdrop,
-headerbar stackswitcher > button:checked:backdrop,
-headerbar button.toggle:checked:backdrop {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #ffd700;
-  border-color: #ffd700;
-  background-color: $backdrop_background_color;
-  box-shadow: none;
-}
-.tiled .titlebar:not(headerbar),
-.tiled-top .titlebar:not(headerbar),
-.tiled-left .titlebar:not(headerbar),
-.tiled-right .titlebar:not(headerbar),
-.tiled-bottom .titlebar:not(headerbar),
-.maximized .titlebar:not(headerbar),
-.fullscreen .titlebar:not(headerbar),
-.tiled headerbar,
-.tiled-top headerbar,
-.tiled-left headerbar,
-.tiled-right headerbar,
-.tiled-bottom headerbar,
-.maximized headerbar,
-.fullscreen headerbar {
 }
 .default-decoration.titlebar:not(headerbar),
 headerbar.default-decoration {
@@ -2219,8 +2092,6 @@ headerbar.default-decoration windowcontrols menubutton button {
 }
 .solid-csd .titlebar:dir(rtl):not(headerbar),
 .solid-csd .titlebar:dir(ltr):not(headerbar),
-.solid-csd headerbar:backdrop:dir(rtl),
-.solid-csd headerbar:backdrop:dir(ltr),
 .solid-csd headerbar:dir(rtl),
 .solid-csd headerbar:dir(ltr) {
   margin-left: -1px;
@@ -2272,7 +2143,6 @@ window.devel headerbar.titlebar {
 }
 window.devel headerbar.titlebar:backdrop {
   background-color: $backdrop_background_color;
-  /* background-color would flash */
 }
 
 /************
@@ -2346,19 +2216,10 @@ columnview.view:disabled:selected,
 treeview.view:disabled:selected {
   color: #ffd700;
 }
-columnview.view:disabled:selected:backdrop,
-treeview.view:disabled:selected:backdrop {
-  color: #ffd700;
-}
 columnview.view.separator,
 treeview.view.separator {
   min-height: 2px;
   color: #e100ff;
-}
-columnview.view:backdrop,
-treeview.view:backdrop {
-  border-left-color: #e100ff;
-  border-top: #ddd9d6;
 }
 columnview.view:drop(active),
 treeview.view:drop(active) {
@@ -2422,13 +2283,6 @@ treeview.view.progressbar:selected:focus,
 treeview.view.progressbar:selected {
   color: #ffd700;
   background: $primary_background_color;
-}
-columnview.view.progressbar:selected:focus:backdrop,
-columnview.view.progressbar:selected:backdrop,
-treeview.view.progressbar:selected:focus:backdrop,
-treeview.view.progressbar:selected:backdrop {
-  color: #ffd700;
-  background-color: $backdrop_background_color;
 }
 columnview.view.trough,
 treeview.view.trough {
@@ -2539,9 +2393,6 @@ popover.background > contents {
   background-clip: padding-box;
   border: 1px solid #e100ff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-popover.background:backdrop {
-  background-color: $backdrop_background_color;
 }
 popover.background > contents {
   padding: 8px;
@@ -2845,13 +2696,6 @@ notebook > header.right > tabs > arrow.up {
 notebook > header > tabs > arrow {
   min-height: 16px;
   min-width: 16px;
-}
-notebook > header > tabs > arrow:hover:not(:active):not(:backdrop) {
-  background-clip: padding-box;
-  background: $primary_background_color;
-  background: $primary_background_color;
-  border-color: #ffd700;
-  box-shadow: none;
 }
 notebook > header > tabs > arrow:disabled {
   border-color: #e100ff;
@@ -3214,23 +3058,6 @@ iconview.content-view.check:active:not(list),
   -gtk-icon-shadow: none;
 }
 
-.view.content-view.check:backdrop:not(list),
-iconview.content-view.check:backdrop:not(list),
-.content-view .tile check:backdrop:not(list) {
-  margin: 4px;
-  min-width: 32px;
-  min-height: 32px;
-  color: #e100ff;
-  background: $primary_background_color;
-
-  background: $primary_background_color;
-  transition: 200ms;
-  box-shadow: none;
-  border-width: 0;
-  -gtk-icon-source: none;
-  -gtk-icon-shadow: none;
-}
-
 .view.content-view.check:checked:not(list),
 iconview.content-view.check:checked:not(list),
 .content-view .tile check:checked:not(list) {
@@ -3268,23 +3095,6 @@ iconview.content-view.check:checked:hover:not(list),
 .view.content-view.check:checked:active:not(list),
 iconview.content-view.check:checked:active:not(list),
 .content-view .tile check:checked:active:not(list) {
-  margin: 4px;
-  min-width: 32px;
-  min-height: 32px;
-  color: #ffd700;
-  background: $primary_background_color;
-
-  background: $primary_background_color;
-  transition: 200ms;
-  box-shadow: none;
-  border-width: 0;
-  -gtk-icon-source: -gtk-icontheme("object-select-symbolic");
-  -gtk-icon-shadow: none;
-}
-
-.view.content-view.check:backdrop:checked:not(list),
-iconview.content-view.check:backdrop:checked:not(list),
-.content-view .tile check:backdrop:checked:not(list) {
   margin: 4px;
   min-width: 32px;
   min-height: 32px;
@@ -4063,14 +3873,10 @@ scale.color.horizontal > trough {
   background-position: 0 -3px;
 }
 scale.color.horizontal > trough > slider:dir(ltr):hover,
-scale.color.horizontal > trough > slider:dir(ltr):backdrop,
 scale.color.horizontal > trough > slider:dir(ltr):disabled,
-scale.color.horizontal > trough > slider:dir(ltr):backdrop:disabled,
 scale.color.horizontal > trough > slider:dir(ltr),
 scale.color.horizontal > trough > slider:dir(rtl):hover,
-scale.color.horizontal > trough > slider:dir(rtl):backdrop,
 scale.color.horizontal > trough > slider:dir(rtl):disabled,
-scale.color.horizontal > trough > slider:dir(rtl):backdrop:disabled,
 scale.color.horizontal > trough > slider:dir(rtl) {
   color: #00fff7;
   margin-bottom: -15px;
@@ -4084,9 +3890,7 @@ scale.color.vertical:dir(ltr) > trough {
   background-position: 3px 0;
 }
 scale.color.vertical:dir(ltr) > trough > slider:hover,
-scale.color.vertical:dir(ltr) > trough > slider:backdrop,
 scale.color.vertical:dir(ltr) > trough > slider:disabled,
-scale.color.vertical:dir(ltr) > trough > slider:backdrop:disabled,
 scale.color.vertical:dir(ltr) > trough > slider {
   color: #00fff7;
   margin-left: -15px;
@@ -4100,9 +3904,7 @@ scale.color.vertical:dir(rtl) > trough {
   background-position: -3px 0;
 }
 scale.color.vertical:dir(rtl) > trough > slider:hover,
-scale.color.vertical:dir(rtl) > trough > slider:backdrop,
 scale.color.vertical:dir(rtl) > trough > slider:disabled,
-scale.color.vertical:dir(rtl) > trough > slider:backdrop:disabled,
 scale.color.vertical:dir(rtl) > trough > slider {
   color: #00fff7;
   margin-right: -15px;
@@ -4359,12 +4161,6 @@ list {
   background: $primary_background_color;
   border-color: #e100ff;
 }
-listview:backdrop,
-list:backdrop {
-  color: #e100ff;
-  background-color: $backdrop_background_color;
-  border-color: #e100ff;
-}
 listview > row,
 list > row {
   padding: 2px;
@@ -4566,9 +4362,6 @@ calendar > header > button {
   border: none;
   box-shadow: none;
   background: $primary_background_color;
-}
-calendar > header > button:backdrop {
-  background-color: $backdrop_background_color;
 }
 calendar > grid > label.today {
   box-shadow: inset 0px -2px #cdc7c2;
@@ -5069,11 +4862,6 @@ window.csd {
   box-shadow: none;
   margin: 0px;
 }
-window.csd:backdrop {
-  box-shadow: none;
-
-  transition: 200ms ease-out;
-}
 window.csd.popup {
   box-shadow: none;
 }
@@ -5087,9 +4875,6 @@ window.solid-csd {
 
   box-shadow: none;
 }
-window.solid-csd:backdrop {
-  box-shadow: none;
-}
 window.maximized,
 window.fullscreen {
   box-shadow: none;
@@ -5099,9 +4884,6 @@ window.tiled-top,
 window.tiled-left,
 window.tiled-right,
 window.tiled-bottom {
-  box-shadow: none;
-}
-window:backdrop {
   box-shadow: none;
 }
 window.popup {
@@ -5450,11 +5232,6 @@ headerbar {
 headerbar label .title {
   color: #e100ff;
 }
-.titlebar:backdrop:not(headerbar),
-headerbar:backdrop {
-  background-color: $backdrop_background_color;
-  border-color: #e100ff;
-}
 .maximized .titlebar:not(headerbar),
 .fullscreen .titlebar:not(headerbar),
 .maximized headerbar,
@@ -5584,222 +5361,6 @@ headerbar .path-bar button.toggle:active {
   border-color: #ffd700;
   background: $primary_background_color;
 }
-.titlebar:not(headerbar) button:backdrop,
-.titlebar:not(headerbar) buttonbox.toggle:backdrop,
-headerbar button:backdrop,
-headerbar buttonbox.toggle:backdrop {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  border-color: #e100ff;
-  background-color: $backdrop_background_color;
-  box-shadow: none;
-  border-color: #e100ff;
-}
-.titlebar:not(headerbar) button:backdrop.flat:active,
-.titlebar:not(headerbar) button:backdrop.flat:checked,
-.titlebar:not(headerbar) button:backdrop:active,
-.titlebar:not(headerbar) button:backdrop:checked,
-.titlebar:not(headerbar) button.image-button:backdrop.flat:active,
-.titlebar:not(headerbar) button.image-button:backdrop.flat:checked,
-.titlebar:not(headerbar) button.image-button:backdrop:active,
-.titlebar:not(headerbar) button.image-button:backdrop:checked,
-.titlebar:not(headerbar) button.image-button.toggle:backdrop.flat:active,
-.titlebar:not(headerbar) button.image-button.toggle:backdrop.flat:checked,
-.titlebar:not(headerbar) button.image-button.toggle:backdrop:active,
-.titlebar:not(headerbar) button.image-button.toggle:backdrop:checked,
-.titlebar:not(headerbar) button.text-button:backdrop.flat:active,
-.titlebar:not(headerbar) button.text-button:backdrop.flat:checked,
-.titlebar:not(headerbar) button.text-button:backdrop:active,
-.titlebar:not(headerbar) button.text-button:backdrop:checked,
-.titlebar:not(headerbar) button.toggle:backdrop.flat:active,
-.titlebar:not(headerbar) button.toggle:backdrop.flat:checked,
-.titlebar:not(headerbar) button.toggle:backdrop:active,
-.titlebar:not(headerbar) button.toggle:backdrop:checked,
-.titlebar:not(headerbar) box button.toggle:backdrop.flat:active,
-.titlebar:not(headerbar) box button.toggle:backdrop.flat:checked,
-.titlebar:not(headerbar) box button.toggle:backdrop:active,
-.titlebar:not(headerbar) box button.toggle:backdrop:checked,
-.titlebar:not(headerbar) buttonbox.toggle:backdrop.flat:active,
-.titlebar:not(headerbar) buttonbox.toggle:backdrop.flat:checked,
-.titlebar:not(headerbar) buttonbox.toggle:backdrop:active,
-.titlebar:not(headerbar) buttonbox.toggle:backdrop:checked,
-.titlebar:not(headerbar) stackswitcher button:backdrop.flat:active,
-.titlebar:not(headerbar) stackswitcher button:backdrop.flat:checked,
-.titlebar:not(headerbar) stackswitcher button:backdrop:active,
-.titlebar:not(headerbar) stackswitcher button:backdrop:checked,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:active,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:checked,
-.titlebar:not(headerbar) filechooser .path-bar.linked > button:backdrop:active,
-.titlebar:not(headerbar) filechooser .path-bar.linked > button:backdrop:checked,
-.titlebar:not(headerbar) .path-bar button:backdrop.flat:active,
-.titlebar:not(headerbar) .path-bar button:backdrop.flat:checked,
-.titlebar:not(headerbar) .path-bar button:backdrop:active,
-.titlebar:not(headerbar) .path-bar button:backdrop:checked,
-headerbar button:backdrop.flat:active,
-headerbar button:backdrop.flat:checked,
-headerbar button:backdrop:active,
-headerbar button:backdrop:checked,
-headerbar button.image-button:backdrop.flat:active,
-headerbar button.image-button:backdrop.flat:checked,
-headerbar button.image-button:backdrop:active,
-headerbar button.image-button:backdrop:checked,
-headerbar button.image-button.toggle:backdrop.flat:active,
-headerbar button.image-button.toggle:backdrop.flat:checked,
-headerbar button.image-button.toggle:backdrop:active,
-headerbar button.image-button.toggle:backdrop:checked,
-headerbar button.text-button:backdrop.flat:active,
-headerbar button.text-button:backdrop.flat:checked,
-headerbar button.text-button:backdrop:active,
-headerbar button.text-button:backdrop:checked,
-headerbar button.toggle:backdrop.flat:active,
-headerbar button.toggle:backdrop.flat:checked,
-headerbar button.toggle:backdrop:active,
-headerbar button.toggle:backdrop:checked,
-headerbar box button.toggle:backdrop.flat:active,
-headerbar box button.toggle:backdrop.flat:checked,
-headerbar box button.toggle:backdrop:active,
-headerbar box button.toggle:backdrop:checked,
-headerbar buttonbox.toggle:backdrop.flat:active,
-headerbar buttonbox.toggle:backdrop.flat:checked,
-headerbar buttonbox.toggle:backdrop:active,
-headerbar buttonbox.toggle:backdrop:checked,
-headerbar stackswitcher button:backdrop.flat:active,
-headerbar stackswitcher button:backdrop.flat:checked,
-headerbar stackswitcher button:backdrop:active,
-headerbar stackswitcher button:backdrop:checked,
-headerbar filechooser .path-bar.linked > button:backdrop.flat:active,
-headerbar filechooser .path-bar.linked > button:backdrop.flat:checked,
-headerbar filechooser .path-bar.linked > button:backdrop:active,
-headerbar filechooser .path-bar.linked > button:backdrop:checked,
-headerbar .path-bar button:backdrop.flat:active,
-headerbar .path-bar button:backdrop.flat:checked,
-headerbar .path-bar button:backdrop:active,
-headerbar .path-bar button:backdrop:checked {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #ffd700;
-  border-color: #ffd700;
-  background: $primary_background_color;
-  box-shadow: none;
-  border-color: #ffd700;
-}
-.titlebar:not(headerbar) button:backdrop:disabled,
-.titlebar:not(headerbar) buttonbox.toggle:backdrop:disabled,
-headerbar button:backdrop:disabled,
-headerbar buttonbox.toggle:backdrop:disabled {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  border-color: #e100ff;
-  background: $primary_background_color;
-  box-shadow: none;
-  border-color: #e100ff;
-}
-.titlebar:not(headerbar) button:backdrop.flat:disabled:active,
-.titlebar:not(headerbar) button:backdrop.flat:disabled:checked,
-.titlebar:not(headerbar) button:backdrop:disabled:active,
-.titlebar:not(headerbar) button:backdrop:disabled:checked,
-.titlebar:not(headerbar) button.image-button:backdrop.flat:disabled:active,
-.titlebar:not(headerbar) button.image-button:backdrop.flat:disabled:checked,
-.titlebar:not(headerbar) button.image-button:backdrop:disabled:active,
-.titlebar:not(headerbar) button.image-button:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.image-button.toggle:backdrop.flat:disabled:active,
-.titlebar:not(headerbar)
-  button.image-button.toggle:backdrop.flat:disabled:checked,
-.titlebar:not(headerbar) button.image-button.toggle:backdrop:disabled:active,
-.titlebar:not(headerbar) button.image-button.toggle:backdrop:disabled:checked,
-.titlebar:not(headerbar) button.text-button:backdrop.flat:disabled:active,
-.titlebar:not(headerbar) button.text-button:backdrop.flat:disabled:checked,
-.titlebar:not(headerbar) button.text-button:backdrop:disabled:active,
-.titlebar:not(headerbar) button.text-button:backdrop:disabled:checked,
-.titlebar:not(headerbar) button.toggle:backdrop.flat:disabled:active,
-.titlebar:not(headerbar) button.toggle:backdrop.flat:disabled:checked,
-.titlebar:not(headerbar) button.toggle:backdrop:disabled:active,
-.titlebar:not(headerbar) button.toggle:backdrop:disabled:checked,
-.titlebar:not(headerbar) box button.toggle:backdrop.flat:disabled:active,
-.titlebar:not(headerbar) box button.toggle:backdrop.flat:disabled:checked,
-.titlebar:not(headerbar) box button.toggle:backdrop:disabled:active,
-.titlebar:not(headerbar) box button.toggle:backdrop:disabled:checked,
-.titlebar:not(headerbar) buttonbox.toggle:backdrop.flat:disabled:active,
-.titlebar:not(headerbar) buttonbox.toggle:backdrop.flat:disabled:checked,
-.titlebar:not(headerbar) buttonbox.toggle:backdrop:disabled:active,
-.titlebar:not(headerbar) buttonbox.toggle:backdrop:disabled:checked,
-.titlebar:not(headerbar) stackswitcher button:backdrop.flat:disabled:active,
-.titlebar:not(headerbar) stackswitcher button:backdrop.flat:disabled:checked,
-.titlebar:not(headerbar) stackswitcher button:backdrop:disabled:active,
-.titlebar:not(headerbar) stackswitcher button:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:disabled:active,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:disabled:checked,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop:disabled:checked,
-.titlebar:not(headerbar) .path-bar button:backdrop.flat:disabled:active,
-.titlebar:not(headerbar) .path-bar button:backdrop.flat:disabled:checked,
-.titlebar:not(headerbar) .path-bar button:backdrop:disabled:active,
-.titlebar:not(headerbar) .path-bar button:backdrop:disabled:checked,
-headerbar button:backdrop.flat:disabled:active,
-headerbar button:backdrop.flat:disabled:checked,
-headerbar button:backdrop:disabled:active,
-headerbar button:backdrop:disabled:checked,
-headerbar button.image-button:backdrop.flat:disabled:active,
-headerbar button.image-button:backdrop.flat:disabled:checked,
-headerbar button.image-button:backdrop:disabled:active,
-headerbar button.image-button:backdrop:disabled:checked,
-headerbar button.image-button.toggle:backdrop.flat:disabled:active,
-headerbar button.image-button.toggle:backdrop.flat:disabled:checked,
-headerbar button.image-button.toggle:backdrop:disabled:active,
-headerbar button.image-button.toggle:backdrop:disabled:checked,
-headerbar button.text-button:backdrop.flat:disabled:active,
-headerbar button.text-button:backdrop.flat:disabled:checked,
-headerbar button.text-button:backdrop:disabled:active,
-headerbar button.text-button:backdrop:disabled:checked,
-headerbar button.toggle:backdrop.flat:disabled:active,
-headerbar button.toggle:backdrop.flat:disabled:checked,
-headerbar button.toggle:backdrop:disabled:active,
-headerbar button.toggle:backdrop:disabled:checked,
-headerbar box button.toggle:backdrop.flat:disabled:active,
-headerbar box button.toggle:backdrop.flat:disabled:checked,
-headerbar box button.toggle:backdrop:disabled:active,
-headerbar box button.toggle:backdrop:disabled:checked,
-headerbar buttonbox.toggle:backdrop.flat:disabled:active,
-headerbar buttonbox.toggle:backdrop.flat:disabled:checked,
-headerbar buttonbox.toggle:backdrop:disabled:active,
-headerbar buttonbox.toggle:backdrop:disabled:checked,
-headerbar stackswitcher button:backdrop.flat:disabled:active,
-headerbar stackswitcher button:backdrop.flat:disabled:checked,
-headerbar stackswitcher button:backdrop:disabled:active,
-headerbar stackswitcher button:backdrop:disabled:checked,
-headerbar filechooser .path-bar.linked > button:backdrop.flat:disabled:active,
-headerbar filechooser .path-bar.linked > button:backdrop.flat:disabled:checked,
-headerbar filechooser .path-bar.linked > button:backdrop:disabled:active,
-headerbar filechooser .path-bar.linked > button:backdrop:disabled:checked,
-headerbar .path-bar button:backdrop.flat:disabled:active,
-headerbar .path-bar button:backdrop.flat:disabled:checked,
-headerbar .path-bar button:backdrop:disabled:active,
-headerbar .path-bar button:backdrop:disabled:checked {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #ffd700;
-  border-color: #ffd700;
-  background: $primary_background_color;
-  box-shadow: none;
-  border-color: #ffd700;
-}
 .titlebar:not(headerbar) button:disabled,
 .titlebar:not(headerbar) buttonbox.toggle:disabled,
 headerbar button:disabled,
@@ -5871,318 +5432,9 @@ headerbar buttonbox.toggle.suggested-action:checked {
   background: $primary_background_color;
   box-shadow: none;
 }
-.titlebar:not(headerbar) button.suggested-action:backdrop,
-.titlebar:not(headerbar) buttonbox.toggle.suggested-action:backdrop,
-headerbar button.suggested-action:backdrop,
-headerbar buttonbox.toggle.suggested-action:backdrop {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  border-color: #e100ff;
-  background-color: $backdrop_background_color;
-  box-shadow: none;
-}
-.titlebar:not(headerbar) button.suggested-action:backdrop:active,
-.titlebar:not(headerbar) button.suggested-action:backdrop:checked,
-.titlebar:not(headerbar) button.suggested-action.flat:backdrop:active,
-.titlebar:not(headerbar) button.suggested-action.flat:backdrop:checked,
-.titlebar:not(headerbar) button.image-button.suggested-action:backdrop:active,
-.titlebar:not(headerbar) button.image-button.suggested-action:backdrop:checked,
-.titlebar:not(headerbar)
-  button.image-button.suggested-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  button.image-button.suggested-action.flat:backdrop:checked,
-.titlebar:not(headerbar)
-  button.image-button.toggle.suggested-action:backdrop:active,
-.titlebar:not(headerbar)
-  button.image-button.toggle.suggested-action:backdrop:checked,
-.titlebar:not(headerbar)
-  button.image-button.toggle.suggested-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  button.image-button.toggle.suggested-action.flat:backdrop:checked,
-.titlebar:not(headerbar) button.text-button.suggested-action:backdrop:active,
-.titlebar:not(headerbar) button.text-button.suggested-action:backdrop:checked,
-.titlebar:not(headerbar)
-  button.text-button.suggested-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  button.text-button.suggested-action.flat:backdrop:checked,
-.titlebar:not(headerbar) button.toggle.suggested-action:backdrop:active,
-.titlebar:not(headerbar) button.toggle.suggested-action:backdrop:checked,
-.titlebar:not(headerbar) button.toggle.suggested-action.flat:backdrop:active,
-.titlebar:not(headerbar) button.toggle.suggested-action.flat:backdrop:checked,
-.titlebar:not(headerbar) box button.toggle.suggested-action:backdrop:active,
-.titlebar:not(headerbar) box button.toggle.suggested-action:backdrop:checked,
-.titlebar:not(headerbar)
-  box
-  button.toggle.suggested-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  box
-  button.toggle.suggested-action.flat:backdrop:checked,
-.titlebar:not(headerbar) buttonbox.toggle.suggested-action:backdrop:active,
-.titlebar:not(headerbar) buttonbox.toggle.suggested-action:backdrop:checked,
-.titlebar:not(headerbar) buttonbox.toggle.suggested-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  buttonbox.toggle.suggested-action.flat:backdrop:checked,
-.titlebar:not(headerbar) stackswitcher button.suggested-action:backdrop:active,
-.titlebar:not(headerbar) stackswitcher button.suggested-action:backdrop:checked,
-.titlebar:not(headerbar)
-  stackswitcher
-  button.suggested-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  stackswitcher
-  button.suggested-action.flat:backdrop:checked,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.suggested-action:backdrop:active,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.suggested-action:backdrop:checked,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.suggested-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.suggested-action.flat:backdrop:checked,
-.titlebar:not(headerbar) .path-bar button.suggested-action:backdrop:active,
-.titlebar:not(headerbar) .path-bar button.suggested-action:backdrop:checked,
-.titlebar:not(headerbar) .path-bar button.suggested-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  .path-bar
-  button.suggested-action.flat:backdrop:checked,
-headerbar button.suggested-action:backdrop:active,
-headerbar button.suggested-action:backdrop:checked,
-headerbar button.suggested-action.flat:backdrop:active,
-headerbar button.suggested-action.flat:backdrop:checked,
-headerbar button.image-button.suggested-action:backdrop:active,
-headerbar button.image-button.suggested-action:backdrop:checked,
-headerbar button.image-button.suggested-action.flat:backdrop:active,
-headerbar button.image-button.suggested-action.flat:backdrop:checked,
-headerbar button.image-button.toggle.suggested-action:backdrop:active,
-headerbar button.image-button.toggle.suggested-action:backdrop:checked,
-headerbar button.image-button.toggle.suggested-action.flat:backdrop:active,
-headerbar button.image-button.toggle.suggested-action.flat:backdrop:checked,
-headerbar button.text-button.suggested-action:backdrop:active,
-headerbar button.text-button.suggested-action:backdrop:checked,
-headerbar button.text-button.suggested-action.flat:backdrop:active,
-headerbar button.text-button.suggested-action.flat:backdrop:checked,
-headerbar button.toggle.suggested-action:backdrop:active,
-headerbar button.toggle.suggested-action:backdrop:checked,
-headerbar button.toggle.suggested-action.flat:backdrop:active,
-headerbar button.toggle.suggested-action.flat:backdrop:checked,
-headerbar box button.toggle.suggested-action:backdrop:active,
-headerbar box button.toggle.suggested-action:backdrop:checked,
-headerbar box button.toggle.suggested-action.flat:backdrop:active,
-headerbar box button.toggle.suggested-action.flat:backdrop:checked,
-headerbar buttonbox.toggle.suggested-action:backdrop:active,
-headerbar buttonbox.toggle.suggested-action:backdrop:checked,
-headerbar buttonbox.toggle.suggested-action.flat:backdrop:active,
-headerbar buttonbox.toggle.suggested-action.flat:backdrop:checked,
-headerbar stackswitcher button.suggested-action:backdrop:active,
-headerbar stackswitcher button.suggested-action:backdrop:checked,
-headerbar stackswitcher button.suggested-action.flat:backdrop:active,
-headerbar stackswitcher button.suggested-action.flat:backdrop:checked,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.suggested-action:backdrop:active,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.suggested-action:backdrop:checked,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.suggested-action.flat:backdrop:active,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.suggested-action.flat:backdrop:checked,
-headerbar .path-bar button.suggested-action:backdrop:active,
-headerbar .path-bar button.suggested-action:backdrop:checked,
-headerbar .path-bar button.suggested-action.flat:backdrop:active,
-headerbar .path-bar button.suggested-action.flat:backdrop:checked {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #ffd700;
-  border-color: #ffd700;
-  background: $primary_background_color;
-  box-shadow: none;
-}
-.titlebar:not(headerbar) button.suggested-action:backdrop:disabled,
-.titlebar:not(headerbar) buttonbox.toggle.suggested-action:backdrop:disabled,
-headerbar button.suggested-action:backdrop:disabled,
-headerbar buttonbox.toggle.suggested-action:backdrop:disabled {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  border-color: #e100ff;
-  background: $primary_background_color;
-  box-shadow: none;
-}
-.titlebar:not(headerbar) button.suggested-action:backdrop:disabled:active,
-.titlebar:not(headerbar) button.suggested-action:backdrop:disabled:checked,
-.titlebar:not(headerbar) button.suggested-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar) button.suggested-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.image-button.suggested-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.image-button.suggested-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.image-button.suggested-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.image-button.suggested-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.image-button.toggle.suggested-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.image-button.toggle.suggested-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.image-button.toggle.suggested-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.image-button.toggle.suggested-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.text-button.suggested-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.text-button.suggested-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.text-button.suggested-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.text-button.suggested-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.toggle.suggested-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.toggle.suggested-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.toggle.suggested-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.toggle.suggested-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  box
-  button.toggle.suggested-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  box
-  button.toggle.suggested-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  box
-  button.toggle.suggested-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  box
-  button.toggle.suggested-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  buttonbox.toggle.suggested-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  buttonbox.toggle.suggested-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  buttonbox.toggle.suggested-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  buttonbox.toggle.suggested-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  stackswitcher
-  button.suggested-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  stackswitcher
-  button.suggested-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  stackswitcher
-  button.suggested-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  stackswitcher
-  button.suggested-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.suggested-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.suggested-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.suggested-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.suggested-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  .path-bar
-  button.suggested-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  .path-bar
-  button.suggested-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  .path-bar
-  button.suggested-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  .path-bar
-  button.suggested-action.flat:backdrop:disabled:checked,
-headerbar button.suggested-action:backdrop:disabled:active,
-headerbar button.suggested-action:backdrop:disabled:checked,
-headerbar button.suggested-action.flat:backdrop:disabled:active,
-headerbar button.suggested-action.flat:backdrop:disabled:checked,
-headerbar button.image-button.suggested-action:backdrop:disabled:active,
-headerbar button.image-button.suggested-action:backdrop:disabled:checked,
-headerbar button.image-button.suggested-action.flat:backdrop:disabled:active,
-headerbar button.image-button.suggested-action.flat:backdrop:disabled:checked,
-headerbar button.image-button.toggle.suggested-action:backdrop:disabled:active,
-headerbar button.image-button.toggle.suggested-action:backdrop:disabled:checked,
-headerbar
-  button.image-button.toggle.suggested-action.flat:backdrop:disabled:active,
-headerbar
-  button.image-button.toggle.suggested-action.flat:backdrop:disabled:checked,
-headerbar button.text-button.suggested-action:backdrop:disabled:active,
-headerbar button.text-button.suggested-action:backdrop:disabled:checked,
-headerbar button.text-button.suggested-action.flat:backdrop:disabled:active,
-headerbar button.text-button.suggested-action.flat:backdrop:disabled:checked,
-headerbar button.toggle.suggested-action:backdrop:disabled:active,
-headerbar button.toggle.suggested-action:backdrop:disabled:checked,
-headerbar button.toggle.suggested-action.flat:backdrop:disabled:active,
-headerbar button.toggle.suggested-action.flat:backdrop:disabled:checked,
-headerbar box button.toggle.suggested-action:backdrop:disabled:active,
-headerbar box button.toggle.suggested-action:backdrop:disabled:checked,
-headerbar box button.toggle.suggested-action.flat:backdrop:disabled:active,
-headerbar box button.toggle.suggested-action.flat:backdrop:disabled:checked,
-headerbar buttonbox.toggle.suggested-action:backdrop:disabled:active,
-headerbar buttonbox.toggle.suggested-action:backdrop:disabled:checked,
-headerbar buttonbox.toggle.suggested-action.flat:backdrop:disabled:active,
-headerbar buttonbox.toggle.suggested-action.flat:backdrop:disabled:checked,
-headerbar stackswitcher button.suggested-action:backdrop:disabled:active,
-headerbar stackswitcher button.suggested-action:backdrop:disabled:checked,
-headerbar stackswitcher button.suggested-action.flat:backdrop:disabled:active,
-headerbar stackswitcher button.suggested-action.flat:backdrop:disabled:checked,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.suggested-action:backdrop:disabled:active,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.suggested-action:backdrop:disabled:checked,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.suggested-action.flat:backdrop:disabled:active,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.suggested-action.flat:backdrop:disabled:checked,
-headerbar .path-bar button.suggested-action:backdrop:disabled:active,
-headerbar .path-bar button.suggested-action:backdrop:disabled:checked,
-headerbar .path-bar button.suggested-action.flat:backdrop:disabled:active,
-headerbar .path-bar button.suggested-action.flat:backdrop:disabled:checked {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #ffd700;
-  border-color: #ffd700;
-  background: $primary_background_color;
-  box-shadow: none;
-}
-.titlebar:not(headerbar) button.suggested-action.flat:backdrop,
 .titlebar:not(headerbar) button.suggested-action.flat:disabled,
-.titlebar:not(headerbar) buttonbox.toggle.suggested-action.flat:backdrop,
 .titlebar:not(headerbar) buttonbox.toggle.suggested-action.flat:disabled,
-headerbar button.suggested-action.flat:backdrop,
 headerbar button.suggested-action.flat:disabled,
-headerbar buttonbox.toggle.suggested-action.flat:backdrop,
 headerbar buttonbox.toggle.suggested-action.flat:disabled {
   border-color: #e100ff;
   background: $primary_background_color;
@@ -6236,74 +5488,79 @@ headerbar buttonbox.toggle.suggested-action:disabled:checked {
   background: $primary_background_color;
   background-clip: padding-box;
 }
-.osd .titlebar:not(headerbar) button.suggested-action:active:backdrop,
 .osd .titlebar:not(headerbar) button.suggested-action:active,
-.osd .titlebar:not(headerbar) button.suggested-action:checked:backdrop,
 .osd .titlebar:not(headerbar) button.suggested-action:checked,
 .osd
   .titlebar:not(headerbar)
-  button.image-button.suggested-action:active:backdrop,
-.osd .titlebar:not(headerbar) button.image-button.suggested-action:active,
+  .osd
+  .titlebar:not(headerbar)
+  button.image-button.suggested-action:active,
 .osd
   .titlebar:not(headerbar)
-  button.image-button.suggested-action:checked:backdrop,
-.osd .titlebar:not(headerbar) button.image-button.suggested-action:checked,
+  .osd
+  .titlebar:not(headerbar)
+  button.image-button.suggested-action:checked,
 .osd
   .titlebar:not(headerbar)
-  button.image-button.toggle.suggested-action:active:backdrop,
-.osd
+  .osd
   .titlebar:not(headerbar)
   button.image-button.toggle.suggested-action:active,
 .osd
   .titlebar:not(headerbar)
-  button.image-button.toggle.suggested-action:checked:backdrop,
-.osd
+  .osd
   .titlebar:not(headerbar)
   button.image-button.toggle.suggested-action:checked,
 .osd
   .titlebar:not(headerbar)
-  button.text-button.suggested-action:active:backdrop,
-.osd .titlebar:not(headerbar) button.text-button.suggested-action:active,
+  .osd
+  .titlebar:not(headerbar)
+  button.text-button.suggested-action:active,
 .osd
   .titlebar:not(headerbar)
-  button.text-button.suggested-action:checked:backdrop,
-.osd .titlebar:not(headerbar) button.text-button.suggested-action:checked,
-.osd .titlebar:not(headerbar) button.toggle.suggested-action:active:backdrop,
+  .osd
+  .titlebar:not(headerbar)
+  button.text-button.suggested-action:checked,
 .osd .titlebar:not(headerbar) button.toggle.suggested-action:active,
-.osd .titlebar:not(headerbar) button.toggle.suggested-action:checked:backdrop,
 .osd .titlebar:not(headerbar) button.toggle.suggested-action:checked,
 .osd
   .titlebar:not(headerbar)
   box
-  button.toggle.suggested-action:active:backdrop,
-.osd .titlebar:not(headerbar) box button.toggle.suggested-action:active,
+  .osd
+  .titlebar:not(headerbar)
+  box
+  button.toggle.suggested-action:active,
 .osd
   .titlebar:not(headerbar)
   box
-  button.toggle.suggested-action:checked:backdrop,
-.osd .titlebar:not(headerbar) box button.toggle.suggested-action:checked,
-.osd .titlebar:not(headerbar) buttonbox.toggle.suggested-action:active:backdrop,
+  .osd
+  .titlebar:not(headerbar)
+  box
+  button.toggle.suggested-action:checked,
 .osd .titlebar:not(headerbar) buttonbox.toggle.suggested-action:active,
 .osd
   .titlebar:not(headerbar)
-  buttonbox.toggle.suggested-action:checked:backdrop,
-.osd .titlebar:not(headerbar) buttonbox.toggle.suggested-action:checked,
+  .osd
+  .titlebar:not(headerbar)
+  buttonbox.toggle.suggested-action:checked,
 .osd
   .titlebar:not(headerbar)
   stackswitcher
-  button.suggested-action:active:backdrop,
-.osd .titlebar:not(headerbar) stackswitcher button.suggested-action:active,
+  .osd
+  .titlebar:not(headerbar)
+  stackswitcher
+  button.suggested-action:active,
 .osd
   .titlebar:not(headerbar)
   stackswitcher
-  button.suggested-action:checked:backdrop,
-.osd .titlebar:not(headerbar) stackswitcher button.suggested-action:checked,
+  .osd
+  .titlebar:not(headerbar)
+  stackswitcher
+  button.suggested-action:checked,
 .osd
   .titlebar:not(headerbar)
   filechooser
   .path-bar.linked
-  > button.suggested-action:active:backdrop,
-.osd
+  .osd
   .titlebar:not(headerbar)
   filechooser
   .path-bar.linked
@@ -6312,66 +5569,54 @@ headerbar buttonbox.toggle.suggested-action:disabled:checked {
   .titlebar:not(headerbar)
   filechooser
   .path-bar.linked
-  > button.suggested-action:checked:backdrop,
-.osd
+  .osd
   .titlebar:not(headerbar)
   filechooser
   .path-bar.linked
   > button.suggested-action:checked,
-.osd .titlebar:not(headerbar) .path-bar button.suggested-action:active:backdrop,
 .osd .titlebar:not(headerbar) .path-bar button.suggested-action:active,
 .osd
   .titlebar:not(headerbar)
   .path-bar
-  button.suggested-action:checked:backdrop,
-.osd .titlebar:not(headerbar) .path-bar button.suggested-action:checked,
-.osd headerbar button.suggested-action:active:backdrop,
+  .osd
+  .titlebar:not(headerbar)
+  .path-bar
+  button.suggested-action:checked,
 .osd headerbar button.suggested-action:active,
-.osd headerbar button.suggested-action:checked:backdrop,
 .osd headerbar button.suggested-action:checked,
-.osd headerbar button.image-button.suggested-action:active:backdrop,
 .osd headerbar button.image-button.suggested-action:active,
-.osd headerbar button.image-button.suggested-action:checked:backdrop,
 .osd headerbar button.image-button.suggested-action:checked,
-.osd headerbar button.image-button.toggle.suggested-action:active:backdrop,
 .osd headerbar button.image-button.toggle.suggested-action:active,
-.osd headerbar button.image-button.toggle.suggested-action:checked:backdrop,
 .osd headerbar button.image-button.toggle.suggested-action:checked,
-.osd headerbar button.text-button.suggested-action:active:backdrop,
 .osd headerbar button.text-button.suggested-action:active,
-.osd headerbar button.text-button.suggested-action:checked:backdrop,
 .osd headerbar button.text-button.suggested-action:checked,
-.osd headerbar button.toggle.suggested-action:active:backdrop,
 .osd headerbar button.toggle.suggested-action:active,
-.osd headerbar button.toggle.suggested-action:checked:backdrop,
 .osd headerbar button.toggle.suggested-action:checked,
-.osd headerbar box button.toggle.suggested-action:active:backdrop,
 .osd headerbar box button.toggle.suggested-action:active,
-.osd headerbar box button.toggle.suggested-action:checked:backdrop,
 .osd headerbar box button.toggle.suggested-action:checked,
-.osd headerbar buttonbox.toggle.suggested-action:active:backdrop,
 .osd headerbar buttonbox.toggle.suggested-action:active,
-.osd headerbar buttonbox.toggle.suggested-action:checked:backdrop,
 .osd headerbar buttonbox.toggle.suggested-action:checked,
-.osd headerbar stackswitcher button.suggested-action:active:backdrop,
 .osd headerbar stackswitcher button.suggested-action:active,
-.osd headerbar stackswitcher button.suggested-action:checked:backdrop,
 .osd headerbar stackswitcher button.suggested-action:checked,
 .osd
   headerbar
   filechooser
   .path-bar.linked
-  > button.suggested-action:active:backdrop,
-.osd headerbar filechooser .path-bar.linked > button.suggested-action:active,
+  .osd
+  headerbar
+  filechooser
+  .path-bar.linked
+  > button.suggested-action:active,
 .osd
   headerbar
   filechooser
   .path-bar.linked
-  > button.suggested-action:checked:backdrop,
-.osd headerbar filechooser .path-bar.linked > button.suggested-action:checked,
-.osd headerbar .path-bar button.suggested-action:active:backdrop,
+  .osd
+  headerbar
+  filechooser
+  .path-bar.linked
+  > button.suggested-action:checked,
 .osd headerbar .path-bar button.suggested-action:active,
-.osd headerbar .path-bar button.suggested-action:checked:backdrop,
 .osd headerbar .path-bar button.suggested-action:checked {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ffd700;
@@ -6390,17 +5635,6 @@ headerbar buttonbox.toggle.suggested-action:disabled:checked {
   border-color: #e100ff;
   background: $primary_background_color;
   background: $primary_background_color;
-  background-clip: padding-box;
-}
-.osd .titlebar:not(headerbar) button.suggested-action:backdrop,
-.osd .titlebar:not(headerbar) buttonbox.toggle.suggested-action:backdrop,
-.osd headerbar button.suggested-action:backdrop,
-.osd headerbar buttonbox.toggle.suggested-action:backdrop {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  border-color: #e100ff;
-  background-color: $backdrop_background_color;
-  background-color: $backdrop_background_color;
   background-clip: padding-box;
 }
 .titlebar:not(headerbar) button.destructive-action,
@@ -6450,332 +5684,9 @@ headerbar buttonbox.toggle.destructive-action:checked {
   background: $primary_background_color;
   box-shadow: none;
 }
-.titlebar:not(headerbar) button.destructive-action:backdrop,
-.titlebar:not(headerbar) buttonbox.toggle.destructive-action:backdrop,
-headerbar button.destructive-action:backdrop,
-headerbar buttonbox.toggle.destructive-action:backdrop {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  border-color: #e100ff;
-  background-color: $backdrop_background_color;
-  box-shadow: none;
-}
-.titlebar:not(headerbar) button.destructive-action:backdrop:active,
-.titlebar:not(headerbar) button.destructive-action:backdrop:checked,
-.titlebar:not(headerbar) button.destructive-action.flat:backdrop:active,
-.titlebar:not(headerbar) button.destructive-action.flat:backdrop:checked,
-.titlebar:not(headerbar) button.image-button.destructive-action:backdrop:active,
-.titlebar:not(headerbar)
-  button.image-button.destructive-action:backdrop:checked,
-.titlebar:not(headerbar)
-  button.image-button.destructive-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  button.image-button.destructive-action.flat:backdrop:checked,
-.titlebar:not(headerbar)
-  button.image-button.toggle.destructive-action:backdrop:active,
-.titlebar:not(headerbar)
-  button.image-button.toggle.destructive-action:backdrop:checked,
-.titlebar:not(headerbar)
-  button.image-button.toggle.destructive-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  button.image-button.toggle.destructive-action.flat:backdrop:checked,
-.titlebar:not(headerbar) button.text-button.destructive-action:backdrop:active,
-.titlebar:not(headerbar) button.text-button.destructive-action:backdrop:checked,
-.titlebar:not(headerbar)
-  button.text-button.destructive-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  button.text-button.destructive-action.flat:backdrop:checked,
-.titlebar:not(headerbar) button.toggle.destructive-action:backdrop:active,
-.titlebar:not(headerbar) button.toggle.destructive-action:backdrop:checked,
-.titlebar:not(headerbar) button.toggle.destructive-action.flat:backdrop:active,
-.titlebar:not(headerbar) button.toggle.destructive-action.flat:backdrop:checked,
-.titlebar:not(headerbar) box button.toggle.destructive-action:backdrop:active,
-.titlebar:not(headerbar) box button.toggle.destructive-action:backdrop:checked,
-.titlebar:not(headerbar)
-  box
-  button.toggle.destructive-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  box
-  button.toggle.destructive-action.flat:backdrop:checked,
-.titlebar:not(headerbar) buttonbox.toggle.destructive-action:backdrop:active,
-.titlebar:not(headerbar) buttonbox.toggle.destructive-action:backdrop:checked,
-.titlebar:not(headerbar)
-  buttonbox.toggle.destructive-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  buttonbox.toggle.destructive-action.flat:backdrop:checked,
-.titlebar:not(headerbar)
-  stackswitcher
-  button.destructive-action:backdrop:active,
-.titlebar:not(headerbar)
-  stackswitcher
-  button.destructive-action:backdrop:checked,
-.titlebar:not(headerbar)
-  stackswitcher
-  button.destructive-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  stackswitcher
-  button.destructive-action.flat:backdrop:checked,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.destructive-action:backdrop:active,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.destructive-action:backdrop:checked,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.destructive-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.destructive-action.flat:backdrop:checked,
-.titlebar:not(headerbar) .path-bar button.destructive-action:backdrop:active,
-.titlebar:not(headerbar) .path-bar button.destructive-action:backdrop:checked,
-.titlebar:not(headerbar)
-  .path-bar
-  button.destructive-action.flat:backdrop:active,
-.titlebar:not(headerbar)
-  .path-bar
-  button.destructive-action.flat:backdrop:checked,
-headerbar button.destructive-action:backdrop:active,
-headerbar button.destructive-action:backdrop:checked,
-headerbar button.destructive-action.flat:backdrop:active,
-headerbar button.destructive-action.flat:backdrop:checked,
-headerbar button.image-button.destructive-action:backdrop:active,
-headerbar button.image-button.destructive-action:backdrop:checked,
-headerbar button.image-button.destructive-action.flat:backdrop:active,
-headerbar button.image-button.destructive-action.flat:backdrop:checked,
-headerbar button.image-button.toggle.destructive-action:backdrop:active,
-headerbar button.image-button.toggle.destructive-action:backdrop:checked,
-headerbar button.image-button.toggle.destructive-action.flat:backdrop:active,
-headerbar button.image-button.toggle.destructive-action.flat:backdrop:checked,
-headerbar button.text-button.destructive-action:backdrop:active,
-headerbar button.text-button.destructive-action:backdrop:checked,
-headerbar button.text-button.destructive-action.flat:backdrop:active,
-headerbar button.text-button.destructive-action.flat:backdrop:checked,
-headerbar button.toggle.destructive-action:backdrop:active,
-headerbar button.toggle.destructive-action:backdrop:checked,
-headerbar button.toggle.destructive-action.flat:backdrop:active,
-headerbar button.toggle.destructive-action.flat:backdrop:checked,
-headerbar box button.toggle.destructive-action:backdrop:active,
-headerbar box button.toggle.destructive-action:backdrop:checked,
-headerbar box button.toggle.destructive-action.flat:backdrop:active,
-headerbar box button.toggle.destructive-action.flat:backdrop:checked,
-headerbar buttonbox.toggle.destructive-action:backdrop:active,
-headerbar buttonbox.toggle.destructive-action:backdrop:checked,
-headerbar buttonbox.toggle.destructive-action.flat:backdrop:active,
-headerbar buttonbox.toggle.destructive-action.flat:backdrop:checked,
-headerbar stackswitcher button.destructive-action:backdrop:active,
-headerbar stackswitcher button.destructive-action:backdrop:checked,
-headerbar stackswitcher button.destructive-action.flat:backdrop:active,
-headerbar stackswitcher button.destructive-action.flat:backdrop:checked,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.destructive-action:backdrop:active,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.destructive-action:backdrop:checked,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.destructive-action.flat:backdrop:active,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.destructive-action.flat:backdrop:checked,
-headerbar .path-bar button.destructive-action:backdrop:active,
-headerbar .path-bar button.destructive-action:backdrop:checked,
-headerbar .path-bar button.destructive-action.flat:backdrop:active,
-headerbar .path-bar button.destructive-action.flat:backdrop:checked {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #ffd700;
-  border-color: #ffd700;
-  background: $primary_background_color;
-  box-shadow: none;
-}
-.titlebar:not(headerbar) button.destructive-action:backdrop:disabled,
-.titlebar:not(headerbar) buttonbox.toggle.destructive-action:backdrop:disabled,
-headerbar button.destructive-action:backdrop:disabled,
-headerbar buttonbox.toggle.destructive-action:backdrop:disabled {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  border-color: #e100ff;
-  background: $primary_background_color;
-  box-shadow: none;
-}
-.titlebar:not(headerbar) button.destructive-action:backdrop:disabled:active,
-.titlebar:not(headerbar) button.destructive-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.destructive-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.destructive-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.image-button.destructive-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.image-button.destructive-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.image-button.destructive-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.image-button.destructive-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.image-button.toggle.destructive-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.image-button.toggle.destructive-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.image-button.toggle.destructive-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.image-button.toggle.destructive-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.text-button.destructive-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.text-button.destructive-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.text-button.destructive-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.text-button.destructive-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.toggle.destructive-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.toggle.destructive-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  button.toggle.destructive-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  button.toggle.destructive-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  box
-  button.toggle.destructive-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  box
-  button.toggle.destructive-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  box
-  button.toggle.destructive-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  box
-  button.toggle.destructive-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  buttonbox.toggle.destructive-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  buttonbox.toggle.destructive-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  buttonbox.toggle.destructive-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  buttonbox.toggle.destructive-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  stackswitcher
-  button.destructive-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  stackswitcher
-  button.destructive-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  stackswitcher
-  button.destructive-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  stackswitcher
-  button.destructive-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.destructive-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.destructive-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.destructive-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button.destructive-action.flat:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  .path-bar
-  button.destructive-action:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  .path-bar
-  button.destructive-action:backdrop:disabled:checked,
-.titlebar:not(headerbar)
-  .path-bar
-  button.destructive-action.flat:backdrop:disabled:active,
-.titlebar:not(headerbar)
-  .path-bar
-  button.destructive-action.flat:backdrop:disabled:checked,
-headerbar button.destructive-action:backdrop:disabled:active,
-headerbar button.destructive-action:backdrop:disabled:checked,
-headerbar button.destructive-action.flat:backdrop:disabled:active,
-headerbar button.destructive-action.flat:backdrop:disabled:checked,
-headerbar button.image-button.destructive-action:backdrop:disabled:active,
-headerbar button.image-button.destructive-action:backdrop:disabled:checked,
-headerbar button.image-button.destructive-action.flat:backdrop:disabled:active,
-headerbar button.image-button.destructive-action.flat:backdrop:disabled:checked,
-headerbar
-  button.image-button.toggle.destructive-action:backdrop:disabled:active,
-headerbar
-  button.image-button.toggle.destructive-action:backdrop:disabled:checked,
-headerbar
-  button.image-button.toggle.destructive-action.flat:backdrop:disabled:active,
-headerbar
-  button.image-button.toggle.destructive-action.flat:backdrop:disabled:checked,
-headerbar button.text-button.destructive-action:backdrop:disabled:active,
-headerbar button.text-button.destructive-action:backdrop:disabled:checked,
-headerbar button.text-button.destructive-action.flat:backdrop:disabled:active,
-headerbar button.text-button.destructive-action.flat:backdrop:disabled:checked,
-headerbar button.toggle.destructive-action:backdrop:disabled:active,
-headerbar button.toggle.destructive-action:backdrop:disabled:checked,
-headerbar button.toggle.destructive-action.flat:backdrop:disabled:active,
-headerbar button.toggle.destructive-action.flat:backdrop:disabled:checked,
-headerbar box button.toggle.destructive-action:backdrop:disabled:active,
-headerbar box button.toggle.destructive-action:backdrop:disabled:checked,
-headerbar box button.toggle.destructive-action.flat:backdrop:disabled:active,
-headerbar box button.toggle.destructive-action.flat:backdrop:disabled:checked,
-headerbar buttonbox.toggle.destructive-action:backdrop:disabled:active,
-headerbar buttonbox.toggle.destructive-action:backdrop:disabled:checked,
-headerbar buttonbox.toggle.destructive-action.flat:backdrop:disabled:active,
-headerbar buttonbox.toggle.destructive-action.flat:backdrop:disabled:checked,
-headerbar stackswitcher button.destructive-action:backdrop:disabled:active,
-headerbar stackswitcher button.destructive-action:backdrop:disabled:checked,
-headerbar stackswitcher button.destructive-action.flat:backdrop:disabled:active,
-headerbar
-  stackswitcher
-  button.destructive-action.flat:backdrop:disabled:checked,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.destructive-action:backdrop:disabled:active,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.destructive-action:backdrop:disabled:checked,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.destructive-action.flat:backdrop:disabled:active,
-headerbar
-  filechooser
-  .path-bar.linked
-  > button.destructive-action.flat:backdrop:disabled:checked,
-headerbar .path-bar button.destructive-action:backdrop:disabled:active,
-headerbar .path-bar button.destructive-action:backdrop:disabled:checked,
-headerbar .path-bar button.destructive-action.flat:backdrop:disabled:active,
-headerbar .path-bar button.destructive-action.flat:backdrop:disabled:checked {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #ffd700;
-  border-color: #ffd700;
-  background: $primary_background_color;
-  box-shadow: none;
-}
-.titlebar:not(headerbar) button.destructive-action.flat:backdrop,
 .titlebar:not(headerbar) button.destructive-action.flat:disabled,
-.titlebar:not(headerbar) buttonbox.toggle.destructive-action.flat:backdrop,
 .titlebar:not(headerbar) buttonbox.toggle.destructive-action.flat:disabled,
-headerbar button.destructive-action.flat:backdrop,
 headerbar button.destructive-action.flat:disabled,
-headerbar buttonbox.toggle.destructive-action.flat:backdrop,
 headerbar buttonbox.toggle.destructive-action.flat:disabled {
   border-color: #e100ff;
   background: $primary_background_color;
@@ -6829,76 +5740,83 @@ headerbar buttonbox.toggle.destructive-action:disabled:checked {
   background: $primary_background_color;
   background-clip: padding-box;
 }
-.osd .titlebar:not(headerbar) button.destructive-action:active:backdrop,
 .osd .titlebar:not(headerbar) button.destructive-action:active,
-.osd .titlebar:not(headerbar) button.destructive-action:checked:backdrop,
 .osd .titlebar:not(headerbar) button.destructive-action:checked,
 .osd
   .titlebar:not(headerbar)
-  button.image-button.destructive-action:active:backdrop,
-.osd .titlebar:not(headerbar) button.image-button.destructive-action:active,
+  .osd
+  .titlebar:not(headerbar)
+  button.image-button.destructive-action:active,
 .osd
   .titlebar:not(headerbar)
-  button.image-button.destructive-action:checked:backdrop,
-.osd .titlebar:not(headerbar) button.image-button.destructive-action:checked,
+  .osd
+  .titlebar:not(headerbar)
+  button.image-button.destructive-action:checked,
 .osd
   .titlebar:not(headerbar)
-  button.image-button.toggle.destructive-action:active:backdrop,
-.osd
+  .osd
   .titlebar:not(headerbar)
   button.image-button.toggle.destructive-action:active,
 .osd
   .titlebar:not(headerbar)
-  button.image-button.toggle.destructive-action:checked:backdrop,
-.osd
+  .osd
   .titlebar:not(headerbar)
   button.image-button.toggle.destructive-action:checked,
 .osd
   .titlebar:not(headerbar)
-  button.text-button.destructive-action:active:backdrop,
-.osd .titlebar:not(headerbar) button.text-button.destructive-action:active,
+  .osd
+  .titlebar:not(headerbar)
+  button.text-button.destructive-action:active,
 .osd
   .titlebar:not(headerbar)
-  button.text-button.destructive-action:checked:backdrop,
-.osd .titlebar:not(headerbar) button.text-button.destructive-action:checked,
-.osd .titlebar:not(headerbar) button.toggle.destructive-action:active:backdrop,
+  .osd
+  .titlebar:not(headerbar)
+  button.text-button.destructive-action:checked,
 .osd .titlebar:not(headerbar) button.toggle.destructive-action:active,
-.osd .titlebar:not(headerbar) button.toggle.destructive-action:checked:backdrop,
 .osd .titlebar:not(headerbar) button.toggle.destructive-action:checked,
 .osd
   .titlebar:not(headerbar)
   box
-  button.toggle.destructive-action:active:backdrop,
-.osd .titlebar:not(headerbar) box button.toggle.destructive-action:active,
+  .osd
+  .titlebar:not(headerbar)
+  box
+  button.toggle.destructive-action:active,
 .osd
   .titlebar:not(headerbar)
   box
-  button.toggle.destructive-action:checked:backdrop,
-.osd .titlebar:not(headerbar) box button.toggle.destructive-action:checked,
+  .osd
+  .titlebar:not(headerbar)
+  box
+  button.toggle.destructive-action:checked,
 .osd
   .titlebar:not(headerbar)
-  buttonbox.toggle.destructive-action:active:backdrop,
-.osd .titlebar:not(headerbar) buttonbox.toggle.destructive-action:active,
+  .osd
+  .titlebar:not(headerbar)
+  buttonbox.toggle.destructive-action:active,
 .osd
   .titlebar:not(headerbar)
-  buttonbox.toggle.destructive-action:checked:backdrop,
-.osd .titlebar:not(headerbar) buttonbox.toggle.destructive-action:checked,
+  .osd
+  .titlebar:not(headerbar)
+  buttonbox.toggle.destructive-action:checked,
 .osd
   .titlebar:not(headerbar)
   stackswitcher
-  button.destructive-action:active:backdrop,
-.osd .titlebar:not(headerbar) stackswitcher button.destructive-action:active,
+  .osd
+  .titlebar:not(headerbar)
+  stackswitcher
+  button.destructive-action:active,
 .osd
   .titlebar:not(headerbar)
   stackswitcher
-  button.destructive-action:checked:backdrop,
-.osd .titlebar:not(headerbar) stackswitcher button.destructive-action:checked,
+  .osd
+  .titlebar:not(headerbar)
+  stackswitcher
+  button.destructive-action:checked,
 .osd
   .titlebar:not(headerbar)
   filechooser
   .path-bar.linked
-  > button.destructive-action:active:backdrop,
-.osd
+  .osd
   .titlebar:not(headerbar)
   filechooser
   .path-bar.linked
@@ -6907,8 +5825,7 @@ headerbar buttonbox.toggle.destructive-action:disabled:checked {
   .titlebar:not(headerbar)
   filechooser
   .path-bar.linked
-  > button.destructive-action:checked:backdrop,
-.osd
+  .osd
   .titlebar:not(headerbar)
   filechooser
   .path-bar.linked
@@ -6916,60 +5833,52 @@ headerbar buttonbox.toggle.destructive-action:disabled:checked {
 .osd
   .titlebar:not(headerbar)
   .path-bar
-  button.destructive-action:active:backdrop,
-.osd .titlebar:not(headerbar) .path-bar button.destructive-action:active,
+  .osd
+  .titlebar:not(headerbar)
+  .path-bar
+  button.destructive-action:active,
 .osd
   .titlebar:not(headerbar)
   .path-bar
-  button.destructive-action:checked:backdrop,
-.osd .titlebar:not(headerbar) .path-bar button.destructive-action:checked,
-.osd headerbar button.destructive-action:active:backdrop,
+  .osd
+  .titlebar:not(headerbar)
+  .path-bar
+  button.destructive-action:checked,
 .osd headerbar button.destructive-action:active,
-.osd headerbar button.destructive-action:checked:backdrop,
 .osd headerbar button.destructive-action:checked,
-.osd headerbar button.image-button.destructive-action:active:backdrop,
 .osd headerbar button.image-button.destructive-action:active,
-.osd headerbar button.image-button.destructive-action:checked:backdrop,
 .osd headerbar button.image-button.destructive-action:checked,
-.osd headerbar button.image-button.toggle.destructive-action:active:backdrop,
 .osd headerbar button.image-button.toggle.destructive-action:active,
-.osd headerbar button.image-button.toggle.destructive-action:checked:backdrop,
 .osd headerbar button.image-button.toggle.destructive-action:checked,
-.osd headerbar button.text-button.destructive-action:active:backdrop,
 .osd headerbar button.text-button.destructive-action:active,
-.osd headerbar button.text-button.destructive-action:checked:backdrop,
 .osd headerbar button.text-button.destructive-action:checked,
-.osd headerbar button.toggle.destructive-action:active:backdrop,
 .osd headerbar button.toggle.destructive-action:active,
-.osd headerbar button.toggle.destructive-action:checked:backdrop,
 .osd headerbar button.toggle.destructive-action:checked,
-.osd headerbar box button.toggle.destructive-action:active:backdrop,
 .osd headerbar box button.toggle.destructive-action:active,
-.osd headerbar box button.toggle.destructive-action:checked:backdrop,
 .osd headerbar box button.toggle.destructive-action:checked,
-.osd headerbar buttonbox.toggle.destructive-action:active:backdrop,
 .osd headerbar buttonbox.toggle.destructive-action:active,
-.osd headerbar buttonbox.toggle.destructive-action:checked:backdrop,
 .osd headerbar buttonbox.toggle.destructive-action:checked,
-.osd headerbar stackswitcher button.destructive-action:active:backdrop,
 .osd headerbar stackswitcher button.destructive-action:active,
-.osd headerbar stackswitcher button.destructive-action:checked:backdrop,
 .osd headerbar stackswitcher button.destructive-action:checked,
 .osd
   headerbar
   filechooser
   .path-bar.linked
-  > button.destructive-action:active:backdrop,
-.osd headerbar filechooser .path-bar.linked > button.destructive-action:active,
+  .osd
+  headerbar
+  filechooser
+  .path-bar.linked
+  > button.destructive-action:active,
 .osd
   headerbar
   filechooser
   .path-bar.linked
-  > button.destructive-action:checked:backdrop,
-.osd headerbar filechooser .path-bar.linked > button.destructive-action:checked,
-.osd headerbar .path-bar button.destructive-action:active:backdrop,
+  .osd
+  headerbar
+  filechooser
+  .path-bar.linked
+  > button.destructive-action:checked,
 .osd headerbar .path-bar button.destructive-action:active,
-.osd headerbar .path-bar button.destructive-action:checked:backdrop,
 .osd headerbar .path-bar button.destructive-action:checked {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ffd700;
@@ -6990,17 +5899,6 @@ headerbar buttonbox.toggle.destructive-action:disabled:checked {
   background: $primary_background_color;
   background-clip: padding-box;
 }
-.osd .titlebar:not(headerbar) button.destructive-action:backdrop,
-.osd .titlebar:not(headerbar) buttonbox.toggle.destructive-action:backdrop,
-.osd headerbar button.destructive-action:backdrop,
-.osd headerbar buttonbox.toggle.destructive-action:backdrop {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  border-color: #e100ff;
-  background-color: $backdrop_background_color;
-  background-color: $backdrop_background_color;
-  background-clip: padding-box;
-}
 .titlebar:not(headerbar) entry:disabled,
 headerbar entry:disabled {
   color: #e100ff;
@@ -7008,10 +5906,6 @@ headerbar entry:disabled {
 .titlebar:not(headerbar) separator,
 headerbar separator {
   background: $primary_background_color;
-}
-.titlebar:not(headerbar) separator:backdrop,
-headerbar separator:backdrop {
-  background-color: $backdrop_background_color;
 }
 .titlebar:not(headerbar) menu separator,
 .titlebar:not(headerbar) popover separator,
@@ -7029,18 +5923,9 @@ headerbar switch {
 headerbar switch:hover {
   background: $primary_background_color;
 }
-.titlebar:not(headerbar) switch:backdrop,
-headerbar switch:backdrop {
-  background-color: $backdrop_background_color;
-  box-shadow: none;
-}
 .titlebar:not(headerbar) switch:disabled,
 headerbar switch:disabled {
   background: $primary_background_color;
-  border-color: #e100ff;
-}
-.titlebar:not(headerbar) switch:backdrop,
-headerbar switch:backdrop {
   border-color: #e100ff;
 }
 .titlebar:not(headerbar) switch:checked,
@@ -7079,21 +5964,6 @@ headerbar.selection-mode {
 .selection-mode headerbar separator,
 headerbar.selection-mode separator {
   background: $primary_background_color;
-}
-.selection-mode .titlebar:backdrop:not(headerbar),
-.selection-mode.titlebar:backdrop:not(headerbar),
-.selection-mode headerbar:backdrop,
-headerbar.selection-mode:backdrop {
-  background-color: $backdrop_background_color;
-  background-color: $backdrop_background_color;
-  box-shadow: inset 0 1px rgba(193, 223, 198, 0.88);
-}
-.selection-mode .titlebar:backdrop:not(headerbar) label,
-.selection-mode.titlebar:backdrop:not(headerbar) label,
-.selection-mode headerbar:backdrop label,
-headerbar.selection-mode:backdrop label {
-  text-shadow: none;
-  color: #e100ff;
 }
 .selection-mode .titlebar:not(headerbar) button,
 .selection-mode .titlebar:not(headerbar) buttonbox.toggle,
@@ -7339,894 +6209,46 @@ headerbar.selection-mode .path-bar button.toggle:active {
   background: $primary_background_color;
   box-shadow: none;
 }
-.selection-mode .titlebar:not(headerbar) button:backdrop.flat,
-.selection-mode .titlebar:not(headerbar) button:backdrop,
-.selection-mode .titlebar:not(headerbar) button.image-button:backdrop.flat,
-.selection-mode .titlebar:not(headerbar) button.image-button:backdrop,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button.toggle:backdrop.flat,
-.selection-mode .titlebar:not(headerbar) button.image-button.toggle:backdrop,
-.selection-mode .titlebar:not(headerbar) button.text.button:backdrop.flat,
-.selection-mode .titlebar:not(headerbar) button.text.button:backdrop,
-.selection-mode .titlebar:not(headerbar) button.toggle:backdrop.flat,
-.selection-mode .titlebar:not(headerbar) button.toggle:backdrop,
-.selection-mode .titlebar:not(headerbar) box button.toggle:backdrop.flat,
-.selection-mode .titlebar:not(headerbar) box button.toggle:backdrop,
-.selection-mode .titlebar:not(headerbar) buttonbox.toggle:backdrop.flat,
-.selection-mode .titlebar:not(headerbar) buttonbox.toggle:backdrop,
-.selection-mode .titlebar:not(headerbar) stackswitcher button:backdrop.flat,
-.selection-mode .titlebar:not(headerbar) stackswitcher button:backdrop,
-.selection-mode
-  .titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat,
-.selection-mode
-  .titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop,
-.selection-mode .titlebar:not(headerbar) .path-bar button:backdrop.flat,
-.selection-mode .titlebar:not(headerbar) .path-bar button:backdrop,
-.selection-mode.titlebar:not(headerbar) button:backdrop.flat,
-.selection-mode.titlebar:not(headerbar) button:backdrop,
-.selection-mode.titlebar:not(headerbar) button.image-button:backdrop.flat,
-.selection-mode.titlebar:not(headerbar) button.image-button:backdrop,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button.toggle:backdrop.flat,
-.selection-mode.titlebar:not(headerbar) button.image-button.toggle:backdrop,
-.selection-mode.titlebar:not(headerbar) button.text.button:backdrop.flat,
-.selection-mode.titlebar:not(headerbar) button.text.button:backdrop,
-.selection-mode.titlebar:not(headerbar) button.toggle:backdrop.flat,
-.selection-mode.titlebar:not(headerbar) button.toggle:backdrop,
-.selection-mode.titlebar:not(headerbar) box button.toggle:backdrop.flat,
-.selection-mode.titlebar:not(headerbar) box button.toggle:backdrop,
-.selection-mode.titlebar:not(headerbar) buttonbox.toggle:backdrop.flat,
-.selection-mode.titlebar:not(headerbar) buttonbox.toggle:backdrop,
-.selection-mode.titlebar:not(headerbar) stackswitcher button:backdrop.flat,
-.selection-mode.titlebar:not(headerbar) stackswitcher button:backdrop,
-.selection-mode.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat,
-.selection-mode.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop,
-.selection-mode.titlebar:not(headerbar) .path-bar button:backdrop.flat,
-.selection-mode.titlebar:not(headerbar) .path-bar button:backdrop,
-.selection-mode headerbar button:backdrop.flat,
-.selection-mode headerbar button:backdrop,
-.selection-mode headerbar button.image-button:backdrop.flat,
-.selection-mode headerbar button.image-button:backdrop,
-.selection-mode headerbar button.image-button.toggle:backdrop.flat,
-.selection-mode headerbar button.image-button.toggle:backdrop,
-.selection-mode headerbar button.text.button:backdrop.flat,
-.selection-mode headerbar button.text.button:backdrop,
-.selection-mode headerbar button.toggle:backdrop.flat,
-.selection-mode headerbar button.toggle:backdrop,
-.selection-mode headerbar box button.toggle:backdrop.flat,
-.selection-mode headerbar box button.toggle:backdrop,
-.selection-mode headerbar buttonbox.toggle:backdrop.flat,
-.selection-mode headerbar buttonbox.toggle:backdrop,
-.selection-mode headerbar stackswitcher button:backdrop.flat,
-.selection-mode headerbar stackswitcher button:backdrop,
-.selection-mode headerbar filechooser .path-bar.linked > button:backdrop.flat,
-.selection-mode headerbar filechooser .path-bar.linked > button:backdrop,
-.selection-mode headerbar .path-bar button:backdrop.flat,
-.selection-mode headerbar .path-bar button:backdrop,
-headerbar.selection-mode button:backdrop.flat,
-headerbar.selection-mode button:backdrop,
-headerbar.selection-mode button.image-button:backdrop.flat,
-headerbar.selection-mode button.image-button:backdrop,
-headerbar.selection-mode button.image-button.toggle:backdrop.flat,
-headerbar.selection-mode button.image-button.toggle:backdrop,
-headerbar.selection-mode button.text.button:backdrop.flat,
-headerbar.selection-mode button.text.button:backdrop,
-headerbar.selection-mode button.toggle:backdrop.flat,
-headerbar.selection-mode button.toggle:backdrop,
-headerbar.selection-mode box button.toggle:backdrop.flat,
-headerbar.selection-mode box button.toggle:backdrop,
-headerbar.selection-mode buttonbox.toggle:backdrop.flat,
-headerbar.selection-mode buttonbox.toggle:backdrop,
-headerbar.selection-mode stackswitcher button:backdrop.flat,
-headerbar.selection-mode stackswitcher button:backdrop,
-headerbar.selection-mode filechooser .path-bar.linked > button:backdrop.flat,
-headerbar.selection-mode filechooser .path-bar.linked > button:backdrop,
-headerbar.selection-mode .path-bar button:backdrop.flat,
-headerbar.selection-mode .path-bar button:backdrop {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  border-color: #e100ff;
-  background-color: $backdrop_background_color;
-  box-shadow: none;
-  border-color: #e100ff;
-}
-.selection-mode .titlebar:not(headerbar) button:backdrop.flat:active,
-.selection-mode .titlebar:not(headerbar) button:backdrop.flat:checked,
-.selection-mode .titlebar:not(headerbar) button:backdrop:active,
-.selection-mode .titlebar:not(headerbar) button:backdrop:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button:backdrop.flat:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button:backdrop.flat:checked,
-.selection-mode .titlebar:not(headerbar) button.image-button:backdrop:active,
-.selection-mode .titlebar:not(headerbar) button.image-button:backdrop:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button.toggle:backdrop.flat:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button.toggle:backdrop.flat:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button.toggle:backdrop:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button.toggle:backdrop:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.text.button:backdrop.flat:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.text.button:backdrop.flat:checked,
-.selection-mode .titlebar:not(headerbar) button.text.button:backdrop:active,
-.selection-mode .titlebar:not(headerbar) button.text.button:backdrop:checked,
-.selection-mode .titlebar:not(headerbar) button.toggle:backdrop.flat:active,
-.selection-mode .titlebar:not(headerbar) button.toggle:backdrop.flat:checked,
-.selection-mode .titlebar:not(headerbar) button.toggle:backdrop:active,
-.selection-mode .titlebar:not(headerbar) button.toggle:backdrop:checked,
-.selection-mode .titlebar:not(headerbar) box button.toggle:backdrop.flat:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  box
-  button.toggle:backdrop.flat:checked,
-.selection-mode .titlebar:not(headerbar) box button.toggle:backdrop:active,
-.selection-mode .titlebar:not(headerbar) box button.toggle:backdrop:checked,
-.selection-mode .titlebar:not(headerbar) buttonbox.toggle:backdrop.flat:active,
-.selection-mode .titlebar:not(headerbar) buttonbox.toggle:backdrop.flat:checked,
-.selection-mode .titlebar:not(headerbar) buttonbox.toggle:backdrop:active,
-.selection-mode .titlebar:not(headerbar) buttonbox.toggle:backdrop:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  stackswitcher
-  button:backdrop.flat:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  stackswitcher
-  button:backdrop.flat:checked,
-.selection-mode .titlebar:not(headerbar) stackswitcher button:backdrop:active,
-.selection-mode .titlebar:not(headerbar) stackswitcher button:backdrop:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop:checked,
-.selection-mode .titlebar:not(headerbar) .path-bar button:backdrop.flat:active,
-.selection-mode .titlebar:not(headerbar) .path-bar button:backdrop.flat:checked,
-.selection-mode .titlebar:not(headerbar) .path-bar button:backdrop:active,
-.selection-mode .titlebar:not(headerbar) .path-bar button:backdrop:checked,
-.selection-mode.titlebar:not(headerbar) button:backdrop.flat:active,
-.selection-mode.titlebar:not(headerbar) button:backdrop.flat:checked,
-.selection-mode.titlebar:not(headerbar) button:backdrop:active,
-.selection-mode.titlebar:not(headerbar) button:backdrop:checked,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button:backdrop.flat:active,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button:backdrop.flat:checked,
-.selection-mode.titlebar:not(headerbar) button.image-button:backdrop:active,
-.selection-mode.titlebar:not(headerbar) button.image-button:backdrop:checked,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button.toggle:backdrop.flat:active,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button.toggle:backdrop.flat:checked,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button.toggle:backdrop:active,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button.toggle:backdrop:checked,
-.selection-mode.titlebar:not(headerbar) button.text.button:backdrop.flat:active,
-.selection-mode.titlebar:not(headerbar)
-  button.text.button:backdrop.flat:checked,
-.selection-mode.titlebar:not(headerbar) button.text.button:backdrop:active,
-.selection-mode.titlebar:not(headerbar) button.text.button:backdrop:checked,
-.selection-mode.titlebar:not(headerbar) button.toggle:backdrop.flat:active,
-.selection-mode.titlebar:not(headerbar) button.toggle:backdrop.flat:checked,
-.selection-mode.titlebar:not(headerbar) button.toggle:backdrop:active,
-.selection-mode.titlebar:not(headerbar) button.toggle:backdrop:checked,
-.selection-mode.titlebar:not(headerbar) box button.toggle:backdrop.flat:active,
-.selection-mode.titlebar:not(headerbar) box button.toggle:backdrop.flat:checked,
-.selection-mode.titlebar:not(headerbar) box button.toggle:backdrop:active,
-.selection-mode.titlebar:not(headerbar) box button.toggle:backdrop:checked,
-.selection-mode.titlebar:not(headerbar) buttonbox.toggle:backdrop.flat:active,
-.selection-mode.titlebar:not(headerbar) buttonbox.toggle:backdrop.flat:checked,
-.selection-mode.titlebar:not(headerbar) buttonbox.toggle:backdrop:active,
-.selection-mode.titlebar:not(headerbar) buttonbox.toggle:backdrop:checked,
-.selection-mode.titlebar:not(headerbar)
-  stackswitcher
-  button:backdrop.flat:active,
-.selection-mode.titlebar:not(headerbar)
-  stackswitcher
-  button:backdrop.flat:checked,
-.selection-mode.titlebar:not(headerbar) stackswitcher button:backdrop:active,
-.selection-mode.titlebar:not(headerbar) stackswitcher button:backdrop:checked,
-.selection-mode.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:active,
-.selection-mode.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:checked,
-.selection-mode.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop:active,
-.selection-mode.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop:checked,
-.selection-mode.titlebar:not(headerbar) .path-bar button:backdrop.flat:active,
-.selection-mode.titlebar:not(headerbar) .path-bar button:backdrop.flat:checked,
-.selection-mode.titlebar:not(headerbar) .path-bar button:backdrop:active,
-.selection-mode.titlebar:not(headerbar) .path-bar button:backdrop:checked,
-.selection-mode headerbar button:backdrop.flat:active,
-.selection-mode headerbar button:backdrop.flat:checked,
-.selection-mode headerbar button:backdrop:active,
-.selection-mode headerbar button:backdrop:checked,
-.selection-mode headerbar button.image-button:backdrop.flat:active,
-.selection-mode headerbar button.image-button:backdrop.flat:checked,
-.selection-mode headerbar button.image-button:backdrop:active,
-.selection-mode headerbar button.image-button:backdrop:checked,
-.selection-mode headerbar button.image-button.toggle:backdrop.flat:active,
-.selection-mode headerbar button.image-button.toggle:backdrop.flat:checked,
-.selection-mode headerbar button.image-button.toggle:backdrop:active,
-.selection-mode headerbar button.image-button.toggle:backdrop:checked,
-.selection-mode headerbar button.text.button:backdrop.flat:active,
-.selection-mode headerbar button.text.button:backdrop.flat:checked,
-.selection-mode headerbar button.text.button:backdrop:active,
-.selection-mode headerbar button.text.button:backdrop:checked,
-.selection-mode headerbar button.toggle:backdrop.flat:active,
-.selection-mode headerbar button.toggle:backdrop.flat:checked,
-.selection-mode headerbar button.toggle:backdrop:active,
-.selection-mode headerbar button.toggle:backdrop:checked,
-.selection-mode headerbar box button.toggle:backdrop.flat:active,
-.selection-mode headerbar box button.toggle:backdrop.flat:checked,
-.selection-mode headerbar box button.toggle:backdrop:active,
-.selection-mode headerbar box button.toggle:backdrop:checked,
-.selection-mode headerbar buttonbox.toggle:backdrop.flat:active,
-.selection-mode headerbar buttonbox.toggle:backdrop.flat:checked,
-.selection-mode headerbar buttonbox.toggle:backdrop:active,
-.selection-mode headerbar buttonbox.toggle:backdrop:checked,
-.selection-mode headerbar stackswitcher button:backdrop.flat:active,
-.selection-mode headerbar stackswitcher button:backdrop.flat:checked,
-.selection-mode headerbar stackswitcher button:backdrop:active,
-.selection-mode headerbar stackswitcher button:backdrop:checked,
-.selection-mode
-  headerbar
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:active,
-.selection-mode
-  headerbar
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:checked,
-.selection-mode headerbar filechooser .path-bar.linked > button:backdrop:active,
-.selection-mode
-  headerbar
-  filechooser
-  .path-bar.linked
-  > button:backdrop:checked,
-.selection-mode headerbar .path-bar button:backdrop.flat:active,
-.selection-mode headerbar .path-bar button:backdrop.flat:checked,
-.selection-mode headerbar .path-bar button:backdrop:active,
-.selection-mode headerbar .path-bar button:backdrop:checked,
-headerbar.selection-mode button:backdrop.flat:active,
-headerbar.selection-mode button:backdrop.flat:checked,
-headerbar.selection-mode button:backdrop:active,
-headerbar.selection-mode button:backdrop:checked,
-headerbar.selection-mode button.image-button:backdrop.flat:active,
-headerbar.selection-mode button.image-button:backdrop.flat:checked,
-headerbar.selection-mode button.image-button:backdrop:active,
-headerbar.selection-mode button.image-button:backdrop:checked,
-headerbar.selection-mode button.image-button.toggle:backdrop.flat:active,
-headerbar.selection-mode button.image-button.toggle:backdrop.flat:checked,
-headerbar.selection-mode button.image-button.toggle:backdrop:active,
-headerbar.selection-mode button.image-button.toggle:backdrop:checked,
-headerbar.selection-mode button.text.button:backdrop.flat:active,
-headerbar.selection-mode button.text.button:backdrop.flat:checked,
-headerbar.selection-mode button.text.button:backdrop:active,
-headerbar.selection-mode button.text.button:backdrop:checked,
-headerbar.selection-mode button.toggle:backdrop.flat:active,
-headerbar.selection-mode button.toggle:backdrop.flat:checked,
-headerbar.selection-mode button.toggle:backdrop:active,
-headerbar.selection-mode button.toggle:backdrop:checked,
-headerbar.selection-mode box button.toggle:backdrop.flat:active,
-headerbar.selection-mode box button.toggle:backdrop.flat:checked,
-headerbar.selection-mode box button.toggle:backdrop:active,
-headerbar.selection-mode box button.toggle:backdrop:checked,
-headerbar.selection-mode buttonbox.toggle:backdrop.flat:active,
-headerbar.selection-mode buttonbox.toggle:backdrop.flat:checked,
-headerbar.selection-mode buttonbox.toggle:backdrop:active,
-headerbar.selection-mode buttonbox.toggle:backdrop:checked,
-headerbar.selection-mode stackswitcher button:backdrop.flat:active,
-headerbar.selection-mode stackswitcher button:backdrop.flat:checked,
-headerbar.selection-mode stackswitcher button:backdrop:active,
-headerbar.selection-mode stackswitcher button:backdrop:checked,
-headerbar.selection-mode
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:active,
-headerbar.selection-mode
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:checked,
-headerbar.selection-mode filechooser .path-bar.linked > button:backdrop:active,
-headerbar.selection-mode filechooser .path-bar.linked > button:backdrop:checked,
-headerbar.selection-mode .path-bar button:backdrop.flat:active,
-headerbar.selection-mode .path-bar button:backdrop.flat:checked,
-headerbar.selection-mode .path-bar button:backdrop:active,
-headerbar.selection-mode .path-bar button:backdrop:checked {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #ffd700;
-  border-color: #ffd700;
-  background: $primary_background_color;
-  box-shadow: none;
-  border-color: #ffd700;
-}
-.selection-mode .titlebar:not(headerbar) button:backdrop.flat:disabled,
-.selection-mode .titlebar:not(headerbar) button:backdrop:disabled,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button:backdrop.flat:disabled,
-.selection-mode .titlebar:not(headerbar) button.image-button:backdrop:disabled,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button.toggle:backdrop.flat:disabled,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button.toggle:backdrop:disabled,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.text.button:backdrop.flat:disabled,
-.selection-mode .titlebar:not(headerbar) button.text.button:backdrop:disabled,
-.selection-mode .titlebar:not(headerbar) button.toggle:backdrop.flat:disabled,
-.selection-mode .titlebar:not(headerbar) button.toggle:backdrop:disabled,
-.selection-mode
-  .titlebar:not(headerbar)
-  box
-  button.toggle:backdrop.flat:disabled,
-.selection-mode .titlebar:not(headerbar) box button.toggle:backdrop:disabled,
-.selection-mode
-  .titlebar:not(headerbar)
-  buttonbox.toggle:backdrop.flat:disabled,
-.selection-mode .titlebar:not(headerbar) buttonbox.toggle:backdrop:disabled,
-.selection-mode
-  .titlebar:not(headerbar)
-  stackswitcher
-  button:backdrop.flat:disabled,
-.selection-mode .titlebar:not(headerbar) stackswitcher button:backdrop:disabled,
-.selection-mode
-  .titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:disabled,
-.selection-mode
-  .titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop:disabled,
-.selection-mode
-  .titlebar:not(headerbar)
-  .path-bar
-  button:backdrop.flat:disabled,
-.selection-mode .titlebar:not(headerbar) .path-bar button:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar) button:backdrop.flat:disabled,
-.selection-mode.titlebar:not(headerbar) button:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button:backdrop.flat:disabled,
-.selection-mode.titlebar:not(headerbar) button.image-button:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button.toggle:backdrop.flat:disabled,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button.toggle:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar)
-  button.text.button:backdrop.flat:disabled,
-.selection-mode.titlebar:not(headerbar) button.text.button:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar) button.toggle:backdrop.flat:disabled,
-.selection-mode.titlebar:not(headerbar) button.toggle:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar)
-  box
-  button.toggle:backdrop.flat:disabled,
-.selection-mode.titlebar:not(headerbar) box button.toggle:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar) buttonbox.toggle:backdrop.flat:disabled,
-.selection-mode.titlebar:not(headerbar) buttonbox.toggle:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar)
-  stackswitcher
-  button:backdrop.flat:disabled,
-.selection-mode.titlebar:not(headerbar) stackswitcher button:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:disabled,
-.selection-mode.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar) .path-bar button:backdrop.flat:disabled,
-.selection-mode.titlebar:not(headerbar) .path-bar button:backdrop:disabled,
-.selection-mode headerbar button:backdrop.flat:disabled,
-.selection-mode headerbar button:backdrop:disabled,
-.selection-mode headerbar button.image-button:backdrop.flat:disabled,
-.selection-mode headerbar button.image-button:backdrop:disabled,
-.selection-mode headerbar button.image-button.toggle:backdrop.flat:disabled,
-.selection-mode headerbar button.image-button.toggle:backdrop:disabled,
-.selection-mode headerbar button.text.button:backdrop.flat:disabled,
-.selection-mode headerbar button.text.button:backdrop:disabled,
-.selection-mode headerbar button.toggle:backdrop.flat:disabled,
-.selection-mode headerbar button.toggle:backdrop:disabled,
-.selection-mode headerbar box button.toggle:backdrop.flat:disabled,
-.selection-mode headerbar box button.toggle:backdrop:disabled,
-.selection-mode headerbar buttonbox.toggle:backdrop.flat:disabled,
-.selection-mode headerbar buttonbox.toggle:backdrop:disabled,
-.selection-mode headerbar stackswitcher button:backdrop.flat:disabled,
-.selection-mode headerbar stackswitcher button:backdrop:disabled,
-.selection-mode
-  headerbar
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:disabled,
-.selection-mode
-  headerbar
-  filechooser
-  .path-bar.linked
-  > button:backdrop:disabled,
-.selection-mode headerbar .path-bar button:backdrop.flat:disabled,
-.selection-mode headerbar .path-bar button:backdrop:disabled,
-headerbar.selection-mode button:backdrop.flat:disabled,
-headerbar.selection-mode button:backdrop:disabled,
-headerbar.selection-mode button.image-button:backdrop.flat:disabled,
-headerbar.selection-mode button.image-button:backdrop:disabled,
-headerbar.selection-mode button.image-button.toggle:backdrop.flat:disabled,
-headerbar.selection-mode button.image-button.toggle:backdrop:disabled,
-headerbar.selection-mode button.text.button:backdrop.flat:disabled,
-headerbar.selection-mode button.text.button:backdrop:disabled,
-headerbar.selection-mode button.toggle:backdrop.flat:disabled,
-headerbar.selection-mode button.toggle:backdrop:disabled,
-headerbar.selection-mode box button.toggle:backdrop.flat:disabled,
-headerbar.selection-mode box button.toggle:backdrop:disabled,
-headerbar.selection-mode buttonbox.toggle:backdrop.flat:disabled,
-headerbar.selection-mode buttonbox.toggle:backdrop:disabled,
-headerbar.selection-mode stackswitcher button:backdrop.flat:disabled,
-headerbar.selection-mode stackswitcher button:backdrop:disabled,
-headerbar.selection-mode
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:disabled,
-headerbar.selection-mode
-  filechooser
-  .path-bar.linked
-  > button:backdrop:disabled,
-headerbar.selection-mode .path-bar button:backdrop.flat:disabled,
-headerbar.selection-mode .path-bar button:backdrop:disabled {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  border-color: #e100ff;
-  background: $primary_background_color;
-  box-shadow: none;
-  border-color: #e100ff;
-}
-.selection-mode .titlebar:not(headerbar) button:backdrop.flat:disabled:active,
-.selection-mode .titlebar:not(headerbar) button:backdrop.flat:disabled:checked,
-.selection-mode .titlebar:not(headerbar) button:backdrop:disabled:active,
-.selection-mode .titlebar:not(headerbar) button:backdrop:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button:backdrop.flat:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button:backdrop.flat:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button:backdrop:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button:backdrop:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button.toggle:backdrop.flat:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button.toggle:backdrop.flat:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button.toggle:backdrop:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.image-button.toggle:backdrop:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.text.button:backdrop.flat:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.text.button:backdrop.flat:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.text.button:backdrop:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.text.button:backdrop:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.toggle:backdrop.flat:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.toggle:backdrop.flat:disabled:checked,
-.selection-mode .titlebar:not(headerbar) button.toggle:backdrop:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  button.toggle:backdrop:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  box
-  button.toggle:backdrop.flat:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  box
-  button.toggle:backdrop.flat:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  box
-  button.toggle:backdrop:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  box
-  button.toggle:backdrop:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  buttonbox.toggle:backdrop.flat:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  buttonbox.toggle:backdrop.flat:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  buttonbox.toggle:backdrop:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  buttonbox.toggle:backdrop:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  stackswitcher
-  button:backdrop.flat:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  stackswitcher
-  button:backdrop.flat:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  stackswitcher
-  button:backdrop:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  stackswitcher
-  button:backdrop:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  .path-bar
-  button:backdrop.flat:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  .path-bar
-  button:backdrop.flat:disabled:checked,
-.selection-mode
-  .titlebar:not(headerbar)
-  .path-bar
-  button:backdrop:disabled:active,
-.selection-mode
-  .titlebar:not(headerbar)
-  .path-bar
-  button:backdrop:disabled:checked,
-.selection-mode.titlebar:not(headerbar) button:backdrop.flat:disabled:active,
-.selection-mode.titlebar:not(headerbar) button:backdrop.flat:disabled:checked,
-.selection-mode.titlebar:not(headerbar) button:backdrop:disabled:active,
-.selection-mode.titlebar:not(headerbar) button:backdrop:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button:backdrop.flat:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button:backdrop.flat:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button:backdrop:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button:backdrop:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button.toggle:backdrop.flat:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button.toggle:backdrop.flat:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button.toggle:backdrop:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button.toggle:backdrop:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  button.text.button:backdrop.flat:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  button.text.button:backdrop.flat:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  button.text.button:backdrop:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  button.text.button:backdrop:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  button.toggle:backdrop.flat:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  button.toggle:backdrop.flat:disabled:checked,
-.selection-mode.titlebar:not(headerbar) button.toggle:backdrop:disabled:active,
-.selection-mode.titlebar:not(headerbar) button.toggle:backdrop:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  box
-  button.toggle:backdrop.flat:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  box
-  button.toggle:backdrop.flat:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  box
-  button.toggle:backdrop:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  box
-  button.toggle:backdrop:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  buttonbox.toggle:backdrop.flat:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  buttonbox.toggle:backdrop.flat:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  buttonbox.toggle:backdrop:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  buttonbox.toggle:backdrop:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  stackswitcher
-  button:backdrop.flat:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  stackswitcher
-  button:backdrop.flat:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  stackswitcher
-  button:backdrop:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  stackswitcher
-  button:backdrop:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  filechooser
-  .path-bar.linked
-  > button:backdrop:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  .path-bar
-  button:backdrop.flat:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  .path-bar
-  button:backdrop.flat:disabled:checked,
-.selection-mode.titlebar:not(headerbar)
-  .path-bar
-  button:backdrop:disabled:active,
-.selection-mode.titlebar:not(headerbar)
-  .path-bar
-  button:backdrop:disabled:checked,
-.selection-mode headerbar button:backdrop.flat:disabled:active,
-.selection-mode headerbar button:backdrop.flat:disabled:checked,
-.selection-mode headerbar button:backdrop:disabled:active,
-.selection-mode headerbar button:backdrop:disabled:checked,
-.selection-mode headerbar button.image-button:backdrop.flat:disabled:active,
-.selection-mode headerbar button.image-button:backdrop.flat:disabled:checked,
-.selection-mode headerbar button.image-button:backdrop:disabled:active,
-.selection-mode headerbar button.image-button:backdrop:disabled:checked,
-.selection-mode
-  headerbar
-  button.image-button.toggle:backdrop.flat:disabled:active,
-.selection-mode
-  headerbar
-  button.image-button.toggle:backdrop.flat:disabled:checked,
-.selection-mode headerbar button.image-button.toggle:backdrop:disabled:active,
-.selection-mode headerbar button.image-button.toggle:backdrop:disabled:checked,
-.selection-mode headerbar button.text.button:backdrop.flat:disabled:active,
-.selection-mode headerbar button.text.button:backdrop.flat:disabled:checked,
-.selection-mode headerbar button.text.button:backdrop:disabled:active,
-.selection-mode headerbar button.text.button:backdrop:disabled:checked,
-.selection-mode headerbar button.toggle:backdrop.flat:disabled:active,
-.selection-mode headerbar button.toggle:backdrop.flat:disabled:checked,
-.selection-mode headerbar button.toggle:backdrop:disabled:active,
-.selection-mode headerbar button.toggle:backdrop:disabled:checked,
-.selection-mode headerbar box button.toggle:backdrop.flat:disabled:active,
-.selection-mode headerbar box button.toggle:backdrop.flat:disabled:checked,
-.selection-mode headerbar box button.toggle:backdrop:disabled:active,
-.selection-mode headerbar box button.toggle:backdrop:disabled:checked,
-.selection-mode headerbar buttonbox.toggle:backdrop.flat:disabled:active,
-.selection-mode headerbar buttonbox.toggle:backdrop.flat:disabled:checked,
-.selection-mode headerbar buttonbox.toggle:backdrop:disabled:active,
-.selection-mode headerbar buttonbox.toggle:backdrop:disabled:checked,
-.selection-mode headerbar stackswitcher button:backdrop.flat:disabled:active,
-.selection-mode headerbar stackswitcher button:backdrop.flat:disabled:checked,
-.selection-mode headerbar stackswitcher button:backdrop:disabled:active,
-.selection-mode headerbar stackswitcher button:backdrop:disabled:checked,
-.selection-mode
-  headerbar
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:disabled:active,
-.selection-mode
-  headerbar
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:disabled:checked,
-.selection-mode
-  headerbar
-  filechooser
-  .path-bar.linked
-  > button:backdrop:disabled:active,
-.selection-mode
-  headerbar
-  filechooser
-  .path-bar.linked
-  > button:backdrop:disabled:checked,
-.selection-mode headerbar .path-bar button:backdrop.flat:disabled:active,
-.selection-mode headerbar .path-bar button:backdrop.flat:disabled:checked,
-.selection-mode headerbar .path-bar button:backdrop:disabled:active,
-.selection-mode headerbar .path-bar button:backdrop:disabled:checked,
-headerbar.selection-mode button:backdrop.flat:disabled:active,
-headerbar.selection-mode button:backdrop.flat:disabled:checked,
-headerbar.selection-mode button:backdrop:disabled:active,
-headerbar.selection-mode button:backdrop:disabled:checked,
-headerbar.selection-mode button.image-button:backdrop.flat:disabled:active,
-headerbar.selection-mode button.image-button:backdrop.flat:disabled:checked,
-headerbar.selection-mode button.image-button:backdrop:disabled:active,
-headerbar.selection-mode button.image-button:backdrop:disabled:checked,
-headerbar.selection-mode
-  button.image-button.toggle:backdrop.flat:disabled:active,
-headerbar.selection-mode
-  button.image-button.toggle:backdrop.flat:disabled:checked,
-headerbar.selection-mode button.image-button.toggle:backdrop:disabled:active,
-headerbar.selection-mode button.image-button.toggle:backdrop:disabled:checked,
-headerbar.selection-mode button.text.button:backdrop.flat:disabled:active,
-headerbar.selection-mode button.text.button:backdrop.flat:disabled:checked,
-headerbar.selection-mode button.text.button:backdrop:disabled:active,
-headerbar.selection-mode button.text.button:backdrop:disabled:checked,
-headerbar.selection-mode button.toggle:backdrop.flat:disabled:active,
-headerbar.selection-mode button.toggle:backdrop.flat:disabled:checked,
-headerbar.selection-mode button.toggle:backdrop:disabled:active,
-headerbar.selection-mode button.toggle:backdrop:disabled:checked,
-headerbar.selection-mode box button.toggle:backdrop.flat:disabled:active,
-headerbar.selection-mode box button.toggle:backdrop.flat:disabled:checked,
-headerbar.selection-mode box button.toggle:backdrop:disabled:active,
-headerbar.selection-mode box button.toggle:backdrop:disabled:checked,
-headerbar.selection-mode buttonbox.toggle:backdrop.flat:disabled:active,
-headerbar.selection-mode buttonbox.toggle:backdrop.flat:disabled:checked,
-headerbar.selection-mode buttonbox.toggle:backdrop:disabled:active,
-headerbar.selection-mode buttonbox.toggle:backdrop:disabled:checked,
-headerbar.selection-mode stackswitcher button:backdrop.flat:disabled:active,
-headerbar.selection-mode stackswitcher button:backdrop.flat:disabled:checked,
-headerbar.selection-mode stackswitcher button:backdrop:disabled:active,
-headerbar.selection-mode stackswitcher button:backdrop:disabled:checked,
-headerbar.selection-mode
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:disabled:active,
-headerbar.selection-mode
-  filechooser
-  .path-bar.linked
-  > button:backdrop.flat:disabled:checked,
-headerbar.selection-mode
-  filechooser
-  .path-bar.linked
-  > button:backdrop:disabled:active,
-headerbar.selection-mode
-  filechooser
-  .path-bar.linked
-  > button:backdrop:disabled:checked,
-headerbar.selection-mode .path-bar button:backdrop.flat:disabled:active,
-headerbar.selection-mode .path-bar button:backdrop.flat:disabled:checked,
-headerbar.selection-mode .path-bar button:backdrop:disabled:active,
-headerbar.selection-mode .path-bar button:backdrop:disabled:checked {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #ffd700;
-  border-color: #ffd700;
-  background: $primary_background_color;
-  box-shadow: none;
-  border-color: #ffd700;
-}
-.selection-mode .titlebar:not(headerbar) button.flat:backdrop,
 .selection-mode .titlebar:not(headerbar) button.flat:disabled,
-.selection-mode .titlebar:not(headerbar) button.flat:backdrop:disabled,
-.selection-mode .titlebar:not(headerbar) button.image-button.flat:backdrop,
 .selection-mode .titlebar:not(headerbar) button.image-button.flat:disabled,
 .selection-mode
   .titlebar:not(headerbar)
-  button.image-button.flat:backdrop:disabled,
-.selection-mode
+  .selection-mode
   .titlebar:not(headerbar)
-  button.image-button.toggle.flat:backdrop,
-.selection-mode
+  .selection-mode
   .titlebar:not(headerbar)
   button.image-button.toggle.flat:disabled,
 .selection-mode
   .titlebar:not(headerbar)
-  button.image-button.toggle.flat:backdrop:disabled,
-.selection-mode .titlebar:not(headerbar) button.text.button.flat:backdrop,
-.selection-mode .titlebar:not(headerbar) button.text.button.flat:disabled,
+  .selection-mode
+  .titlebar:not(headerbar)
+  button.text.button.flat:disabled,
 .selection-mode
   .titlebar:not(headerbar)
-  button.text.button.flat:backdrop:disabled,
-.selection-mode .titlebar:not(headerbar) button.toggle.flat:backdrop,
-.selection-mode .titlebar:not(headerbar) button.toggle.flat:disabled,
-.selection-mode .titlebar:not(headerbar) button.toggle.flat:backdrop:disabled,
-.selection-mode .titlebar:not(headerbar) box button.toggle.flat:backdrop,
+  .selection-mode
+  .titlebar:not(headerbar)
+  button.toggle.flat:disabled,
 .selection-mode .titlebar:not(headerbar) box button.toggle.flat:disabled,
 .selection-mode
   .titlebar:not(headerbar)
   box
-  button.toggle.flat:backdrop:disabled,
-.selection-mode .titlebar:not(headerbar) buttonbox.toggle.flat:backdrop,
-.selection-mode .titlebar:not(headerbar) buttonbox.toggle.flat:disabled,
+  .selection-mode
+  .titlebar:not(headerbar)
+  buttonbox.toggle.flat:disabled,
 .selection-mode
   .titlebar:not(headerbar)
-  buttonbox.toggle.flat:backdrop:disabled,
-.selection-mode .titlebar:not(headerbar) stackswitcher button.flat:backdrop,
-.selection-mode .titlebar:not(headerbar) stackswitcher button.flat:disabled,
+  .selection-mode
+  .titlebar:not(headerbar)
+  stackswitcher
+  button.flat:disabled,
 .selection-mode
   .titlebar:not(headerbar)
   stackswitcher
-  button.flat:backdrop:disabled,
-.selection-mode
+  .selection-mode
   .titlebar:not(headerbar)
   filechooser
   .path-bar.linked
-  > button.flat:backdrop,
-.selection-mode
+  .selection-mode
   .titlebar:not(headerbar)
   filechooser
   .path-bar.linked
@@ -8235,128 +6257,79 @@ headerbar.selection-mode .path-bar button:backdrop:disabled:checked {
   .titlebar:not(headerbar)
   filechooser
   .path-bar.linked
-  > button.flat:backdrop:disabled,
-.selection-mode .titlebar:not(headerbar) .path-bar button.flat:backdrop,
-.selection-mode .titlebar:not(headerbar) .path-bar button.flat:disabled,
+  .selection-mode
+  .titlebar:not(headerbar)
+  .path-bar
+  button.flat:disabled,
 .selection-mode
   .titlebar:not(headerbar)
   .path-bar
-  button.flat:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar) button.flat:backdrop,
-.selection-mode.titlebar:not(headerbar) button.flat:disabled,
-.selection-mode.titlebar:not(headerbar) button.flat:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar) button.image-button.flat:backdrop,
+  .selection-mode.titlebar:not(headerbar)
+  button.flat:disabled,
 .selection-mode.titlebar:not(headerbar) button.image-button.flat:disabled,
 .selection-mode.titlebar:not(headerbar)
-  button.image-button.flat:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar)
-  button.image-button.toggle.flat:backdrop,
-.selection-mode.titlebar:not(headerbar)
+  .selection-mode.titlebar:not(headerbar)
+  .selection-mode.titlebar:not(headerbar)
   button.image-button.toggle.flat:disabled,
 .selection-mode.titlebar:not(headerbar)
-  button.image-button.toggle.flat:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar) button.text.button.flat:backdrop,
-.selection-mode.titlebar:not(headerbar) button.text.button.flat:disabled,
+  .selection-mode.titlebar:not(headerbar)
+  button.text.button.flat:disabled,
 .selection-mode.titlebar:not(headerbar)
-  button.text.button.flat:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar) button.toggle.flat:backdrop,
-.selection-mode.titlebar:not(headerbar) button.toggle.flat:disabled,
-.selection-mode.titlebar:not(headerbar) button.toggle.flat:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar) box button.toggle.flat:backdrop,
+  .selection-mode.titlebar:not(headerbar)
+  button.toggle.flat:disabled,
 .selection-mode.titlebar:not(headerbar) box button.toggle.flat:disabled,
 .selection-mode.titlebar:not(headerbar)
   box
-  button.toggle.flat:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar) buttonbox.toggle.flat:backdrop,
-.selection-mode.titlebar:not(headerbar) buttonbox.toggle.flat:disabled,
-.selection-mode.titlebar:not(headerbar) buttonbox.toggle.flat:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar) stackswitcher button.flat:backdrop,
+  .selection-mode.titlebar:not(headerbar)
+  buttonbox.toggle.flat:disabled,
 .selection-mode.titlebar:not(headerbar) stackswitcher button.flat:disabled,
 .selection-mode.titlebar:not(headerbar)
   stackswitcher
-  button.flat:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar)
+  .selection-mode.titlebar:not(headerbar)
   filechooser
   .path-bar.linked
-  > button.flat:backdrop,
-.selection-mode.titlebar:not(headerbar)
+  .selection-mode.titlebar:not(headerbar)
   filechooser
   .path-bar.linked
   > button.flat:disabled,
 .selection-mode.titlebar:not(headerbar)
   filechooser
   .path-bar.linked
-  > button.flat:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar) .path-bar button.flat:backdrop,
-.selection-mode.titlebar:not(headerbar) .path-bar button.flat:disabled,
-.selection-mode.titlebar:not(headerbar) .path-bar button.flat:backdrop:disabled,
-.selection-mode headerbar button.flat:backdrop,
+  .selection-mode.titlebar:not(headerbar)
+  .path-bar
+  button.flat:disabled,
 .selection-mode headerbar button.flat:disabled,
-.selection-mode headerbar button.flat:backdrop:disabled,
-.selection-mode headerbar button.image-button.flat:backdrop,
 .selection-mode headerbar button.image-button.flat:disabled,
-.selection-mode headerbar button.image-button.flat:backdrop:disabled,
-.selection-mode headerbar button.image-button.toggle.flat:backdrop,
 .selection-mode headerbar button.image-button.toggle.flat:disabled,
-.selection-mode headerbar button.image-button.toggle.flat:backdrop:disabled,
-.selection-mode headerbar button.text.button.flat:backdrop,
 .selection-mode headerbar button.text.button.flat:disabled,
-.selection-mode headerbar button.text.button.flat:backdrop:disabled,
-.selection-mode headerbar button.toggle.flat:backdrop,
 .selection-mode headerbar button.toggle.flat:disabled,
-.selection-mode headerbar button.toggle.flat:backdrop:disabled,
-.selection-mode headerbar box button.toggle.flat:backdrop,
 .selection-mode headerbar box button.toggle.flat:disabled,
-.selection-mode headerbar box button.toggle.flat:backdrop:disabled,
-.selection-mode headerbar buttonbox.toggle.flat:backdrop,
 .selection-mode headerbar buttonbox.toggle.flat:disabled,
-.selection-mode headerbar buttonbox.toggle.flat:backdrop:disabled,
-.selection-mode headerbar stackswitcher button.flat:backdrop,
 .selection-mode headerbar stackswitcher button.flat:disabled,
-.selection-mode headerbar stackswitcher button.flat:backdrop:disabled,
-.selection-mode headerbar filechooser .path-bar.linked > button.flat:backdrop,
 .selection-mode headerbar filechooser .path-bar.linked > button.flat:disabled,
 .selection-mode
   headerbar
   filechooser
   .path-bar.linked
-  > button.flat:backdrop:disabled,
-.selection-mode headerbar .path-bar button.flat:backdrop,
-.selection-mode headerbar .path-bar button.flat:disabled,
-.selection-mode headerbar .path-bar button.flat:backdrop:disabled,
-headerbar.selection-mode button.flat:backdrop,
+  .selection-mode
+  headerbar
+  .path-bar
+  button.flat:disabled,
 headerbar.selection-mode button.flat:disabled,
-headerbar.selection-mode button.flat:backdrop:disabled,
-headerbar.selection-mode button.image-button.flat:backdrop,
 headerbar.selection-mode button.image-button.flat:disabled,
-headerbar.selection-mode button.image-button.flat:backdrop:disabled,
-headerbar.selection-mode button.image-button.toggle.flat:backdrop,
 headerbar.selection-mode button.image-button.toggle.flat:disabled,
-headerbar.selection-mode button.image-button.toggle.flat:backdrop:disabled,
-headerbar.selection-mode button.text.button.flat:backdrop,
 headerbar.selection-mode button.text.button.flat:disabled,
-headerbar.selection-mode button.text.button.flat:backdrop:disabled,
-headerbar.selection-mode button.toggle.flat:backdrop,
 headerbar.selection-mode button.toggle.flat:disabled,
-headerbar.selection-mode button.toggle.flat:backdrop:disabled,
-headerbar.selection-mode box button.toggle.flat:backdrop,
 headerbar.selection-mode box button.toggle.flat:disabled,
-headerbar.selection-mode box button.toggle.flat:backdrop:disabled,
-headerbar.selection-mode buttonbox.toggle.flat:backdrop,
 headerbar.selection-mode buttonbox.toggle.flat:disabled,
-headerbar.selection-mode buttonbox.toggle.flat:backdrop:disabled,
-headerbar.selection-mode stackswitcher button.flat:backdrop,
 headerbar.selection-mode stackswitcher button.flat:disabled,
-headerbar.selection-mode stackswitcher button.flat:backdrop:disabled,
-headerbar.selection-mode filechooser .path-bar.linked > button.flat:backdrop,
 headerbar.selection-mode filechooser .path-bar.linked > button.flat:disabled,
 headerbar.selection-mode
   filechooser
   .path-bar.linked
-  > button.flat:backdrop:disabled,
-headerbar.selection-mode .path-bar button.flat:backdrop,
-headerbar.selection-mode .path-bar button.flat:disabled,
-headerbar.selection-mode .path-bar button.flat:backdrop:disabled {
+  headerbar.selection-mode
+  .path-bar
+  button.flat:disabled {
   border-color: #e100ff;
   background: $primary_background_color;
   background: $primary_background_color;
@@ -8555,44 +6528,6 @@ headerbar.selection-mode buttonbox.toggle.suggested-action:disabled {
   background: $primary_background_color;
   border-color: #e100ff;
 }
-.selection-mode .titlebar:not(headerbar) button.suggested-action:backdrop,
-.selection-mode
-  .titlebar:not(headerbar)
-  buttonbox.toggle.suggested-action:backdrop,
-.selection-mode.titlebar:not(headerbar) button.suggested-action:backdrop,
-.selection-mode.titlebar:not(headerbar)
-  buttonbox.toggle.suggested-action:backdrop,
-.selection-mode headerbar button.suggested-action:backdrop,
-.selection-mode headerbar buttonbox.toggle.suggested-action:backdrop,
-headerbar.selection-mode button.suggested-action:backdrop,
-headerbar.selection-mode buttonbox.toggle.suggested-action:backdrop {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  background-color: $backdrop_background_color;
-  box-shadow: none;
-  border-color: #e100ff;
-}
-.selection-mode
-  .titlebar:not(headerbar)
-  button.suggested-action:backdrop:disabled,
-.selection-mode
-  .titlebar:not(headerbar)
-  buttonbox.toggle.suggested-action:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar)
-  button.suggested-action:backdrop:disabled,
-.selection-mode.titlebar:not(headerbar)
-  buttonbox.toggle.suggested-action:backdrop:disabled,
-.selection-mode headerbar button.suggested-action:backdrop:disabled,
-.selection-mode headerbar buttonbox.toggle.suggested-action:backdrop:disabled,
-headerbar.selection-mode button.suggested-action:backdrop:disabled,
-headerbar.selection-mode buttonbox.toggle.suggested-action:backdrop:disabled {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  border-color: #e100ff;
-  background: $primary_background_color;
-  box-shadow: none;
-  border-color: #e100ff;
-}
 .selection-mode .titlebar:not(headerbar) .selection-menu,
 .selection-mode.titlebar:not(headerbar) .selection-menu,
 .selection-mode headerbar .selection-menu,
@@ -8618,18 +6553,9 @@ paned.titlebar > separator {
   background: $primary_background_color;
   background: $primary_background_color;
 }
-paned.titlebar > separator:backdrop {
-  color: #e100ff;
-  background-color: $backdrop_background_color;
-  background-color: $backdrop_background_color;
-}
 
 window.devel headerbar.titlebar {
   background: $primary_background_color;
-}
-window.devel headerbar.titlebar:backdrop {
-  background-color: $backdrop_background_color;
-  /* background-color would flash */
 }
 
 /*****************
@@ -8668,11 +6594,6 @@ windowcontrols button:checked {
   background: $primary_background_color;
   transition-duration: 100ms;
 }
-windowcontrols button:backdrop {
-  background-color: $backdrop_background_color;
-  background-color: $backdrop_background_color;
-  transition-duration: 100ms;
-}
 windowcontrols button.close {
   background: $primary_background_color;
   transition-duration: 100ms;
@@ -8686,13 +6607,8 @@ windowcontrols button.close:checked {
   background: $primary_background_color;
   transition-duration: 100ms;
 }
-windowcontrols button.close:backdrop {
-  background-color: $backdrop_background_color;
-  transition-duration: 100ms;
-}
 
-headerbar button.appmenu.popup.toggle,
-headerbar button.appmenu.popup.toggle:backdrop {
+headerbar button.appmenu.popup.toggle {
   border-color: #e100ff;
   background-color: $backdrop_background_color;
   background-color: $backdrop_background_color;
@@ -8755,28 +6671,6 @@ switch:disabled {
   text-shadow: none;
 }
 switch:disabled:checked {
-  background: $primary_background_color;
-}
-switch:backdrop {
-  color: #e100ff;
-  border-color: #e100ff;
-  background-color: $backdrop_background_color;
-  text-shadow: none;
-  transition: 200ms ease-out;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3) inset;
-}
-switch:backdrop:checked {
-  color: #ffd700;
-  border-color: #ffd700;
-  background: $primary_background_color;
-}
-switch:backdrop:disabled {
-  color: #e100ff;
-  border-color: #e100ff;
-  background: $primary_background_color;
-  box-shadow: none;
-}
-switch:backdrop:disabled:checked {
   background: $primary_background_color;
 }
 switch slider {
@@ -8998,15 +6892,6 @@ infobar button {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   color: #e100ff;
   background: $primary_background_color;
-  border-color: #e100ff;
-}
-infobar button:backdrop {
-  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #e100ff;
-  border-color: #e100ff;
-  background-color: $backdrop_background_color;
-  box-shadow: none;
-  background-color: $backdrop_background_color;
   border-color: #e100ff;
 }
 infobar button:hover {
