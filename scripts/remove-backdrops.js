@@ -2,24 +2,19 @@ const fs = require("fs");
 const path = require("path");
 const scriptDir = path.dirname(__filename);
 
-const gtk3Path = path.join(scriptDir, "../gtk-3.0/gtk.css");
+const gtk3Path = path.join(scriptDir, "../src/gnome/gtk-4.0/gtk.scss");
 
 const removeBackdrops = (cssText) => {
   let updatedCss = cssText;
 
   // Remove selectors where all lines end with :backdrop
-  updatedCss = cssText.replace(/[^{]*:backdrop[^}]*}/g, "");
+  const allLines = cssText.split("\n");
 
-  /*   // For mixed selectors, only remove the :backdrop parts
-  updatedCss = updatedCss.replace(/([^,\n]*:backdrop,?\s*\n?)/g, "");
+  const allLinesEndingWithBackdrop = allLines.filter((line) => {
+    return line.includes(":backdrop") && line.endsWith(",") ? false : true;
+  });
 
-  // Clean up any empty rules that might be left
-  updatedCss = updatedCss.replace(/[^{]+{\s*}/g, "");
-
-  // Remove extra blank lines
-  updatedCss = updatedCss.replace(/\n\s*\n\s*\n/g, "\n\n");
- */
-  return updatedCss;
+  return allLinesEndingWithBackdrop.join("\n");
 };
 
 const gtk3 = fs.readFileSync(gtk3Path, "utf8");
