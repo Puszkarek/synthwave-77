@@ -5,3 +5,11 @@ $backdrop_background_color: #1b1d2b;
 @use "./common.scss";
 @use "./scrollbar.scss";
 @use "./inputs.scss";
+
+.view text selection,
+textview text selection,
+iconview text selection,
+entry selection {
+  color: #12141f;
+  background-color: #006561;
+}

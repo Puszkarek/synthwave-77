@@ -800,23 +800,23 @@ html.theme-light {
   --scrollbar-auto-track: transparent;
   --scrollbar-thin-thumb: var(-accent-color);
   --scrollbar-thin-track: transparent;
-  --spoiler-hidden-background: var(--primary-700);
-  --spoiler-revealed-background: var(--primary-660);
+  --spoiler-hidden-background: var(--bg-1);
+  --spoiler-revealed-background: var(--bg-0);
   --stage-card-pill-bg: var(--primary-630);
   --status-danger: var(--pink);
-  --status-danger-background: var(--red-430);
-  --status-danger-text: var(--white-500);
+  --status-danger-background: var(--bg-1);
+  --status-danger-text: var(--red-430);
   --status-dnd: var(--red-400);
   --status-idle: var(--yellow-300);
   --status-offline: var(--primary-360);
   --status-online: var(--green-360);
   --status-positive: var(--green-360);
-  --status-positive-background: var(--green-430);
-  --status-positive-text: var(--white-500);
+  --status-positive-background: var(--bg-1);
+  --status-positive-text: var(--green-430);
   --status-speaking: var(--green-360);
   --status-warning: var(--yellow-300);
-  --status-warning-background: var(--yellow-300);
-  --status-warning-text: var(--black-500);
+  --status-warning-background: var(--bg-1)
+  --status-warning-text: var(--yellow-300);
   --text-brand: var(--brand-360);
   --text-danger: var(--red-345);
   --text-link: var(--txt-link);
@@ -1008,6 +1008,7 @@ html.theme-light {
 }
 
 /* customize things here */
+.theme-dark,
 :root {
   --font: "Refinery 75 Medium";
   letter-spacing: -0.05ch;
@@ -1027,14 +1028,14 @@ html.theme-light {
   --bg-2: #12141f;
   --bg-3: #12141f;
 
-  --hover: var(--accent-color);
+  --hover: var(--bg-0);
   --active: oklch(54% 0 0 / 0.2);
   --selected: var(--active);
 
   --txt-dark: #e100ff;
   --txt-link: #e100ff;
   --txt-0: #e100ff;
-  --txt-1: #c4b0cd;
+  --txt-1: #e100ff;
   --txt-2: #e100ff;
   --txt-3: #e100ff;
 
@@ -1078,6 +1079,9 @@ html.theme-light {
 
   --scrollbarBG: transparent;
   --thumbBG: var(--accent-color);
+
+  --bg-overlay-hover: var(--bg-0);
+  --bg-overlay-hover: var(--bg-0);
 }
 
 .sidebarRegionScroller_c25c6d {
@@ -1091,7 +1095,7 @@ html.theme-light {
 }
 
 .link_d8bfb3 {
-  border: 2px solid transparent;
+  border: 1px solid transparent;
 }
 
 .modeSelected_d8bfb3 .link_d8bfb3 {
@@ -1103,11 +1107,13 @@ html.theme-light {
 }
 
 .selected_c64476:hover {
-  background-color: var(--accent-color);
-  --text-secondary: var(--bg-0);
+  background-color: var(--bg-0);
+  color: var(--acc-0);
+  --text-secondary: var(--acc-0);
 }
 
 .clickable_d808b0.container_d808b0:hover {
-  background-color: var(--accent-color);
-  --channels-default: var(--bg-0);
+  background-color: var(--bg-0);
+  color: var(--acc-0);
+  --channels-default: var(--acc-0);
 }
